@@ -13,23 +13,35 @@
   section { padding: 40px; max-width: 900px; margin: auto; }
   h2 { color: #13294b; }
   .card { background: #fff; padding: 20px; margin: 20px 0; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-  footer { text-align: center; padding: 20px; background: #0a1f44; color: #fff; margin-top: 40px; }
+footer { 
+  text-align: center; 
+  padding: 20px; 
+  background: #0a1f44; 
+  color: #fff; 
+  margin-top: 40px; 
+}
 
-  /* ✅ New styles for icons + links */
-  i {
-    margin-right: 8px;
-    color: #13294b; /* default navy for icons */
-  }
+/* ✅ Professional styling for contact section */
+.card p {
+  font-size: 1.1rem;
+  margin: 12px 0;
+}
 
-  a {
-    color: #13294b;
-    text-decoration: none;
-  }
+.card a {
+  color: #13294b;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
 
-  a:hover {
-    text-decoration: underline;
-    color: #0a1f44; /* darker hover effect */
-  }
+.card a:hover {
+  color: #0a1f44;
+  text-decoration: underline;
+}
+
+.card i {
+  margin-right: 10px;
+  color: #0a1f44;
+}
 </style>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -47,36 +59,24 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <section>
+<section>
   <h2>Get in Touch</h2>
-  <div class="card">
-    <p>
-      <i class="fas fa-envelope"></i>
-      <strong>Email:</strong> 
-      <a href="mailto:sadvandniknaz0@gmail.com">sadvandniknaz0@gmail.com</a>
-    </p>
-
-  <p>
-  <i class="fas fa-envelope"></i>
-  <a href="mailto:sadvandniknaz0@gmail.com">sadvandniknaz0@gmail.com</a>
-</p>
-
-<p>
-  <i class="fab fa-linkedin"></i>
-  <a href="https://www.linkedin.com/in/niknaz-sadehvandi-a34179325" target="_blank">LinkedIn Profile</a>
-</p>
-
-<p>
-  <i class="fab fa-github"></i>
-  <a href="https://github.com/niknaz-65" target="_blank">github.com/niknaz-65</a>
-</p>
-
-<p>
-  <i class="fas fa-globe"></i>
-  <a href="https://niknaz-65.github.io/" target="_blank">niknaz-65.github.io</a>
-</p>
-  </div>
+<div class="card contact-row">
+  <a href="mailto:sadvandniknaz0@gmail.com" target="_blank">
+    <i class="fas fa-envelope"></i> Email
+  </a>
+  <a href="https://www.linkedin.com/in/niknaz-sadehvandi-a34179325" target="_blank">
+    <i class="fab fa-linkedin"></i> LinkedIn
+  </a>
+  <a href="https://github.com/niknaz-65" target="_blank">
+    <i class="fab fa-github"></i> GitHub
+  </a>
+  <a href="https://niknaz-65.github.io/" target="_blank">
+    <i class="fas fa-globe"></i> Website
+  </a>
+</div>
 </section>
+
 
   <footer>
     <p>© 2025 Niknaz Sadehvandi | Cybersecurity Portfolio</p>
