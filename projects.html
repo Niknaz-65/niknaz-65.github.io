@@ -11,7 +11,7 @@
     nav { background: #13294b; padding: 10px; text-align: center; }
     nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
     nav a:hover { text-decoration: underline; }
-    section { padding: 40px; max-width: 900px; margin: auto; }
+    main { padding: 40px; max-width: 900px; margin: auto; }
     h2 { color: #13294b; }
     .card { background: #fff; padding: 20px; margin: 20px 0; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
     footer { text-align: center; padding: 20px; background: #0a1f44; color: #fff; margin-top: 40px; }
@@ -25,38 +25,45 @@
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
+    <a href="projects.html" aria-current="page">Projects</a>
     <a href="certifications.html">Certifications</a>
     <a href="contact.html">Contact</a>
   </nav>
 
-  <section>
+  <main>
     <h2>Featured Projects</h2>
 
     <div class="card">
-      <h3>Digital Forensics & Incident Response Lab</h3>
-      <p>🔹 Investigated intrusions using FTK Imager, Autopsy, and Autoruns.<br>
-         🔹 Identified persistence mechanisms, unauthorized accounts, and SSH exfiltration.<br>
-         🔹 Produced reports aligned with NIST standards.</p>
+      <h3>Digital Forensics &amp; Incident Response Lab</h3>
+      <ul>
+        <li>Investigated intrusions using FTK Imager, Autopsy, and Autoruns</li>
+        <li>Identified persistence mechanisms, unauthorized accounts, and SSH exfiltration</li>
+        <li>Produced reports aligned with NIST standards</li>
+      </ul>
     </div>
 
     <div class="card">
       <h3>Splunk Threat Intelligence Integration</h3>
-      <p>🔹 Integrated threat intelligence feeds into Splunk.<br>
-         🔹 Improved detection rates by 30% across the organization.<br>
-         🔹 Helped SOC team triage incidents faster.</p>
+      <ul>
+        <li>Integrated threat intelligence feeds into Splunk</li>
+        <li>Improved detection rates by 30% across the organization</li>
+        <li>Helped SOC team triage incidents faster</li>
+      </ul>
     </div>
 
     <div class="card">
-      <h3>ITGC Audit & SOX Compliance</h3>
-      <p>🔹 Executed IT General Controls testing with 100% SOX compliance.<br>
-         🔹 Supported 5+ annual audits.<br>
-         🔹 Documented control procedures, reducing audit prep time by 20%.</p>
+      <h3>ITGC Audit &amp; SOX Compliance</h3>
+      <ul>
+        <li>Executed IT General Controls testing with 100% SOX compliance</li>
+        <li>Supported 5+ annual audits</li>
+        <li>Documented control procedures, reducing audit prep time by 20%</li>
+      </ul>
     </div>
-  </section>
+  </main>
 
   <footer>
     <p>© 2025 Niknaz Sadehvandi | Cybersecurity Portfolio</p>
   </footer>
 </body>
 </html>
+
