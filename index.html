@@ -1,117 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Niknaz Sadehvandi | Cybersecurity Portfolio</title>
+/* ✅ Resume button styling */
+.resume-btn {
+  background: #13294b;
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
 
-  <!-- SEO / Sharing -->
-  <meta name="description" content="Junior Cybersecurity Analyst with hands-on experience in vulnerability management, incident response, SOX/ITGC, and forensics. View projects, certifications, and resume." />
-  <meta property="og:title" content="Niknaz Sadehvandi | Cybersecurity Portfolio" />
-  <meta property="og:description" content="Vulnerability management, incident response, SOX/ITGC testing, and DFIR projects." />
-  <meta property="og:type" content="website" />
+.resume-btn:hover {
+  background: #0a1f44;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
 
-  <style>
-    :root{
-      --bg:#f7f9fc; --ink:#333; --brand:#13294b; --brand-dark:#0a1f44; --card:#fff;
-    }
-    *{box-sizing:border-box}
-    body{font-family:Arial,Helvetica,sans-serif; margin:0; color:var(--ink); background:var(--bg);}
-    .container{max-width:1000px; margin:0 auto; padding:0 20px;}
-    header{background:var(--brand-dark); color:#fff; padding:32px 0; text-align:center;}
-    header h1{margin:0 0 8px}
-    header p{margin:6px 0}
-    .btn{display:inline-block; padding:10px 20px; background:var(--brand); color:#fff; border-radius:8px; text-decoration:none; font-weight:700; margin-top:12px}
-    .btn:focus,.btn:hover{text-decoration:underline}
-    nav{background:var(--brand); position:sticky; top:0; z-index:10}
-    nav .container{display:flex; gap:18px; justify-content:center; padding:10px 20px}
-    nav a{color:#fff; text-decoration:none; font-weight:700}
-    nav a[aria-current="page"]{text-decoration:underline}
-    section{padding:40px 0}
-    h2{color:var(--brand)}
-    .card{background:var(--card); border-radius:12px; padding:20px; box-shadow:0 2px 6px rgba(0,0,0,.08); margin:18px 0}
-    ul{margin:0; padding-left:20px}
-    footer{background:var(--brand-dark); color:#fff; text-align:center; padding:22px 0; margin-top:40px}
-    .grid{display:grid; gap:16px}
-    @media (min-width:760px){ .grid{grid-template-columns:repeat(2,1fr);} }
-    a[target="_blank"]{cursor:alias}
-  </style>
-</head>
-<body>
-  <a class="visually-hidden" href="#main">Skip to content</a>
+.resume-btn i {
+  color: #d93025; /* PDF red */
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
 
-  <header>
-    <div class="container">
-      <h1>Niknaz Sadehvandi</h1>
-      <p>Junior Cybersecurity Analyst · IT &amp; Risk Management</p>
-      <a class="btn" href="Niknaz_Sadehvandi_Resume.pdf" download>📄 Download My Resume</a>
-    </div>
-  </header>
-
-  <nav>
-    <div class="container">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="certifications.html">Certifications</a>
-      <a href="contact.html">Contact</a>
-    </div>
-  </nav>
-
-  <main id="main" class="container">
-    <section id="about">
-      <h2>About Me</h2>
-      <div class="card">
-        <p>I am a Junior Cybersecurity Analyst with hands-on experience in vulnerability management, incident response, and IT General Controls testing. I hold an M.S. in Cybersecurity Technology (4.0 GPA) and work with Splunk, Nessus, Wireshark, and forensic tools.</p>
-        <p>My goal is to protect digital assets by combining technical depth with strong risk management and compliance practices (SOX/ITGC, audits, control remediation).</p>
-      </div>
-    </section>
-
-    <section id="projects">
-      <h2>Highlighted Projects</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Digital Forensics &amp; Incident Response Lab</h3>
-          <p>Investigated intrusions using FTK Imager, Autopsy, and Autoruns; identified persistence, unauthorized accounts, and SSH exfiltration; produced NIST-aligned reports.</p>
-          <p><a href="projects.html">View details →</a></p>
-        </div>
-        <div class="card">
-          <h3>Splunk Threat Intelligence Integration</h3>
-          <p>Integrated TI feeds into Splunk, improving detection rates by ~30% and reducing false positives.</p>
-          <p><a href="projects.html">View details →</a></p>
-        </div>
-        <div class="card">
-          <h3>IT General Controls Testing</h3>
-          <p>Executed ITGC testing toward 100% SOX compliance; collaborated with auditors across 5 annual reviews; streamlined evidence and documentation.</p>
-          <p><a href="projects.html">View details →</a></p>
-        </div>
-      </div>
-    </section>
-
-   <section id="certifications">
-  <h2>Certifications</h2>
-  <div class="card">
-    <ul>
-      <li>Python Basics for Data Science — IBM (2024)</li>
-      <li>R Programming Fundamentals — Stanford Online (2024)</li>
-    </ul>
-  </div>
-</section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <div class="card">
-        <p>Email: <a href="mailto:sadvandniknaz0@gmail.com">sadvandniknaz0@gmail.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/niknaz-sadehvandi-a34179325" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></p>
-        <p>GitHub: <a href="https://github.com/niknaz-65" target="_blank" rel="noopener noreferrer">github.com/niknaz-65</a></p>
-        <p>Portfolio (this site): <a href="https://niknaz-65.github.io/niknaz-portfolio/" target="_blank" rel="noopener noreferrer">niknaz-65.github.io/niknaz-portfolio</a></p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Niknaz Sadehvandi · Cybersecurity Portfolio</p>
-  </footer>
-</body>
-</html>
-
-
+.resume-btn:hover i {
+  transform: scale(1.15);
+}
