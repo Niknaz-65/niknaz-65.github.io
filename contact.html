@@ -42,6 +42,43 @@ footer {
   margin-right: 10px;
   color: #0a1f44;
 }
+
+/* ✅ Button-style row for contact links */
+.contact-row {
+  display: flex;
+  justify-content: center;   /* center them neatly */
+  flex-wrap: wrap;           /* responsive for mobile */
+  gap: 20px;                 /* spacing between buttons */
+  padding: 20px;
+}
+
+.contact-row a {
+  background: #13294b;       /* uniform navy background */
+  color: #fff;               /* white text */
+  padding: 12px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.contact-row a:hover {
+  background: #0a1f44;       /* darker navy on hover */
+  transform: translateY(-2px); /* subtle lift effect */
+}
+
+.contact-row i {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+/* 🎨 Brand colors for icons only */
+.fa-envelope { color: #d93025; }   /* Gmail red */
+.fa-linkedin { color: #0077b5; }   /* LinkedIn blue */
+.fa-github   { color: #000; }      /* GitHub black */
+.fa-globe    { color: #4CAF50; }   /* Website green */
 </style>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
