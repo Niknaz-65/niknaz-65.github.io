@@ -1,3 +1,5 @@
+![Banner](assets/site-banner.png)
+
 # 🌐 Niknaz Sadehvandi | Cybersecurity Portfolio
 
 Welcome to my personal cybersecurity portfolio website!  
