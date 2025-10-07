@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Niknaz Sadehvandi</title>
 
-  <!-- Social preview -->
   <meta name="description" content="Hands-on cybersecurity projects by Niknaz Sadehvandi: DFIR, SOX ITGC, Splunk, risk management." />
   <meta property="og:title" content="Projects | Niknaz Sadehvandi" />
   <meta property="og:description" content="Hands-on cybersecurity projects by Niknaz Sadehvandi." />
@@ -13,7 +12,6 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://niknaz-65.github.io/projects.html" />
 
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <style>
@@ -25,7 +23,11 @@
     nav a.active,nav a:hover{text-decoration:underline;text-underline-offset:4px}
     section{max-width:900px;margin:0 auto;padding:40px 16px}
     h2{color:var(--navy2);margin:0 0 12px}
-    .card{background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:22px;margin:20px 0}
+
+    .card-wrapper { text-decoration:none; color:inherit; display:block; }
+    .card{background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:22px;margin:20px 0;
+          transition:transform .2s ease, box-shadow .2s ease;}
+    .card:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(0,0,0,.12)}
     .bullets{padding-left:18px;margin-top:10px}
     .bullets li{margin:6px 0}
     img.project-thumb{max-width:100%;border-radius:12px;margin:14px 0}
@@ -42,48 +44,16 @@
     .btn-secondary:hover{background:var(--navy2);color:#fff}
     .fa-file-pdf{color:#d93025}
 
-    /* Icon hover effect in headings */
-    .card h3 i {
-      color: var(--navy2);
-      margin-right: 8px;
-      transition: transform 0.3s ease, color 0.3s ease;
-    }
-    .card h3 i:hover {
-      transform: scale(1.2);
-      color: var(--navy);
-    }
-
-    /* Tool chips */
-    .tools {
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin:12px 0 6px;
-    }
+    /* Chips */
+    .tools { display:flex; flex-wrap:wrap; gap:10px; margin:12px 0 6px; }
     .chip {
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      background:var(--chip);
-      border:1px solid #dbe3f2;
-      padding:8px 10px;
-      border-radius:999px;
-      font-size:.92rem;
+      display:inline-flex; align-items:center; gap:8px;
+      background:var(--chip); border:1px solid #dbe3f2;
+      padding:8px 10px; border-radius:999px; font-size:.92rem;
       transition:transform .2s ease, box-shadow .2s ease;
     }
-    .chip:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 6px 14px rgba(0,0,0,.10);
-    }
-    .chip img {
-      height:18px;
-      width:auto;
-      border-radius:3px;
-      display:block;
-    }
-    .chip i {
-      color:var(--navy2);
-    }
+    .chip:hover { transform:translateY(-1px); box-shadow:0 6px 14px rgba(0,0,0,.10); }
+    .chip i { color:var(--navy2); }
 
     a:focus,button:focus{outline:3px solid #ffbf47;outline-offset:2px}
     @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
@@ -107,103 +77,69 @@
     <p>These hands-on labs and case studies demonstrate my practical experience in cybersecurity. Each project showcases tools, methodologies, and frameworks I’ve applied in areas such as digital forensics, incident response, vulnerability management, and compliance.</p>
 
     <!-- DFIR Project -->
-    <div class="card">
-      <h3 style="margin:0 0 6px;">
-        <i class="fas fa-shield-alt"></i>
-        Digital Forensics & Incident Response Lab (UMGC)
-      </h3>
-      <p><strong>Jan 2025 – Mar 2025</strong></p>
+    <a href="assets/forensics-report.pdf" target="_blank" rel="noopener noreferrer" class="card-wrapper">
+      <div class="card">
+        <h3>Digital Forensics & Incident Response Lab (UMGC)</h3>
+        <p><strong>Jan 2025 – Mar 2025</strong></p>
 
-      <!-- Tools Used -->
-      <div class="tools" aria-label="Tools used">
-        <span class="chip">
-          <img src="assets/ftk.png" alt="FTK Imager logo" />
-          FTK Imager
-        </span>
-        <span class="chip">
-          <img src="assets/autopsy.png" alt="Autopsy logo" />
-          Autopsy
-        </span>
-        <span class="chip">
-          <img src="assets/autoruns.png" alt="Autoruns logo" />
-          Autoruns
-        </span>
-        <span class="chip">
-          <i class="fa-solid fa-network-wired" aria-hidden="true"></i>
-          SSH
-        </span>
-        <span class="chip">
-          <i class="fa-solid fa-user-shield" aria-hidden="true"></i>
-          Accounts & Persistence
-        </span>
+        <div class="tools" aria-label="Tools used">
+          <span class="chip"><i class="fa-solid fa-magnifying-glass"></i> FTK Imager</span>
+          <span class="chip"><i class="fa-solid fa-database"></i> Autopsy</span>
+          <span class="chip"><i class="fa-solid fa-gear"></i> Autoruns</span>
+          <span class="chip"><i class="fa-solid fa-network-wired"></i> SSH Analysis</span>
+          <span class="chip"><i class="fa-solid fa-user-shield"></i> Persistence</span>
+        </div>
+
+        <ul class="bullets">
+          <li>Investigated intrusions using FTK Imager, Autopsy, and Autoruns.</li>
+          <li>Identified persistence mechanisms, unauthorized accounts, and SSH exfiltration.</li>
+          <li>Documented findings aligned to NIST and ITGC testing practices.</li>
+        </ul>
+
+        <img class="project-thumb" src="assets/forensics-thumb.png" alt="DFIR project title slide">
+
+        <p>
+          <a class="btn btn-primary" href="assets/forensics-report.pdf" target="_blank">
+            <i class="fas fa-file-pdf"></i> View Report (PDF)
+          </a>
+          <a class="btn btn-secondary" href="assets/forensics-report.pdf" download>
+            <i class="fas fa-download"></i> Download
+          </a>
+        </p>
       </div>
+    </a>
 
-      <ul class="bullets">
-        <li>Investigated intrusions using FTK Imager, Autopsy, and Autoruns.</li>
-        <li>Identified persistence mechanisms, unauthorized accounts, and SSH exfiltration.</li>
-        <li>Documented findings aligned to NIST and ITGC testing practices.</li>
-      </ul>
+    <!-- Vulnerability Assessment (Example Template) -->
+    <a href="assets/your-report.pdf" target="_blank" rel="noopener noreferrer" class="card-wrapper">
+      <div class="card">
+        <h3>Vulnerability Assessment Lab</h3>
+        <p><strong>Role / Dates</strong></p>
 
-      <img class="project-thumb"
-           src="assets/forensics-thumb.png"
-           alt="DFIR project title slide"
-           loading="lazy" width="1200" height="675">
+        <div class="tools">
+          <span class="chip"><i class="fa-solid fa-terminal"></i> Nmap</span>
+          <span class="chip"><i class="fa-solid fa-bug"></i> Burp Suite</span>
+          <span class="chip"><i class="fa-solid fa-magnifying-glass"></i> Nikto / DIRB</span>
+          <span class="chip"><i class="fa-solid fa-flag-checkered"></i> Remediation</span>
+        </div>
 
-      <p>
-        <a class="btn btn-primary" href="assets/forensics-report.pdf" target="_blank" rel="noopener noreferrer">
-          <i class="fas fa-file-pdf"></i> View Report (PDF)
-        </a>
-        <a class="btn btn-secondary" href="assets/forensics-report.pdf" download>
-          <i class="fas fa-download"></i> Download
-        </a>
-      </p>
-    </div>
+        <ul class="bullets">
+          <li>Goal: Perform vulnerability scans on target systems and web apps.</li>
+          <li>Actions: Enumerated services & endpoints; tested for common vulns; verified findings.</li>
+          <li>Impact: Identified misconfigurations and proposed prioritized remediation steps.</li>
+        </ul>
 
-    <!-- Vulnerability Assessment (example template you can fill later) -->
-    <div class="card">
-      <h3>
-        <i class="fas fa-laptop-code"></i>
-        Vulnerability Assessment Lab
-      </h3>
-      <p><strong>Role / Dates</strong></p>
+        <img class="project-thumb" src="assets/your-thumb.png" alt="Project thumbnail">
 
-      <!-- Tools Used -->
-      <div class="tools" aria-label="Tools used">
-        <span class="chip">
-          <img src="assets/nmap.png" alt="Nmap logo" />
-          Nmap
-        </span>
-        <span class="chip">
-          <img src="assets/burpsuite.png" alt="Burp Suite logo" />
-          Burp Suite
-        </span>
-        <span class="chip">
-          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
-          Nikto / DIRB
-        </span>
-        <span class="chip">
-          <i class="fa-solid fa-flag-checkered" aria-hidden="true"></i>
-          Findings & Remediation
-        </span>
+        <p>
+          <a class="btn btn-primary" href="assets/your-report.pdf" target="_blank">
+            <i class="fas fa-file-pdf"></i> View Report
+          </a>
+          <a class="btn btn-secondary" href="assets/your-report.pdf" download>
+            <i class="fas fa-download"></i> Download
+          </a>
+        </p>
       </div>
-
-      <ul class="bullets">
-        <li>Goal: Perform vulnerability scans on target systems and web apps.</li>
-        <li>Actions: Enumerated services & endpoints; tested for common vulns; verified findings.</li>
-        <li>Impact: Identified misconfigurations and proposed prioritized remediation steps.</li>
-      </ul>
-
-      <img class="project-thumb" src="assets/your-thumb.png" alt="Project thumbnail" loading="lazy">
-
-      <p>
-        <a class="btn btn-primary" href="assets/your-report.pdf" target="_blank" rel="noopener noreferrer">
-          <i class="fas fa-file-pdf"></i> View Report
-        </a>
-        <a class="btn btn-secondary" href="assets/your-report.pdf" download>
-          <i class="fas fa-download"></i> Download
-        </a>
-      </p>
-    </div>
+    </a>
   </section>
 
   <footer>
