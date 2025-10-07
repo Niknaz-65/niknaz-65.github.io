@@ -23,9 +23,22 @@
     h2{color:var(--navy2);margin:0 0 12px}
     .card{background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:22px;margin:20px 0}
     ul.clean{margin:0;padding-left:20px}
-    ul.clean li{margin:8px 0}
+    ul.clean li{margin:18px 0;list-style:none}
     footer{background:var(--navy);color:#fff;text-align:center;padding:20px;margin-top:40px}
     a:focus,button:focus{outline:3px solid #ffbf47;outline-offset:2px}
+
+    /* Logo styling */
+    .cert-logo {
+      height: 32px;
+      vertical-align: middle;
+      margin-right: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 4px;
+    }
+    .cert-logo:hover {
+      transform: scale(1.12);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
   </style>
 </head>
 <body>
@@ -42,15 +55,27 @@
   </nav>
 
   <section>
-  <h2>Completed Certifications</h2>
-  <p>Here are my verified certifications that highlight my technical knowledge and professional development in cybersecurity and data science.</p>
-  <div class="card">
-   <ul class="clean">
-  <li><strong>Python Basics for Data Science</strong><br><em>IBM</em>, 2024</li>
-<li><strong>R Programming Fundamentals</strong><br><em>Stanford Online</em>, 2024</li>
-</ul>
-  </div>
-</section>
+    <h2>Completed Certifications</h2>
+    <p>Here are my verified certifications that highlight my technical knowledge and professional development in cybersecurity and data science.</p>
+    <div class="card">
+      <ul class="clean">
+        <li>
+          <a href="https://courses.edx.org/certificates/2f9347cd516d4c7296302b80452aea30" target="_blank" rel="noopener noreferrer">
+            <img class="cert-logo" src="assets/ibm-logo.png" alt="IBM Logo">
+          </a>
+          <strong>Python Basics for Data Science</strong><br>
+          <em>IBM</em>, 2024
+        </li>
+        <li>
+          <a href="https://courses.edx.org/certificates/42943ee922994bb0876b9de66dac1801" target="_blank" rel="noopener noreferrer">
+            <img class="cert-logo" src="assets/stanford-logo.png" alt="Stanford Online Logo">
+          </a>
+          <strong>R Programming Fundamentals</strong><br>
+          <em>Stanford Online</em>, 2024
+        </li>
+      </ul>
+    </div>
+  </section>
 
   <footer>
     © 2025 Niknaz Sadehvandi · Cybersecurity Portfolio
