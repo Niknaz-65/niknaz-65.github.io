@@ -6,10 +6,7 @@
   <title>Contact | Niknaz Sadehvandi</title>
 
   <style>
-    :root {
-      --navy:#0a1f44; --navy2:#13294b; --ink:#222; --bg:#f7f9fc;
-      --shadow:0 4px 10px rgba(0,0,0,.08);
-    }
+    :root { --navy:#0a1f44; --navy2:#13294b; --ink:#222; --bg:#f7f9fc; --shadow:0 4px 10px rgba(0,0,0,.08); }
     body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
     header{background:var(--navy);color:#fff;text-align:center;padding:40px 16px}
     header h1{margin:0 0 6px;font-size:2.2rem}
@@ -17,36 +14,23 @@
     nav{background:var(--navy2);padding:12px;text-align:center}
     nav a{color:#fff;margin:0 16px;text-decoration:none;font-weight:700}
     nav a.active,nav a:hover{text-decoration:underline;text-underline-offset:4px}
-
     main{max-width:900px;margin:0 auto;padding:42px 16px}
     h2{color:var(--navy2);margin:0 0 22px;font-size:1.9rem}
-
-    .card{
-      background:#fff; border-radius:14px; box-shadow:var(--shadow);
-      padding:28px; margin-bottom:28px;
-    }
-
-    /* Buttons */
+    .card{background:#fff;border-radius:14px;box-shadow:var(--shadow);padding:28px;margin-bottom:28px}
     .btn-row{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-bottom:4px}
-    .btn{
-      display:inline-flex;align-items:center;gap:10px;
-      padding:14px 22px;border-radius:8px;font-weight:600;
-      text-decoration:none;color:#fff;font-size:1rem;
-      transition:.25s ease;
-    }
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:8px;font-weight:600;text-decoration:none;color:#fff;font-size:1rem;transition:.25s}
     .btn i{font-size:1.2rem}
-    .btn-email{background:#d93025}    .btn-email:hover{background:#b0241c}
-    .btn-linkedin{background:#0a66c2} .btn-linkedin:hover{background:#004182}
-    .btn-github{background:#333}      .btn-github:hover{background:#000}
-    .btn-website{background:#555}     .btn-website:hover{background:#333}
-
-    /* Google Form embed */
-    .form-wrap{position:relative; overflow:hidden; border-radius:12px; box-shadow:var(--shadow);}
-    .form-wrap iframe{width:100%; height:900px; border:0}
-    @media (max-width:600px){ .form-wrap iframe{height:1100px} }
-
-    .note{color:#5b6474; font-size:.95rem; margin-top:10px; text-align:center}
-
+    .btn-email{background:#d93025}.btn-email:hover{background:#b0241c}
+    .btn-linkedin{background:#0a66c2}.btn-linkedin:hover{background:#004182}
+    .btn-github{background:#333}.btn-github:hover{background:#000}
+    .btn-website{background:#555}.btn-website:hover{background:#333}
+    form{display:flex;flex-direction:column;gap:16px;margin-top:10px}
+    label{font-weight:bold;color:var(--navy2);text-align:left}
+    input,textarea{padding:12px;border:1px solid #ccc;border-radius:6px;font-size:1rem;width:100%;resize:vertical}
+    textarea{min-height:120px}
+    button{align-self:flex-start;background:var(--navy2);color:#fff;padding:12px 20px;border:none;border-radius:6px;cursor:pointer;font-weight:600;transition:.25s}
+    button:hover{background:var(--navy)}
+    .note{color:#5b6474;font-size:.95rem;margin-top:10px;text-align:center}
     footer{background:var(--navy);color:#fff;text-align:center;padding:22px;margin-top:44px}
   </style>
 
@@ -78,23 +62,66 @@
       </div>
     </div>
 
-    <!-- Embedded Google Form -->
+    <!-- Formspree Contact Form -->
     <div class="card" aria-label="Contact form">
       <h3 style="margin-top:0;color:var(--navy2)">Send me a message</h3>
-      <div class="form-wrap">
-        <!-- 🔁 Replace the src URL below with your Google Form embed URL -->
-        <iframe
-          src="https://docs.google.com/forms/d/e/FORM_ID_HERE/viewform?embedded=true"
-          title="Contact form"
-          loading="lazy"
-        ></iframe>
-      </div>
-      <p class="note">Prefer email? Reach me at <a href="mailto:sadvandniknaz0@gmail.com">sadvandniknaz0@gmail.com</a>.</p>
+
+      <form id="contact-form"
+            action="https://formspree.io/f/mvgwbrqb"
+            method="POST" accept-charset="UTF-8">
+        <!-- Honeypot -->
+        <input type="text" name="_gotcha" autocomplete="off" tabindex="-1"
+               style="position:absolute;left:-9999px;height:0;width:0;padding:0;border:0" aria-hidden="true">
+
+        <input type="hidden" name="_subject" value="Portfolio contact from niknaz-65.github.io">
+
+        <label for="name">Name</label>
+        <input id="name" name="name" required autocomplete="name">
+
+        <label for="email">Email</label>
+        <input id="email" type="email" name="email" required autocomplete="email">
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit"><i class="fas fa-paper-plane"></i> Send</button>
+        <p id="form-status" role="status" aria-live="polite" style="margin:10px 0 0;color:#2d6a4f;"></p>
+      </form>
     </div>
+
+    <p class="note">Prefer email? Reach me at <a href="mailto:sadvandniknaz0@gmail.com">sadvandniknaz0@gmail.com</a>.</p>
   </main>
 
   <footer>
     © 2025 Niknaz Sadehvandi · Cybersecurity Portfolio
   </footer>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const statusEl = document.getElementById('form-status');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      statusEl.textContent = 'Sending…';
+      try {
+        const resp = await fetch(form.action, {
+          method: form.method,
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+        if (resp.ok) {
+          statusEl.textContent = "Thanks! I’ll get back to you shortly.";
+          form.reset();
+        } else {
+          const data = await resp.json();
+          statusEl.textContent = (data.errors && data.errors.length)
+            ? data.errors.map(e => e.message).join(', ')
+            : 'Oops—there was a problem submitting the form.';
+        }
+      } catch {
+        statusEl.textContent = 'Network error—please try again.';
+      }
+    });
+  </script>
 </body>
 </html>
