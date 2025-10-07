@@ -1,65 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Niknaz Sadehvandi</title>
- <style>
-  body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f7f9fc; color: #333; }
-  header { background-color: #0a1f44; color: #fff; padding: 20px; text-align: center; }
-  nav { background: #13294b; padding: 10px; text-align: center; }
-  nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
-  nav a:hover { text-decoration: underline; }
-  section { padding: 40px; max-width: 900px; margin: auto; }
-  h2 { color: #13294b; }
-  .card { background: #fff; padding: 20px; margin: 20px 0; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-  footer { text-align: center; padding: 20px; background: #0a1f44; color: #fff; margin-top: 40px; }
 
-  /* ✅ Contact buttons in a 2x2 grid */
-  .contact-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-    padding: 20px;
-  }
+  <meta name="description" content="Contact Niknaz Sadehvandi for cybersecurity opportunities, collaborations, and inquiries." />
+  <meta property="og:title" content="Contact | Niknaz Sadehvandi" />
+  <meta property="og:description" content="Ways to connect with Niknaz Sadehvandi: Email, LinkedIn, GitHub, Website." />
+  <meta property="og:image" content="assets/site-banner.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://niknaz-65.github.io/contact.html" />
 
-  .contact-row a {
-    background: #13294b;       /* navy buttons */
-    color: #fff;
-    padding: 14px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-  }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
-  .contact-row a:hover {
-    background: #0a1f44;       /* darker navy on hover */
-    transform: translateY(-3px); /* subtle lift effect */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* shadow glow */
-  }
+  <style>
+    :root { --navy:#0a1f44; --navy2:#13294b; --ink:#333; --shadow:0 2px 5px rgba(0,0,0,.1); }
 
-  .contact-row i {
-    margin-right: 8px;
-    font-size: 1.3rem;
-    transition: transform 0.3s ease;
-  }
+    body{font-family:Arial,sans-serif;margin:0;background:#f7f9fc;color:var(--ink)}
+    header{background:var(--navy);color:#fff;padding:36px 16px;text-align:center}
+    nav{background:var(--navy2);padding:12px;text-align:center}
+    nav a{color:#fff;margin:0 15px;text-decoration:none;font-weight:bold}
+    nav a.active,nav a:hover{text-decoration:underline;text-underline-offset:4px}
 
-  .contact-row a:hover i {
-    transform: scale(1.15); /* icon grows slightly */
-  }
+    section{max-width:900px;margin:0 auto;padding:40px 16px}
+    h2{color:var(--navy2);margin:0 0 20px}
 
-  /* 🎨 Brand colors for icons */
-  .fa-envelope { color: #d93025; }   /* Gmail red */
-  .fa-linkedin { color: #0077b5; }   /* LinkedIn blue */
-  .fa-github   { color: #000; }      /* GitHub black */
-  .fa-globe    { color: #4CAF50; }   /* Website green */
-</style>
+    .card{background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:24px;margin:20px 0;text-align:center}
+    .contact-links{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}
+    .contact-links a{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;
+                     border-radius:8px;text-decoration:none;font-weight:500;transition:.25s;cursor:pointer}
+    .contact-links a i{font-size:1.2rem}
+    .contact-links a:hover{transform:translateY(-2px);box-shadow:0 6px 12px rgba(0,0,0,.15)}
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    .btn-email{background:#13294b;color:#fff}
+    .btn-email:hover{background:#0a1f44}
+    .btn-linkedin{background:#0077b5;color:#fff}
+    .btn-linkedin:hover{background:#005582}
+    .btn-github{background:#24292f;color:#fff}
+    .btn-github:hover{background:#000}
+    .btn-site{background:#555;color:#fff}
+    .btn-site:hover{background:#333}
+
+    footer{background:var(--navy);color:#fff;text-align:center;padding:20px;margin-top:40px}
+  </style>
 </head>
 <body>
   <header>
@@ -71,29 +55,23 @@
     <a href="index.html">Home</a>
     <a href="projects.html">Projects</a>
     <a href="certifications.html">Certifications</a>
-    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="active">Contact</a>
   </nav>
 
   <section>
     <h2>Get in Touch</h2>
-    <div class="card contact-row">
-      <a href="mailto:sadvandniknaz0@gmail.com" target="_blank">
-        <i class="fas fa-envelope"></i> Email
-      </a>
-      <a href="https://www.linkedin.com/in/niknaz-sadehvandi-a34179325" target="_blank">
-        <i class="fab fa-linkedin"></i> LinkedIn
-      </a>
-      <a href="https://github.com/niknaz-65" target="_blank">
-        <i class="fab fa-github"></i> GitHub
-      </a>
-      <a href="https://niknaz-65.github.io/" target="_blank">
-        <i class="fas fa-globe"></i> Website
-      </a>
+    <div class="card">
+      <div class="contact-links">
+        <a href="mailto:sadvandniknaz0@gmail.com" class="btn-email"><i class="fas fa-envelope"></i>Email</a>
+        <a href="https://www.linkedin.com/in/niknaz-sadehvandi-a34179325" target="_blank" class="btn-linkedin"><i class="fab fa-linkedin"></i>LinkedIn</a>
+        <a href="https://github.com/niknaz-65" target="_blank" class="btn-github"><i class="fab fa-github"></i>GitHub</a>
+        <a href="https://niknaz-65.github.io/" target="_blank" class="btn-site"><i class="fas fa-globe"></i>Website</a>
+      </div>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Niknaz Sadehvandi | Cybersecurity Portfolio</p>
+    © 2025 Niknaz Sadehvandi · Cybersecurity Portfolio
   </footer>
 </body>
 </html>
