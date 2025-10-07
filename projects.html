@@ -1,118 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Niknaz Sadehvandi</title>
+
+  <!-- Social preview (uses your uploaded banner) -->
+  <meta name="description" content="Hands-on cybersecurity projects by Niknaz Sadehvandi: DFIR, SOX ITGC, Splunk, risk management." />
+  <meta property="og:title" content="Projects | Niknaz Sadehvandi" />
+  <meta property="og:description" content="Hands-on cybersecurity projects by Niknaz Sadehvandi." />
+  <meta property="og:image" content="assets/site-banner.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://niknaz-65.github.io/projects.html" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f7f9fc; color: #333; }
-    header { background-color: #0a1f44; color: #fff; padding: 20px; text-align: center; }
-    nav { background: #13294b; padding: 10px; text-align: center; }
-    nav a { color: #fff; margin: 0 15px; text-decoration: none; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-    section { padding: 40px; max-width: 900px; margin: auto; }
-    h2 { color: #13294b; }
-    .card { background: #fff; padding: 20px; margin: 20px 0; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    footer { text-align: center; padding: 20px; background: #0a1f44; color: #fff; margin-top: 40px; }
+    :root { --navy:#0a1f44; --navy2:#13294b; --ink:#333; --shadow:0 2px 5px rgba(0,0,0,.1); }
+    body{font-family:Arial,sans-serif;margin:0;background:#f7f9fc;color:var(--ink)}
+    header{background:var(--navy);color:#fff;padding:36px 16px;text-align:center}
+    nav{background:var(--navy2);padding:12px;text-align:center}
+    nav a{color:#fff;margin:0 15px;text-decoration:none;font-weight:bold}
+    nav a.active,nav a:hover{text-decoration:underline;text-underline-offset:4px}
+    section{max-width:900px;margin:0 auto;padding:40px 16px}
+    h2{color:var(--navy2);margin:0 0 12px}
+    .card{background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:22px;margin:20px 0}
+    .bullets{padding-left:18px;margin-top:10px}
+    .bullets li{margin:6px 0}
+    img.project-thumb{max-width:100%;border-radius:12px;margin:14px 0}
+    footer{background:var(--navy);color:#fff;text-align:center;padding:20px;margin-top:40px}
 
-    /* ====== Global Button Base ====== */
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px 18px;
-      border-radius: 6px;
-      font-weight: 500;
-      text-decoration: none;
-      transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease, color 0.3s ease;
-      cursor: pointer;
-    }
-
-    /* ====== Primary Button (Navy Background) ====== */
-    .btn-primary {
-      background: #13294b;
-      color: #fff;
-    }
-
-    .btn-primary:hover {
-      background: #0a1f44;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    /* ====== Secondary Button (Outlined) ====== */
-    .btn-secondary {
-      background: transparent;
-      color: #13294b;
-      border: 2px solid #13294b;
-    }
-
-    .btn-secondary:hover {
-      background: #13294b;
-      color: #fff;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    /* ====== Icon Styling ====== */
-    .btn i {
-      font-size: 1.1rem;
-      transition: transform 0.3s ease;
-    }
-
-    .btn:hover i {
-      transform: scale(1.15);
-    }
-
-    /* 🎨 Brand Colors for Icons */
-    .fa-file-pdf { color: #d93025; }   /* PDF red */
-    .fa-download { color: #4CAF50; }   /* Green for download */
+    /* Buttons */
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:6px;
+         text-decoration:none;font-weight:500;transition:.25s;cursor:pointer}
+    .btn i{transition:transform .25s}
+    .btn:hover i{transform:scale(1.12)}
+    .btn-primary{background:var(--navy2);color:#fff}
+    .btn-primary:hover{background:var(--navy)}
+    .btn-secondary{border:2px solid var(--navy2);color:var(--navy2);background:transparent}
+    .btn-secondary:hover{background:var(--navy2);color:#fff}
+    .fa-file-pdf{color:#d93025}
+    a:focus,button:focus{outline:3px solid #ffbf47;outline-offset:2px}
+    @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
   </style>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header>
-    <h1>My Projects</h1>
-    <p>Hands-on cybersecurity and IT projects</p>
+    <h1>My Cybersecurity Projects</h1>
+    <p>Hands-on Labs · Case Studies · Investigations</p>
   </header>
 
   <nav>
     <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
+    <a href="projects.html" class="active">Projects</a>
     <a href="certifications.html">Certifications</a>
     <a href="contact.html">Contact</a>
   </nav>
 
   <section>
-    <h2>Digital Forensics & Incident Response Lab (UMGC)</h2>
+    <h2>Featured Projects</h2>
+
+    <!-- DFIR Project -->
     <div class="card">
+      <h3 style="margin:0 0 6px;">Digital Forensics & Incident Response Lab (UMGC)</h3>
       <p><strong>Jan 2025 – Mar 2025</strong></p>
-      <ul>
-        <li>Investigated intrusions using forensic tools (FTK Imager, Autopsy, Autoruns)</li>
-        <li>Identified persistence mechanisms, unauthorized accounts, and SSH exfiltration</li>
-        <li>Documented findings aligned with NIST standards and IT General Controls</li>
+      <ul class="bullets">
+        <li>Investigated intrusions using FTK Imager, Autopsy, and Autoruns.</li>
+        <li>Identified persistence mechanisms, unauthorized accounts, and SSH exfiltration.</li>
+        <li>Documented findings aligned to NIST and ITGC testing practices.</li>
       </ul>
 
-      <!-- Thumbnail -->
-      <img src="assets/forensics-thumb.png" alt="Forensics Lab Thumbnail"
-           style="max-width:100%; border-radius:12px; margin:15px 0;">
+      <img class="project-thumb"
+           src="assets/forensics-thumb.png"
+           alt="DFIR project title slide"
+           loading="lazy" width="1200" height="675">
 
-      <!-- Buttons -->
       <p>
-        <a href="assets/forensics-report.pdf" target="_blank" class="btn btn-primary">
+        <a class="btn btn-primary" href="assets/forensics-report.pdf" target="_blank" rel="noopener noreferrer">
           <i class="fas fa-file-pdf"></i> View Report (PDF)
         </a>
-        <a href="assets/forensics-report.pdf" download class="btn btn-secondary">
+        <a class="btn btn-secondary" href="assets/forensics-report.pdf" download>
           <i class="fas fa-download"></i> Download
         </a>
       </p>
     </div>
+
+    <!-- Template for your next project (copy & edit)
+    <div class="card">
+      <h3>Project Title</h3>
+      <p><strong>Role / Dates</strong></p>
+      <ul class="bullets">
+        <li>Goal:</li>
+        <li>Actions & tools:</li>
+        <li>Impact / results:</li>
+      </ul>
+      <img class="project-thumb" src="assets/your-thumb.png" alt="Project thumbnail" loading="lazy" width="1200" height="675">
+      <p>
+        <a class="btn btn-primary" href="assets/your-report.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> View Report</a>
+        <a class="btn btn-secondary" href="assets/your-report.pdf" download><i class="fas fa-download"></i> Download</a>
+      </p>
+    </div>
+    -->
   </section>
 
   <footer>
-    <p>© 2025 Niknaz Sadehvandi | Cybersecurity Portfolio</p>
+    © 2025 Niknaz Sadehvandi · Cybersecurity Portfolio
   </footer>
 </body>
 </html>
