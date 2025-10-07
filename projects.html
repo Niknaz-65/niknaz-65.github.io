@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Niknaz Sadehvandi</title>
 
-  <!-- Social preview (uses your uploaded banner) -->
+  <!-- Social preview -->
   <meta name="description" content="Hands-on cybersecurity projects by Niknaz Sadehvandi: DFIR, SOX ITGC, Splunk, risk management." />
   <meta property="og:title" content="Projects | Niknaz Sadehvandi" />
   <meta property="og:description" content="Hands-on cybersecurity projects by Niknaz Sadehvandi." />
@@ -13,6 +13,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://niknaz-65.github.io/projects.html" />
 
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <style>
@@ -40,6 +41,18 @@
     .btn-secondary{border:2px solid var(--navy2);color:var(--navy2);background:transparent}
     .btn-secondary:hover{background:var(--navy2);color:#fff}
     .fa-file-pdf{color:#d93025}
+
+    /* Icon hover effect */
+    .card h3 i {
+      color: var(--navy2);
+      margin-right: 8px;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+    .card h3 i:hover {
+      transform: scale(1.2);
+      color: var(--navy);
+    }
+
     a:focus,button:focus{outline:3px solid #ffbf47;outline-offset:2px}
     @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
   </style>
@@ -59,10 +72,14 @@
 
   <section>
     <h2>Featured Projects</h2>
+    <p>These hands-on labs and case studies demonstrate my practical experience in cybersecurity. Each project showcases tools, methodologies, and frameworks I’ve applied in areas such as digital forensics, incident response, vulnerability management, and compliance.</p>
 
     <!-- DFIR Project -->
     <div class="card">
-      <h3 style="margin:0 0 6px;">Digital Forensics & Incident Response Lab (UMGC)</h3>
+      <h3 style="margin:0 0 6px;">
+        <i class="fas fa-shield-alt"></i>
+        Digital Forensics & Incident Response Lab (UMGC)
+      </h3>
       <p><strong>Jan 2025 – Mar 2025</strong></p>
       <ul class="bullets">
         <li>Investigated intrusions using FTK Imager, Autopsy, and Autoruns.</li>
@@ -85,22 +102,24 @@
       </p>
     </div>
 
-    <!-- Template for your next project (copy & edit)
+    <!-- Template for future projects -->
     <div class="card">
-      <h3>Project Title</h3>
+      <h3>
+        <i class="fas fa-laptop-code"></i>
+        Vulnerability Assessment Lab (Example)
+      </h3>
       <p><strong>Role / Dates</strong></p>
       <ul class="bullets">
-        <li>Goal:</li>
-        <li>Actions & tools:</li>
-        <li>Impact / results:</li>
+        <li>Goal: Perform vulnerability scans on target systems.</li>
+        <li>Tools: Nmap, Nikto, Burp Suite.</li>
+        <li>Results: Identified misconfigurations and presented remediation steps.</li>
       </ul>
-      <img class="project-thumb" src="assets/your-thumb.png" alt="Project thumbnail" loading="lazy" width="1200" height="675">
+      <img class="project-thumb" src="assets/your-thumb.png" alt="Project thumbnail" loading="lazy">
       <p>
         <a class="btn btn-primary" href="assets/your-report.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> View Report</a>
         <a class="btn btn-secondary" href="assets/your-report.pdf" download><i class="fas fa-download"></i> Download</a>
       </p>
     </div>
-    -->
   </section>
 
   <footer>
