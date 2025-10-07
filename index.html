@@ -1,30 +1,130 @@
-/* ✅ Resume button styling */
-.resume-btn {
-  background: #13294b;
-  color: #fff;
-  padding: 14px 20px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Niknaz Sadehvandi | Cybersecurity Portfolio</title>
 
-.resume-btn:hover {
-  background: #0a1f44;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
+  <!-- ✅ Resume button styling -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f7f9fc;
+      color: #333;
+    }
 
-.resume-btn i {
-  color: #d93025; /* PDF red */
-  font-size: 1.2rem;
-  transition: transform 0.3s ease;
-}
+    header {
+      background-color: #0a1f44;
+      color: #fff;
+      padding: 40px;
+      text-align: center;
+    }
 
-.resume-btn:hover i {
-  transform: scale(1.15);
-}
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin: 5px 0 0;
+      font-size: 1.2rem;
+    }
+
+    nav {
+      background: #13294b;
+      padding: 12px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0a1f44;
+      color: #fff;
+      margin-top: 40px;
+    }
+
+    /* ✅ Resume button */
+    .resume-btn {
+      background: #13294b;
+      color: #fff;
+      padding: 14px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .resume-btn:hover {
+      background: #0a1f44;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .resume-btn i {
+      color: #d93025; /* PDF red */
+      font-size: 1.2rem;
+      transition: transform 0.3s ease;
+    }
+
+    .resume-btn:hover i {
+      transform: scale(1.15);
+    }
+  </style>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>Niknaz Sadehvandi</h1>
+    <p>Cybersecurity Portfolio</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="projects.html">Projects</a>
+    <a href="certifications.html">Certifications</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section>
+    <h2>Welcome</h2>
+    <p>Explore my cybersecurity projects, certifications, and professional experience.</p>
+
+    <!-- ✅ Resume button placed here -->
+    <p>
+      <a href="assets/Niknaz_Sadehvandi_Resume.pdf" class="resume-btn" download>
+        <i class="fas fa-file-pdf"></i> Download My Resume
+      </a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 Niknaz Sadehvandi | Cybersecurity Portfolio</p>
+  </footer>
+</body>
+</html>
