@@ -13,72 +13,50 @@
   section { padding: 40px; max-width: 900px; margin: auto; }
   h2 { color: #13294b; }
   .card { background: #fff; padding: 20px; margin: 20px 0; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-footer { 
-  text-align: center; 
-  padding: 20px; 
-  background: #0a1f44; 
-  color: #fff; 
-  margin-top: 40px; 
-}
+  footer { text-align: center; padding: 20px; background: #0a1f44; color: #fff; margin-top: 40px; }
 
-/* ✅ Professional styling for contact section */
-.card p {
-  font-size: 1.1rem;
-  margin: 12px 0;
-}
+  /* ✅ Contact buttons in a 2x2 grid */
+  .contact-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
 
-.card a {
-  color: #13294b;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
+  .contact-row a {
+    background: #13294b;       /* navy buttons */
+    color: #fff;
+    padding: 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  }
 
-.card a:hover {
-  color: #0a1f44;
-  text-decoration: underline;
-}
+  .contact-row a:hover {
+    background: #0a1f44;       /* darker navy on hover */
+    transform: translateY(-3px); /* subtle lift effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* shadow glow */
+  }
 
-.card i {
-  margin-right: 10px;
-  color: #0a1f44;
-}
+  .contact-row i {
+    margin-right: 8px;
+    font-size: 1.3rem;
+    transition: transform 0.3s ease;
+  }
 
-/* ✅ Button-style row for contact links */
-.contact-row {
-  display: flex;
-  justify-content: center;   /* center them neatly */
-  flex-wrap: wrap;           /* responsive for mobile */
-  gap: 20px;                 /* spacing between buttons */
-  padding: 20px;
-}
+  .contact-row a:hover i {
+    transform: scale(1.15); /* icon grows slightly */
+  }
 
-.contact-row a {
-  background: #13294b;       /* uniform navy background */
-  color: #fff;               /* white text */
-  padding: 12px 18px;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.contact-row a:hover {
-  background: #0a1f44;       /* darker navy on hover */
-  transform: translateY(-2px); /* subtle lift effect */
-}
-
-.contact-row i {
-  margin-right: 8px;
-  font-size: 1.2rem;
-}
-
-/* 🎨 Brand colors for icons only */
-.fa-envelope { color: #d93025; }   /* Gmail red */
-.fa-linkedin { color: #0077b5; }   /* LinkedIn blue */
-.fa-github   { color: #000; }      /* GitHub black */
-.fa-globe    { color: #4CAF50; }   /* Website green */
+  /* 🎨 Brand colors for icons */
+  .fa-envelope { color: #d93025; }   /* Gmail red */
+  .fa-linkedin { color: #0077b5; }   /* LinkedIn blue */
+  .fa-github   { color: #000; }      /* GitHub black */
+  .fa-globe    { color: #4CAF50; }   /* Website green */
 </style>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -96,24 +74,23 @@ footer {
     <a href="contact.html">Contact</a>
   </nav>
 
-<section>
-  <h2>Get in Touch</h2>
-<div class="card contact-row">
-  <a href="mailto:sadvandniknaz0@gmail.com" target="_blank">
-    <i class="fas fa-envelope"></i> Email
-  </a>
-  <a href="https://www.linkedin.com/in/niknaz-sadehvandi-a34179325" target="_blank">
-    <i class="fab fa-linkedin"></i> LinkedIn
-  </a>
-  <a href="https://github.com/niknaz-65" target="_blank">
-    <i class="fab fa-github"></i> GitHub
-  </a>
-  <a href="https://niknaz-65.github.io/" target="_blank">
-    <i class="fas fa-globe"></i> Website
-  </a>
-</div>
-</section>
-
+  <section>
+    <h2>Get in Touch</h2>
+    <div class="card contact-row">
+      <a href="mailto:sadvandniknaz0@gmail.com" target="_blank">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+      <a href="https://www.linkedin.com/in/niknaz-sadehvandi-a34179325" target="_blank">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/niknaz-65" target="_blank">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://niknaz-65.github.io/" target="_blank">
+        <i class="fas fa-globe"></i> Website
+      </a>
+    </div>
+  </section>
 
   <footer>
     <p>© 2025 Niknaz Sadehvandi | Cybersecurity Portfolio</p>
