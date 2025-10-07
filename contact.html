@@ -5,45 +5,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Niknaz Sadehvandi</title>
 
-  <meta name="description" content="Contact Niknaz Sadehvandi for cybersecurity opportunities, collaborations, and inquiries." />
-  <meta property="og:title" content="Contact | Niknaz Sadehvandi" />
-  <meta property="og:description" content="Ways to connect with Niknaz Sadehvandi: Email, LinkedIn, GitHub, Website." />
-  <meta property="og:image" content="assets/site-banner.png" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://niknaz-65.github.io/contact.html" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
   <style>
-    :root { --navy:#0a1f44; --navy2:#13294b; --ink:#333; --shadow:0 2px 5px rgba(0,0,0,.1); }
-
-    body{font-family:Arial,sans-serif;margin:0;background:#f7f9fc;color:var(--ink)}
-    header{background:var(--navy);color:#fff;padding:36px 16px;text-align:center}
+    :root {
+      --navy:#0a1f44; --navy2:#13294b; --ink:#222; --bg:#f7f9fc;
+      --shadow:0 4px 10px rgba(0,0,0,.08);
+    }
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
+    header{background:var(--navy);color:#fff;text-align:center;padding:40px 16px}
+    header h1{margin:0 0 6px;font-size:2.2rem}
+    header p{margin:0;opacity:.9}
     nav{background:var(--navy2);padding:12px;text-align:center}
-    nav a{color:#fff;margin:0 15px;text-decoration:none;font-weight:bold}
+    nav a{color:#fff;margin:0 16px;text-decoration:none;font-weight:700}
     nav a.active,nav a:hover{text-decoration:underline;text-underline-offset:4px}
 
-    section{max-width:900px;margin:0 auto;padding:40px 16px}
-    h2{color:var(--navy2);margin:0 0 20px}
+    main{max-width:900px;margin:0 auto;padding:42px 16px}
+    h2{color:var(--navy2);margin:0 0 22px;font-size:1.9rem}
 
-    .card{background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:24px;margin:20px 0;text-align:center}
-    .contact-links{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}
-    .contact-links a{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;
-                     border-radius:8px;text-decoration:none;font-weight:500;transition:.25s;cursor:pointer}
-    .contact-links a i{font-size:1.2rem}
-    .contact-links a:hover{transform:translateY(-2px);box-shadow:0 6px 12px rgba(0,0,0,.15)}
+    .card{
+      background:#fff; border-radius:14px; box-shadow:var(--shadow);
+      padding:28px; margin-bottom:28px;
+    }
 
-    .btn-email{background:#13294b;color:#fff}
-    .btn-email:hover{background:#0a1f44}
-    .btn-linkedin{background:#0077b5;color:#fff}
-    .btn-linkedin:hover{background:#005582}
-    .btn-github{background:#24292f;color:#fff}
-    .btn-github:hover{background:#000}
-    .btn-site{background:#555;color:#fff}
-    .btn-site:hover{background:#333}
+    /* Buttons */
+    .btn-row{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-bottom:4px}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:14px 22px;border-radius:8px;font-weight:600;
+      text-decoration:none;color:#fff;font-size:1rem;
+      transition:.25s ease;
+    }
+    .btn i{font-size:1.2rem}
+    .btn-email{background:#d93025}    .btn-email:hover{background:#b0241c}
+    .btn-linkedin{background:#0a66c2} .btn-linkedin:hover{background:#004182}
+    .btn-github{background:#333}      .btn-github:hover{background:#000}
+    .btn-website{background:#555}     .btn-website:hover{background:#333}
 
-    footer{background:var(--navy);color:#fff;text-align:center;padding:20px;margin-top:40px}
+    /* Google Form embed */
+    .form-wrap{position:relative; overflow:hidden; border-radius:12px; box-shadow:var(--shadow);}
+    .form-wrap iframe{width:100%; height:900px; border:0}
+    @media (max-width:600px){ .form-wrap iframe{height:1100px} }
+
+    .note{color:#5b6474; font-size:.95rem; margin-top:10px; text-align:center}
+
+    footer{background:var(--navy);color:#fff;text-align:center;padding:22px;margin-top:44px}
   </style>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header>
@@ -58,17 +65,33 @@
     <a href="contact.html" class="active">Contact</a>
   </nav>
 
-  <section>
+  <main>
     <h2>Get in Touch</h2>
-    <div class="card">
-      <div class="contact-links">
-        <a href="mailto:sadvandniknaz0@gmail.com" class="btn-email"><i class="fas fa-envelope"></i>Email</a>
-        <a href="https://www.linkedin.com/in/niknaz-sadehvandi-a34179325" target="_blank" class="btn-linkedin"><i class="fab fa-linkedin"></i>LinkedIn</a>
-        <a href="https://github.com/niknaz-65" target="_blank" class="btn-github"><i class="fab fa-github"></i>GitHub</a>
-        <a href="https://niknaz-65.github.io/" target="_blank" class="btn-site"><i class="fas fa-globe"></i>Website</a>
+
+    <!-- Social Buttons -->
+    <div class="card" aria-label="Contact links">
+      <div class="btn-row">
+        <a href="mailto:sadvandniknaz0@gmail.com" class="btn btn-email"><i class="fas fa-envelope"></i>Email</a>
+        <a href="https://www.linkedin.com/in/niknaz-sadehvandi-a34179325" target="_blank" class="btn btn-linkedin"><i class="fab fa-linkedin"></i>LinkedIn</a>
+        <a href="https://github.com/niknaz-65" target="_blank" class="btn btn-github"><i class="fab fa-github"></i>GitHub</a>
+        <a href="https://niknaz-65.github.io" target="_blank" class="btn btn-website"><i class="fas fa-globe"></i>Website</a>
       </div>
     </div>
-  </section>
+
+    <!-- Embedded Google Form -->
+    <div class="card" aria-label="Contact form">
+      <h3 style="margin-top:0;color:var(--navy2)">Send me a message</h3>
+      <div class="form-wrap">
+        <!-- 🔁 Replace the src URL below with your Google Form embed URL -->
+        <iframe
+          src="https://docs.google.com/forms/d/e/FORM_ID_HERE/viewform?embedded=true"
+          title="Contact form"
+          loading="lazy"
+        ></iframe>
+      </div>
+      <p class="note">Prefer email? Reach me at <a href="mailto:sadvandniknaz0@gmail.com">sadvandniknaz0@gmail.com</a>.</p>
+    </div>
+  </main>
 
   <footer>
     © 2025 Niknaz Sadehvandi · Cybersecurity Portfolio
