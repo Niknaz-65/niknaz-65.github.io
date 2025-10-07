@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <style>
-    :root { --navy:#0a1f44; --navy2:#13294b; --ink:#333; --shadow:0 2px 5px rgba(0,0,0,.1); }
+    :root { --navy:#0a1f44; --navy2:#13294b; --ink:#333; --shadow:0 2px 5px rgba(0,0,0,.1); --chip:#eef2f9; }
     body{font-family:Arial,sans-serif;margin:0;background:#f7f9fc;color:var(--ink)}
     header{background:var(--navy);color:#fff;padding:36px 16px;text-align:center}
     nav{background:var(--navy2);padding:12px;text-align:center}
@@ -42,7 +42,7 @@
     .btn-secondary:hover{background:var(--navy2);color:#fff}
     .fa-file-pdf{color:#d93025}
 
-    /* Icon hover effect */
+    /* Icon hover effect in headings */
     .card h3 i {
       color: var(--navy2);
       margin-right: 8px;
@@ -51,6 +51,38 @@
     .card h3 i:hover {
       transform: scale(1.2);
       color: var(--navy);
+    }
+
+    /* Tool chips */
+    .tools {
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin:12px 0 6px;
+    }
+    .chip {
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:var(--chip);
+      border:1px solid #dbe3f2;
+      padding:8px 10px;
+      border-radius:999px;
+      font-size:.92rem;
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+    .chip:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 14px rgba(0,0,0,.10);
+    }
+    .chip img {
+      height:18px;
+      width:auto;
+      border-radius:3px;
+      display:block;
+    }
+    .chip i {
+      color:var(--navy2);
     }
 
     a:focus,button:focus{outline:3px solid #ffbf47;outline-offset:2px}
@@ -81,6 +113,31 @@
         Digital Forensics & Incident Response Lab (UMGC)
       </h3>
       <p><strong>Jan 2025 – Mar 2025</strong></p>
+
+      <!-- Tools Used -->
+      <div class="tools" aria-label="Tools used">
+        <span class="chip">
+          <img src="assets/ftk.png" alt="FTK Imager logo" />
+          FTK Imager
+        </span>
+        <span class="chip">
+          <img src="assets/autopsy.png" alt="Autopsy logo" />
+          Autopsy
+        </span>
+        <span class="chip">
+          <img src="assets/autoruns.png" alt="Autoruns logo" />
+          Autoruns
+        </span>
+        <span class="chip">
+          <i class="fa-solid fa-network-wired" aria-hidden="true"></i>
+          SSH
+        </span>
+        <span class="chip">
+          <i class="fa-solid fa-user-shield" aria-hidden="true"></i>
+          Accounts & Persistence
+        </span>
+      </div>
+
       <ul class="bullets">
         <li>Investigated intrusions using FTK Imager, Autopsy, and Autoruns.</li>
         <li>Identified persistence mechanisms, unauthorized accounts, and SSH exfiltration.</li>
@@ -102,22 +159,49 @@
       </p>
     </div>
 
-    <!-- Template for future projects -->
+    <!-- Vulnerability Assessment (example template you can fill later) -->
     <div class="card">
       <h3>
         <i class="fas fa-laptop-code"></i>
-        Vulnerability Assessment Lab (Example)
+        Vulnerability Assessment Lab
       </h3>
       <p><strong>Role / Dates</strong></p>
+
+      <!-- Tools Used -->
+      <div class="tools" aria-label="Tools used">
+        <span class="chip">
+          <img src="assets/nmap.png" alt="Nmap logo" />
+          Nmap
+        </span>
+        <span class="chip">
+          <img src="assets/burpsuite.png" alt="Burp Suite logo" />
+          Burp Suite
+        </span>
+        <span class="chip">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          Nikto / DIRB
+        </span>
+        <span class="chip">
+          <i class="fa-solid fa-flag-checkered" aria-hidden="true"></i>
+          Findings & Remediation
+        </span>
+      </div>
+
       <ul class="bullets">
-        <li>Goal: Perform vulnerability scans on target systems.</li>
-        <li>Tools: Nmap, Nikto, Burp Suite.</li>
-        <li>Results: Identified misconfigurations and presented remediation steps.</li>
+        <li>Goal: Perform vulnerability scans on target systems and web apps.</li>
+        <li>Actions: Enumerated services & endpoints; tested for common vulns; verified findings.</li>
+        <li>Impact: Identified misconfigurations and proposed prioritized remediation steps.</li>
       </ul>
+
       <img class="project-thumb" src="assets/your-thumb.png" alt="Project thumbnail" loading="lazy">
+
       <p>
-        <a class="btn btn-primary" href="assets/your-report.pdf" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i> View Report</a>
-        <a class="btn btn-secondary" href="assets/your-report.pdf" download><i class="fas fa-download"></i> Download</a>
+        <a class="btn btn-primary" href="assets/your-report.pdf" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-file-pdf"></i> View Report
+        </a>
+        <a class="btn btn-secondary" href="assets/your-report.pdf" download>
+          <i class="fas fa-download"></i> Download
+        </a>
       </p>
     </div>
   </section>
