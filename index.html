@@ -21,6 +21,7 @@
       --shadow: 0 10px 30px rgba(0,0,0,.08);
     }
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--bg); color:#222; }
     a { color: var(--navy-2); text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -47,7 +48,7 @@
     .btn.outline { background:#fff; color: var(--navy-2); border:2px solid var(--navy-2); }
     .btn.pdf { background: var(--accent); }
 
-    /* Skills */
+    /* Sections / Cards */
     .section { max-width:1100px; margin: 26px auto; padding: 0 20px; }
     .card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 22px; }
     .section h2 { margin-top: 0; color: var(--navy-2); }
@@ -74,20 +75,20 @@
         <div>Niknaz Sadehvandi</div>
       </div>
       <nav>
-  <ul>
-    <li><a class="active" href="index.html">Home</a></li>
-    <li><a href="projects.html">Projects</a></li>
-    <li><a href="#certifications">Certifications</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
   <!-- Hero -->
   <section class="hero">
-   <img class="headshot" src="profile.jpg" alt="Niknaz Sadehvandi" />
+    <img class="headshot" src="profile.jpg" alt="Niknaz Sadehvandi" />
     <div>
       <h1>Cybersecurity Analyst</h1>
       <p class="tagline">DFIR • SOC Monitoring • Vulnerability Management • Compliance (NIST, SOX ITGC)</p>
@@ -142,7 +143,7 @@
   </section>
 
   <!-- Certifications CTA -->
-  <section class="section">
+  <section class="section" id="certifications">
     <div class="card">
       <h2>Certifications</h2>
       <p>IBM: Python Basics (2024) • Stanford Online: R Programming Fundamentals (2024) • <em>Azure Fundamentals (in progress)</em></p>
@@ -151,73 +152,73 @@
   </section>
 
   <!-- Experience -->
-<section class="section" id="experience">
-  <div class="card">
-    <h2>Experience</h2>
+  <section class="section" id="experience">
+    <div class="card">
+      <h2>Experience</h2>
 
-    <h3 style="margin:8px 0 6px;">Junior Cybersecurity Analyst — Sunset Auto Sales, Charlotte, NC</h3>
-    <p style="margin:0 0 12px; color:#5b6876;"><em>Mar 2020 – Present</em></p>
-    <ul style="margin:0; padding-left:18px; color:#5b6876; line-height:1.6;">
-      <li>Executed IT General Controls testing with strong SOX alignment and audit readiness.</li>
-      <li>Drove process improvements and corrective actions with high on-time resolution.</li>
-      <li>Streamlined documentation of testing procedures; reduced errors and improved efficiency.</li>
-      <li>Led vulnerability triage and incident response; shortened phishing triage time and lowered false positives.</li>
-      <li>Enhanced Splunk detections by integrating threat-intel feeds.</li>
-    </ul>
-  </div>
-</section>
+      <h3 style="margin:8px 0 6px;">Junior Cybersecurity Analyst — Sunset Auto Sales, Charlotte, NC</h3>
+      <p style="margin:0 0 12px; color:#5b6876;"><em>Mar 2020 – Present</em></p>
+      <ul style="margin:0; padding-left:18px; color:#5b6876; line-height:1.6;">
+        <li>Executed IT General Controls testing with strong SOX alignment and audit readiness.</li>
+        <li>Drove process improvements and corrective actions with high on-time resolution.</li>
+        <li>Streamlined documentation of testing procedures; reduced errors and improved efficiency.</li>
+        <li>Led vulnerability triage and incident response; shortened phishing triage time and lowered false positives.</li>
+        <li>Enhanced Splunk detections by integrating threat-intel feeds.</li>
+      </ul>
+    </div>
+  </section>
 
   <!-- Detailed Skills -->
-<section class="section" id="skills-detailed">
-  <div class="card" style="display:grid; gap:16px;">
-    <h2>Skills</h2>
+  <section class="section" id="skills-detailed">
+    <div class="card" style="display:grid; gap:16px;">
+      <h2>Skills</h2>
 
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px;">
-      <div class="card" style="padding:16px;">
-        <h3 style="margin-top:0;">Security & Compliance</h3>
-        <ul style="margin:0; padding-left:18px; color:#5b6876; line-height:1.6;">
-          <li>IT General Controls, SOX, audits, corrective actions</li>
-          <li>Incident response, threat hunting, digital forensics</li>
-          <li>Risk management and documentation</li>
-        </ul>
-      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px;">
+        <div class="card" style="padding:16px;">
+          <h3 style="margin-top:0;">Security & Compliance</h3>
+          <ul style="margin:0; padding-left:18px; color:#5b6876; line-height:1.6;">
+            <li>IT General Controls, SOX, audits, corrective actions</li>
+            <li>Incident response, threat hunting, digital forensics</li>
+            <li>Risk management and documentation</li>
+          </ul>
+        </div>
 
-      <div class="card" style="padding:16px;">
-        <h3 style="margin-top:0;">Tools</h3>
-        <ul style="margin:0; padding-left:18px; color:#5b6876; line-height:1.6;">
-          <li>Tenable, Nessus, Splunk, Wireshark</li>
-          <li>FTK Imager, Autopsy, Autoruns, Nmap, VirusTotal</li>
-        </ul>
-      </div>
+        <div class="card" style="padding:16px;">
+          <h3 style="margin-top:0;">Tools</h3>
+          <ul style="margin:0; padding-left:18px; color:#5b6876; line-height:1.6;">
+            <li>Tenable, Nessus, Splunk, Wireshark</li>
+            <li>FTK Imager, Autopsy, Autoruns, Nmap, VirusTotal</li>
+          </ul>
+        </div>
 
-      <div class="card" style="padding:16px;">
-        <h3 style="margin-top:0;">Platforms</h3>
-        <ul style="margin:0; padding-left:18px; color:#5b6876; line-height:1.6;">
-          <li>Windows, Linux, Mac, Active Directory, Office 365</li>
-          <li>AWS; basic Azure</li>
-        </ul>
-      </div>
+        <div class="card" style="padding:16px;">
+          <h3 style="margin-top:0;">Platforms</h3>
+          <ul style="margin:0; padding-left:18px; color:#5b6876; line-height:1.6;">
+            <li>Windows, Linux, Mac, Active Directory, Office 365</li>
+            <li>AWS; basic Azure</li>
+          </ul>
+        </div>
 
-      <div class="card" style="padding:16px;">
-        <h3 style="margin-top:0;">Programming</h3>
-        <ul style="margin:0; padding-left:18px; color:#5b6876; line-height:1.6;">
-          <li>Python, PowerShell, Bash, Java, R</li>
-        </ul>
+        <div class="card" style="padding:16px;">
+          <h3 style="margin-top:0;">Programming</h3>
+          <ul style="margin:0; padding-left:18px; color:#5b6876; line-height:1.6;">
+            <li>Python, PowerShell, Bash, Java, R</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Education -->
-<section class="section" id="education">
-  <div class="card">
-    <h2>Education</h2>
-    <ul style="margin:0; padding-left:18px; color:#5b6876; line-height:1.6;">
-      <li><strong>M.S. Cybersecurity Technology</strong>, University of Maryland Global Campus — GPA 4.0, President’s List</li>
-      <li><strong>B.S. Information Technology</strong>, University of Phoenix — Magna Cum Laude</li>
-    </ul>
-  </div>
-</section>
+  <section class="section" id="education">
+    <div class="card">
+      <h2>Education</h2>
+      <ul style="margin:0; padding-left:18px; color:#5b6876; line-height:1.6;">
+        <li><strong>M.S. Cybersecurity Technology</strong>, University of Maryland Global Campus — GPA 4.0, President’s List</li>
+        <li><strong>B.S. Information Technology</strong>, University of Phoenix — Magna Cum Laude</li>
+      </ul>
+    </div>
+  </section>
 
   <footer>
     <div class="foot">
