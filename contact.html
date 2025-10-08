@@ -4,123 +4,101 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Niknaz Sadehvandi</title>
-
+  <meta name="description" content="Contact Niknaz Sadehvandi for cybersecurity roles and collaborations." />
+  <link rel="icon" href="assets/favicon.png" />
   <style>
-    :root { --navy:#0a1f44; --navy2:#13294b; --ink:#222; --bg:#f7f9fc; --shadow:0 4px 10px rgba(0,0,0,.08); }
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
-    header{background:var(--navy);color:#fff;text-align:center;padding:40px 16px}
-    header h1{margin:0 0 6px;font-size:2.2rem}
-    header p{margin:0;opacity:.9}
-    nav{background:var(--navy2);padding:12px;text-align:center}
-    nav a{color:#fff;margin:0 16px;text-decoration:none;font-weight:700}
-    nav a.active,nav a:hover{text-decoration:underline;text-underline-offset:4px}
-    main{max-width:900px;margin:0 auto;padding:42px 16px}
-    h2{color:var(--navy2);margin:0 0 22px;font-size:1.9rem}
-    .card{background:#fff;border-radius:14px;box-shadow:var(--shadow);padding:28px;margin-bottom:28px}
-    .btn-row{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-bottom:4px}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:8px;font-weight:600;text-decoration:none;color:#fff;font-size:1rem;transition:.25s}
-    .btn i{font-size:1.2rem}
-    .btn-email{background:#d93025}.btn-email:hover{background:#b0241c}
-    .btn-linkedin{background:#0a66c2}.btn-linkedin:hover{background:#004182}
-    .btn-github{background:#333}.btn-github:hover{background:#000}
-    .btn-website{background:#555}.btn-website:hover{background:#333}
-    form{display:flex;flex-direction:column;gap:16px;margin-top:10px}
-    label{font-weight:bold;color:var(--navy2);text-align:left}
-    input,textarea{padding:12px;border:1px solid #ccc;border-radius:6px;font-size:1rem;width:100%;resize:vertical}
-    textarea{min-height:120px}
-    button{align-self:flex-start;background:var(--navy2);color:#fff;padding:12px 20px;border:none;border-radius:6px;cursor:pointer;font-weight:600;transition:.25s}
-    button:hover{background:var(--navy)}
-    .note{color:#5b6474;font-size:.95rem;margin-top:10px;text-align:center}
-    footer{background:var(--navy);color:#fff;text-align:center;padding:22px;margin-top:44px}
+    :root{--navy:#0a1f44;--navy2:#13294b;--bg:#f7f9fc;--card:#fff;--muted:#5b6876;--radius:16px;--shadow:0 10px 30px rgba(0,0,0,.08)}
+    *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#222}
+    header{background:var(--navy);color:#fff}.nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}.brand .lock{width:26px;height:26px;border:2px solid #fff;border-radius:6px;position:relative}
+    .brand .lock:before{content:"";position:absolute;top:-12px;left:6px;right:6px;height:12px;border:2px solid #fff;border-bottom:none;border-radius:10px 10px 0 0}
+    nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0}nav a{color:#e8eef8;text-decoration:none;font-weight:600}nav a.active{color:#fff;border-bottom:2px solid #fff;padding-bottom:2px}
+    .wrap{max-width:900px;margin:24px auto;padding:0 20px}
+    h1{color:var(--navy2);margin:6px 0 12px}
+    .btnrow{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0}
+    .btn{display:inline-flex;align-items:center;gap:8px;background:var(--navy2);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+    .btn.alt{background:#474a51}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;margin-top:16px}
+    label{display:block;font-weight:600;margin:10px 0 6px;color:#30415d}
+    input,textarea{width:100%;padding:12px 14px;border-radius:10px;border:1px solid #d7dde8;font-size:15px}
+    textarea{min-height:140px;resize:vertical}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .submit{margin-top:12px;display:inline-flex;align-items:center;gap:8px;background:var(--navy2);color:#fff;padding:12px 16px;border-radius:10px;border:none;font-weight:700;cursor:pointer}
+    .note{color:var(--muted);font-size:14px;margin-top:8px}
+    .alert{display:none;margin-top:12px;padding:12px 14px;border-radius:10px;background:#e9f9ef;color:#0c6b2b}
   </style>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header>
-    <h1>Contact Me</h1>
-    <p>Let’s connect!</p>
+    <div class="nav">
+      <div class="brand"><div class="lock"></div><div>Niknaz Sadehvandi</div></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="certifications.html">Certifications</a>
-    <a href="contact.html" class="active">Contact</a>
-  </nav>
-
-  <main>
-    <h2>Get in Touch</h2>
-
-    <!-- Social Buttons -->
-    <div class="card" aria-label="Contact links">
-      <div class="btn-row">
-        <a href="mailto:sadvandniknaz0@gmail.com" class="btn btn-email"><i class="fas fa-envelope"></i>Email</a>
-        <a href="https://www.linkedin.com/in/niknaz-sadehvandi-a34179325" target="_blank" class="btn btn-linkedin"><i class="fab fa-linkedin"></i>LinkedIn</a>
-        <a href="https://github.com/niknaz-65" target="_blank" class="btn btn-github"><i class="fab fa-github"></i>GitHub</a>
-        <a href="https://niknaz-65.github.io" target="_blank" class="btn btn-website"><i class="fas fa-globe"></i>Website</a>
-      </div>
+  <main class="wrap">
+    <h1>Get in Touch</h1>
+    <div class="btnrow">
+      <a class="btn" href="mailto:sadvandniknaz0@gmail.com">✉️ Email</a>
+      <a class="btn" href="https://www.linkedin.com/in/niknaz-sadehvandi-a34179325" target="_blank" rel="noopener">in LinkedIn</a>
+      <a class="btn" href="https://github.com/niknaz-65" target="_blank" rel="noopener">🐙 GitHub</a>
+      <a class="btn alt" href="/">🌐 Website</a>
     </div>
 
-    <!-- Formspree Contact Form -->
-    <div class="card" aria-label="Contact form">
-      <h3 style="margin-top:0;color:var(--navy2)">Send me a message</h3>
-
-      <form id="contact-form"
-            action="https://formspree.io/f/mvgwbrqb"
-            method="POST" accept-charset="UTF-8">
-        <!-- Honeypot -->
-        <input type="text" name="_gotcha" autocomplete="off" tabindex="-1"
-               style="position:absolute;left:-9999px;height:0;width:0;padding:0;border:0" aria-hidden="true">
-
-        <input type="hidden" name="_subject" value="Portfolio contact from niknaz-65.github.io">
-
-        <label for="name">Name</label>
-        <input id="name" name="name" required autocomplete="name">
-
-        <label for="email">Email</label>
-        <input id="email" type="email" name="email" required autocomplete="email">
-
+    <section class="card">
+      <form id="contactForm" action="https://formspree.io/f/FORM_ID" method="POST">
+        <!-- Honeypot to deter bots -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+        <input type="hidden" name="subject" value="New message from niknaz-65.github.io" />
+        <div class="row">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" required />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" required />
+          </div>
+        </div>
         <label for="message">Message</label>
-        <textarea id="message" name="message" required></textarea>
-
-        <button type="submit"><i class="fas fa-paper-plane"></i> Send</button>
-        <p id="form-status" role="status" aria-live="polite" style="margin:10px 0 0;color:#2d6a4f;"></p>
+        <textarea id="message" name="message" required placeholder="Hi Niknaz, I’d love to connect about…"></textarea>
+        <button class="submit" type="submit">Send Message</button>
+        <div id="ok" class="alert">Thanks! Your message has been sent.</div>
+        <p class="note">Open to full-time roles in SOC analysis, digital forensics, vulnerability management, and compliance (remote or hybrid).</p>
       </form>
-    </div>
-
-    <p class="note">Prefer email? Reach me at <a href="mailto:sadvandniknaz0@gmail.com">sadvandniknaz0@gmail.com</a>.</p>
+    </section>
   </main>
 
   <footer>
-    © 2025 Niknaz Sadehvandi · Cybersecurity Portfolio
+    <div class="foot" style="max-width:1100px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;color:#cfd9ea">
+      <small>© 2025 Niknaz Sadehvandi • Cybersecurity Portfolio</small>
+      <a href="Niknaz_Sadehvandi_Resume.pdf" download style="color:#cfd9ea">Download Resume</a>
+    </div>
   </footer>
 
   <script>
-    const form = document.getElementById('contact-form');
-    const statusEl = document.getElementById('form-status');
-
+    // Optional: submit via fetch to stay on-page
+    const form = document.getElementById('contactForm');
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      statusEl.textContent = 'Sending…';
+      const endpoint = form.getAttribute('action');
+      const data = new FormData(form);
       try {
-        const resp = await fetch(form.action, {
-          method: form.method,
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
-        });
-        if (resp.ok) {
-          statusEl.textContent = "Thanks! I’ll get back to you shortly.";
+        const res = await fetch(endpoint, { method: 'POST', body: data, headers: { 'Accept': 'application/json' }});
+        if (res.ok) {
+          document.getElementById('ok').style.display = 'block';
           form.reset();
         } else {
-          const data = await resp.json();
-          statusEl.textContent = (data.errors && data.errors.length)
-            ? data.errors.map(e => e.message).join(', ')
-            : 'Oops—there was a problem submitting the form.';
+          alert('There was a problem sending your message. Please email me directly.');
         }
-      } catch {
-        statusEl.textContent = 'Network error—please try again.';
-      }
+      } catch(err){ alert('Network error. Please try again or email me directly.'); }
     });
   </script>
 </body>
