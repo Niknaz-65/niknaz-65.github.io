@@ -1,162 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Niknaz Sadehvandi | Cybersecurity Portfolio</title>
-
-  <!-- ✅ Resume button styling -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Niknaz Sadehvandi | Cybersecurity Analyst</title>
+  <meta name="description" content="Cybersecurity portfolio for Niknaz Sadehvandi — DFIR, SOC, Vulnerability Management, and Compliance." />
+  <meta property="og:title" content="Niknaz Sadehvandi | Cybersecurity Portfolio" />
+  <meta property="og:description" content="DFIR • SOC • SIEM • Compliance" />
+  <link rel="icon" href="assets/favicon.png" />
+  
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f7f9fc;
-      color: #333;
+    :root {
+      --navy: #0a1f44;
+      --navy-2: #13294b;
+      --bg: #f7f9fc;
+      --card: #ffffff;
+      --muted: #5b6876;
+      --accent: #d93025; /* PDF red */
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
     }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--bg); color:#222; }
+    a { color: var(--navy-2); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-    header {
-      background-color: #0a1f44;
-      color: #fff;
-      padding: 40px;
-      text-align: center;
-    }
+    /* Header / Nav */
+    header { background: var(--navy); color: #fff; }
+    .nav { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: .2px; }
+    .brand .lock { width: 26px; height: 26px; border: 2px solid #fff; border-radius: 6px; position: relative; }
+    .brand .lock:before { content:""; position:absolute; top:-12px; left:6px; right:6px; height: 12px; border: 2px solid #fff; border-bottom: none; border-radius: 10px 10px 0 0; }
+    nav ul { list-style: none; display: flex; gap: 22px; margin:0; padding:0; }
+    nav a { color:#e8eef8; font-weight:600; }
+    nav a.active { color:#fff; border-bottom:2px solid #fff; padding-bottom:2px; }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
+    /* Hero */
+    .hero { max-width: 1100px; margin: 30px auto; display:grid; grid-template-columns: 180px 1fr; gap: 28px; align-items: center; padding: 0 20px; }
+    .headshot { width:180px; height:180px; border-radius: 20px; object-fit: cover; box-shadow: var(--shadow); border: 4px solid #fff; }
+    .hero h1 { margin:0 0 8px; font-size: 32px; color: var(--navy-2); }
+    .tagline { margin:0 0 10px; color:#30415d; font-weight:600; }
+    .summary { color: var(--muted); line-height: 1.5; margin-bottom: 18px; }
+    .cta { display:flex; gap:12px; flex-wrap: wrap; }
+    .btn { display:inline-flex; align-items:center; gap:8px; background: var(--navy-2); color:#fff; padding:12px 16px; border-radius:10px; border:none; box-shadow: var(--shadow); font-weight:600; }
+    .btn:hover { transform: translateY(-2px); filter: brightness(1.05); }
+    .btn.outline { background:#fff; color: var(--navy-2); border:2px solid var(--navy-2); }
+    .btn.pdf { background: var(--accent); }
 
-    header p {
-      margin: 5px 0 0;
-      font-size: 1.2rem;
-    }
+    /* Skills */
+    .section { max-width:1100px; margin: 26px auto; padding: 0 20px; }
+    .card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 22px; }
+    .section h2 { margin-top: 0; color: var(--navy-2); }
+    .badges { display:flex; flex-wrap: wrap; gap: 10px; }
+    .badges img { height: 24px; }
 
-    nav {
-      background: #13294b;
-      padding: 12px;
-      text-align: center;
-    }
+    /* Projects preview */
+    .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+    .project { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px; display:flex; flex-direction:column; gap:10px; }
+    .project h3 { margin:0; color: var(--navy-2); }
+    .project p { margin:0; color: var(--muted); }
+    .kicker { font-size: 12px; color:#6b7787; text-transform: uppercase; letter-spacing: .4px; }
 
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    section {
-      padding: 40px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #0a1f44;
-      color: #fff;
-      margin-top: 40px;
-    }
-
-    /* ✅ Resume button */
-    .resume-btn {
-      background: #13294b;
-      color: #fff;
-      padding: 14px 20px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 500;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-    }
-
-    .resume-btn:hover {
-      background: #0a1f44;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .resume-btn i {
-      color: #d93025; /* PDF red */
-      font-size: 1.2rem;
-      transition: transform 0.3s ease;
-    }
-
-    .resume-btn:hover i {
-      transform: scale(1.15);
-    }
-
-    /* About block */
-    .about {
-      margin-top: 40px;
-      padding: 20px;
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    .about h2 {
-      color: #13294b;
-    }
-    .about p {
-      line-height: 1.6;
-    }
+    /* Footer */
+    footer { margin-top: 36px; background: var(--navy); color:#cfd9ea; }
+    .foot { max-width:1100px; margin:0 auto; padding:16px 20px; display:flex; align-items:center; justify-content: space-between; }
   </style>
-
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <header>
-    <h1>Niknaz Sadehvandi</h1>
-    <p>Cybersecurity Portfolio</p>
+    <div class="nav">
+      <div class="brand">
+        <div class="lock" aria-hidden="true"></div>
+        <div>Niknaz Sadehvandi</div>
+      </div>
+      <nav>
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="projects.html">Projects</a>
-    <a href="certifications.html">Certifications</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <!-- Hero -->
+  <section class="hero">
+    <img class="headshot" src="assets/headshot.jpg" alt="Portrait of Niknaz Sadehvandi" />
+    <div>
+      <h1>Cybersecurity Analyst</h1>
+      <p class="tagline">DFIR • SOC Monitoring • Vulnerability Management • Compliance (NIST, SOX ITGC)</p>
+      <p class="summary">I investigate intrusions, analyze logs, and harden systems. Skilled with Splunk, Linux, Python, and network tooling (Nmap, Wireshark). Currently completing my <strong>M.S. in Cybersecurity Technology (UMGC, 2025)</strong>.</p>
+      <div class="cta">
+        <a class="btn pdf" href="Niknaz_Sadehvandi_Resume.pdf" download>📄 Download Resume</a>
+        <a class="btn outline" href="projects.html">View Projects</a>
+        <a class="btn outline" href="contact.html">Contact Me</a>
+      </div>
+    </div>
+  </section>
 
-  <section>
-    <h2>Welcome</h2>
-    <p>Explore my cybersecurity projects, certifications, and professional experience.</p>
+  <!-- Skills & Tools -->
+  <section class="section">
+    <div class="card">
+      <h2>Skills & Tools</h2>
+      <div class="badges">
+        <img alt="Python" src="https://img.shields.io/badge/Python-3.x-blue" />
+        <img alt="Linux" src="https://img.shields.io/badge/Linux-Ubuntu-orange" />
+        <img alt="Splunk" src="https://img.shields.io/badge/SIEM-Splunk-informational" />
+        <img alt="Rapid7" src="https://img.shields.io/badge/Vuln%20Mgmt-Rapid7-lightgrey" />
+        <img alt="Nmap" src="https://img.shields.io/badge/Recon-Nmap-success" />
+        <img alt="Wireshark" src="https://img.shields.io/badge/Network-Wireshark-9cf" />
+        <img alt="Git" src="https://img.shields.io/badge/Git-Commit%20Early%20%26%20Often-critical" />
+      </div>
+    </div>
+  </section>
 
-    <!-- ✅ Resume button placed here -->
-    <p>
-      <a href="assets/Niknaz_Sadehvandi_Resume.pdf" class="resume-btn" download>
-        <i class="fas fa-file-pdf"></i> Download My Resume
-      </a>
-    </p>
+  <!-- Projects Preview -->
+  <section class="section">
+    <h2>Featured Work</h2>
+    <div class="projects">
+      <article class="project">
+        <span class="kicker">Forensics / DFIR</span>
+        <h3>Forensic Analysis of an Intrusion</h3>
+        <p>Investigated persistence, unauthorized accounts, and SSH exfiltration. Tools: FTK Imager, Autopsy, Autoruns. Report aligned with NIST & ITGC.</p>
+        <p><a href="projects.html">View case study →</a></p>
+      </article>
+      <article class="project">
+        <span class="kicker">SOC / SIEM</span>
+        <h3>Splunk Detections & Dashboards</h3>
+        <p>Created queries for failed logins, privilege assignment (Event IDs 4624/4672), and process anomalies; built triage dashboard.</p>
+        <p><a href="#">Repo (coming soon) →</a></p>
+      </article>
+      <article class="project">
+        <span class="kicker">Recon / Scripting</span>
+        <h3>Network Recon Toolkit</h3>
+        <p>Automated Nmap + service enumeration and quick HTML report generation using Python.</p>
+        <p><a href="#">Repo (coming soon) →</a></p>
+      </article>
+    </div>
+  </section>
 
-    <!-- ✅ About Me block -->
-    <div class="about">
-      <h2>About Me</h2>
-      <p>I am a <strong>Cybersecurity Analyst</strong> with expertise in:</p>
-      <ul>
-        <li>Digital Forensics & Incident Response (DFIR)</li>
-        <li>Risk Management & Compliance (NIST, SOX ITGC)</li>
-        <li>Vulnerability Assessment & SIEM (Splunk, Rapid7)</li>
-        <li>Secure System Administration (Linux/Windows)</li>
-      </ul>
-      <p>
-        I specialize in building resilient systems, investigating intrusions, and aligning cybersecurity practices with industry frameworks. 
-        Currently, I am completing my <strong>M.S. in Cybersecurity Technology (2025)</strong> at UMGC.  
-      </p>
-      <p><em>Career Goal:</em> I am seeking opportunities in <strong>SOC analysis, digital forensics, vulnerability management, and compliance roles</strong>.</p>
+  <!-- Certifications CTA -->
+  <section class="section">
+    <div class="card">
+      <h2>Certifications</h2>
+      <p>IBM: Python Basics (2024) • Stanford Online: R Programming Fundamentals (2024) • <em>Azure Fundamentals (in progress)</em></p>
+      <p><a href="certifications.html">See all certifications →</a></p>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 Niknaz Sadehvandi | Cybersecurity Portfolio</p>
+    <div class="foot">
+      <small>© 2025 Niknaz Sadehvandi • Cybersecurity Portfolio</small>
+      <a href="Niknaz_Sadehvandi_Resume.pdf" download>Download PDF Resume</a>
+    </div>
   </footer>
 </body>
 </html>
