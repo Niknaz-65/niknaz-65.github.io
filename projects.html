@@ -4,94 +4,111 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Niknaz Sadehvandi</title>
-
-  <!-- Social preview -->
-  <meta name="description" content="Hands-on cybersecurity projects by Niknaz Sadehvandi: DFIR, SOX ITGC, Splunk, risk management." />
-  <meta property="og:title" content="Projects | Niknaz Sadehvandi" />
-  <meta property="og:description" content="Hands-on cybersecurity projects by Niknaz Sadehvandi." />
-  <meta property="og:image" content="assets/site-banner.png" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://niknaz-65.github.io/projects.html" />
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
+  <meta name="description" content="Cybersecurity projects by Niknaz Sadehvandi — DFIR case studies, SOC detections, and security tooling." />
+  <link rel="icon" href="assets/favicon.png" />
   <style>
-    :root { --navy:#0a1f44; --navy2:#13294b; --ink:#333; --shadow:0 2px 5px rgba(0,0,0,.1); }
-    body{font-family:Arial,sans-serif;margin:0;background:#f7f9fc;color:var(--ink)}
-    header{background:var(--navy);color:#fff;padding:36px 16px;text-align:center}
-    nav{background:var(--navy2);padding:12px;text-align:center}
-    nav a{color:#fff;margin:0 15px;text-decoration:none;font-weight:bold}
-    nav a.active,nav a:hover{text-decoration:underline;text-underline-offset:4px}
-    section{max-width:900px;margin:0 auto;padding:40px 16px}
-    h2{color:var(--navy2);margin:0 0 12px}
-    .card{background:#fff;border-radius:12px;box-shadow:var(--shadow);padding:22px;margin:20px 0;
-          transition:transform .2s ease, box-shadow .2s ease;}
-    .card:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(0,0,0,.12)}
-    .bullets{padding-left:18px;margin-top:10px}
-    .bullets li{margin:6px 0}
-    img.project-thumb{max-width:100%;border-radius:12px;margin:14px 0}
-    footer{background:var(--navy);color:#fff;text-align:center;padding:20px;margin-top:40px}
-
-    /* Buttons */
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:6px;
-         text-decoration:none;font-weight:500;transition:.25s;cursor:pointer}
-    .btn i{transition:transform .25s}
-    .btn:hover i{transform:scale(1.12)}
-    .btn-primary{background:var(--navy2);color:#fff}
-    .btn-primary:hover{background:var(--navy)}
-    .btn-secondary{border:2px solid var(--navy2);color:var(--navy2);background:transparent}
-    .btn-secondary:hover{background:var(--navy2);color:#fff}
-    .fa-file-pdf{color:#d93025}
-    a:focus,button:focus{outline:3px solid #ffbf47;outline-offset:2px}
-    @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+    :root{--navy:#0a1f44;--navy2:#13294b;--bg:#f7f9fc;--card:#fff;--muted:#5b6876;--radius:16px;--shadow:0 10px 30px rgba(0,0,0,.08)}
+    *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#222}
+    header{background:var(--navy);color:#fff}.nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}.brand .lock{width:26px;height:26px;border:2px solid #fff;border-radius:6px;position:relative}
+    .brand .lock:before{content:"";position:absolute;top:-12px;left:6px;right:6px;height:12px;border:2px solid #fff;border-bottom:none;border-radius:10px 10px 0 0}
+    nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0}nav a{color:#e8eef8;text-decoration:none;font-weight:600}nav a.active{color:#fff;border-bottom:2px solid #fff;padding-bottom:2px}
+    .wrap{max-width:1100px;margin:24px auto;padding:0 20px}
+    h1{color:var(--navy2);margin:6px 0 12px}
+    .lead{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;margin-top:18px}
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column}
+    .thumb{height:180px;background:#0f274f url('assets/forensics-cover.png') center/cover no-repeat}
+    .pad{padding:18px}
+    .kicker{font-size:12px;color:#6b7787;text-transform:uppercase;letter-spacing:.4px}
+    .card h3{margin:6px 0 8px;color:var(--navy2)}
+    .card p{margin:0 0 10px;color:var(--muted)}
+    ul.meta{margin:6px 0 0 18px;color:#2d3e56}
+    .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+    .btn{display:inline-flex;align-items:center;gap:8px;background:var(--navy2);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+    .btn.alt{background:#fff;color:var(--navy2);border:2px solid var(--navy2)}
+    footer{margin-top:28px;background:var(--navy);color:#cfd9ea}.foot{max-width:1100px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
   </style>
 </head>
 <body>
   <header>
-    <h1>My Cybersecurity Projects</h1>
-    <p>Hands-on Labs · Case Studies · Investigations</p>
+    <div class="nav">
+      <div class="brand"><div class="lock"></div><div>Niknaz Sadehvandi</div></div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="projects.html">Projects</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="projects.html" class="active">Projects</a>
-    <a href="certifications.html">Certifications</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <main class="wrap">
+    <h1>Projects</h1>
+    <p class="lead">Selected security projects demonstrating DFIR, SOC detections, and automation.</p>
 
-  <section>
-    <h2>Featured Project</h2>
+    <section class="grid">
+      <!-- DFIR project -->
+      <article class="card">
+        <div class="thumb" role="img" aria-label="Forensics project cover"></div>
+        <div class="pad">
+          <div class="kicker">Forensics / DFIR • Jan–Mar 2025 (UMGC)</div>
+          <h3>Forensic Analysis of an Intrusion</h3>
+          <p>Investigated persistence mechanisms, unauthorized accounts, and SSH exfiltration. Tools included FTK Imager, Autopsy, and Autoruns. Findings aligned with NIST and ITGC practices.</p>
+          <ul class="meta">
+            <li>Parsed Windows Event IDs <strong>4624</strong> (logon) and <strong>4672</strong> (special privileges) for timeline</li>
+            <li>Correlated artifacts across registry, tasks, and SSH logs</li>
+          </ul>
+          <div class="btns">
+            <a class="btn" href="assets/forensic-intrusion-report.pdf" target="_blank" rel="noopener">📄 View Report (PDF)</a>
+            <a class="btn alt" href="#">🔗 Evidence Pack / Repo (optional)</a>
+          </div>
+        </div>
+      </article>
 
-    <!-- DFIR Project -->
-    <a href="assets/forensics-report.pdf" target="_blank" rel="noopener noreferrer" class="card-wrapper">
-      <div class="card">
-        <h3 style="margin:0 0 6px;">Digital Forensics & Incident Response Lab (UMGC)</h3>
-        <p><strong>Jan 2025 – Mar 2025</strong></p>
-        <ul class="bullets">
-          <li>Investigated intrusions using FTK Imager, Autopsy, and Autoruns.</li>
-          <li>Identified persistence mechanisms, unauthorized accounts, and SSH exfiltration.</li>
-          <li>Documented findings aligned to NIST and ITGC testing practices.</li>
-        </ul>
+      <!-- Splunk detections project -->
+      <article class="card">
+        <div class="thumb" style="background-image:linear-gradient(120deg,#0f274f,#244b7a);"></div>
+        <div class="pad">
+          <div class="kicker">SOC / SIEM</div>
+          <h3>Splunk Detections & Dashboards</h3>
+          <p>Created SPL queries for failed authentication spikes, privilege assignment, and suspicious process trees; built triage dashboards for rapid incident response.</p>
+          <ul class="meta">
+            <li>Detections for Event IDs 4625/4672 and process anomalies</li>
+            <li>Dashboard panels for host/user pivots and geo trends</li>
+          </ul>
+          <div class="btns">
+            <a class="btn" href="https://github.com/niknaz-65/splunk-detections" target="_blank" rel="noopener">💻 GitHub Repo</a>
+          </div>
+        </div>
+      </article>
 
-        <img class="project-thumb"
-             src="assets/forensics-thumb.png"
-             alt="DFIR project title slide"
-             loading="lazy" width="1200" height="675">
-
-        <p>
-          <a class="btn btn-primary" href="assets/forensics-report.pdf" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-file-pdf"></i> View Report (PDF)
-          </a>
-          <a class="btn btn-secondary" href="assets/forensics-report.pdf" download>
-            <i class="fas fa-download"></i> Download
-          </a>
-        </p>
-      </div>
-    </a>
-  </section>
+      <!-- Recon toolkit project -->
+      <article class="card">
+        <div class="thumb" style="background-image:linear-gradient(120deg,#0f274f,#1c355c);"></div>
+        <div class="pad">
+          <div class="kicker">Recon / Automation</div>
+          <h3>Network Recon Toolkit</h3>
+          <p>Python wrapper that runs Nmap service enumeration, parses results, and generates an HTML summary for handoff to vulnerability scanning.</p>
+          <ul class="meta">
+            <li>Automated common scan profiles (top-1000, -sV, -O)</li>
+            <li>HTML report with host/service highlights</li>
+          </ul>
+          <div class="btns">
+            <a class="btn" href="https://github.com/niknaz-65/recon-toolkit" target="_blank" rel="noopener">💻 GitHub Repo</a>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
 
   <footer>
-    © 2025 Niknaz Sadehvandi · Cybersecurity Portfolio
+    <div class="foot">
+      <small>© 2025 Niknaz Sadehvandi • Cybersecurity Portfolio</small>
+      <a href="Niknaz_Sadehvandi_Resume.pdf" download style="color:#cfd9ea;">Download Resume</a>
+    </div>
   </footer>
 </body>
 </html>
