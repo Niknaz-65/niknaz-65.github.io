@@ -7,34 +7,130 @@
   <meta name="description" content="Verified certifications and credentials for Niknaz Sadehvandi — cybersecurity, scripting, and cloud fundamentals." />
   <link rel="icon" href="assets/favicon.png" />
   <style>
-    :root{--navy:#0a1f44;--navy2:#13294b;--bg:#f7f9fc;--card:#fff;--muted:#5b6876;--radius:16px;--shadow:0 10px 30px rgba(0,0,0,.08)}
-    *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#222}
-    header{background:var(--navy);color:#fff}.nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 20px}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:700}.brand .lock{width:26px;height:26px;border:2px solid #fff;border-radius:6px;position:relative}
-    .brand .lock:before{content:"";position:absolute;top:-12px;left:6px;right:6px;height:12px;border:2px solid #fff;border-bottom:none;border-radius:10px 10px 0 0}
-    nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0}nav a{color:#e8eef8;text-decoration:none;font-weight:600}nav a.active{color:#fff;border-bottom:2px solid #fff;padding-bottom:2px}
-
-    .wrap{max-width:1100px;margin:24px auto;padding:0 20px}
-    h1{color:var(--navy2);margin:6px 0 4px} .lead{color:var(--muted);margin:0 0 14px}
-
-    .list{display:grid;gap:14px}
-    .cert{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);display:grid;grid-template-columns:80px 1fr auto;gap:16px;align-items:center;padding:16px}
-    .logo{width:64px;height:64px;object-fit:contain;filter: saturate(0.9)}
-    .cert h3{margin:0 0 4px;color:var(--navy2)}
-    .meta{margin:0;color:#2d3e56;font-size:14px}
-    .desc{margin:6px 0 0;color:var(--muted)}
-    .btn{display:inline-flex;align-items:center;gap:8px;background:var(--navy2);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
-    .btn.alt{background:#fff;color:var(--navy2);border:2px solid var(--navy2)}
-
-    h2{color:var(--navy2);margin:22px 0 10px}
-    footer{margin-top:28px;background:var(--navy);color:#cfd9ea}
-    .foot{max-width:1100px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+    :root {
+      --navy: #0a1f44;
+      --navy2: #13294b;
+      --bg: #f7f9fc;
+      --card: #fff;
+      --muted: #5b6876;
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: #222;
+    }
+    header { background: var(--navy); color: #fff; }
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+    }
+    .brand .lock {
+      width: 26px;
+      height: 26px;
+      border: 2px solid #fff;
+      border-radius: 6px;
+      position: relative;
+    }
+    .brand .lock:before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: 6px;
+      right: 6px;
+      height: 12px;
+      border: 2px solid #fff;
+      border-bottom: none;
+      border-radius: 10px 10px 0 0;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 22px;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      color: #e8eef8;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a.active {
+      color: #fff;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 2px;
+    }
+    .wrap { max-width: 1100px; margin: 24px auto; padding: 0 20px; }
+    h1 { color: var(--navy2); margin: 6px 0 4px; }
+    .lead { color: var(--muted); margin: 0 0 14px; }
+    .list { display: grid; gap: 14px; }
+    .cert {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 80px 1fr auto;
+      gap: 16px;
+      align-items: center;
+      padding: 16px;
+    }
+    .logo {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      filter: saturate(0.9);
+    }
+    .cert h3 { margin: 0 0 4px; color: var(--navy2); }
+    .meta { margin: 0; color: #2d3e56; font-size: 14px; }
+    .desc { margin: 6px 0 0; color: var(--muted); }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--navy2);
+      color: #fff;
+      padding: 10px 14px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .btn.alt {
+      background: #fff;
+      color: var(--navy2);
+      border: 2px solid var(--navy2);
+    }
+    h2 { color: var(--navy2); margin: 22px 0 10px; }
+    footer { margin-top: 28px; background: var(--navy); color: #cfd9ea; }
+    .foot {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="nav">
-      <div class="brand"><div class="lock"></div><div>Niknaz Sadehvandi</div></div>
+      <div class="brand">
+        <div class="lock"></div>
+        <div>Niknaz Sadehvandi</div>
+      </div>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -74,22 +170,6 @@
         </div>
         <div>
           <a class="btn" href="#" target="_blank" rel="noopener">🔗 Verify</a>
-        </div>
-      </article>
-    </section>
-
-    <h2>In Progress</h2>
-    <section class="list" aria-label="In-progress certifications">
-      <!-- Azure Fundamentals -->
-      <article class="cert">
-        <img class="logo" src="assets/logos/azure.png" alt="Microsoft Azure logo" />
-        <div>
-          <h3>Microsoft Azure Fundamentals (AZ-900)</h3>
-          <p class="meta">Microsoft • In progress</p>
-          <p class="desc">Cloud concepts, identity, governance, and cost management — foundation for cloud security and compliance.</p>
-        </div>
-        <div>
-          <a class="btn alt" href="https://learn.microsoft.com/en-us/certifications/exams/az-900/" target="_blank" rel="noopener">📘 Exam Guide</a>
         </div>
       </article>
     </section>
