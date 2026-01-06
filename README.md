@@ -1,31 +1,50 @@
 ![Banner](assets/site-banner.png)
 
-# 🌐 Niknaz Sadehvandi | Cybersecurity Portfolio
+# Niknaz Sadehvandi | Cybersecurity Portfolio
 
-Welcome to my personal cybersecurity portfolio website!  
-This site highlights my **projects, certifications, and contact information** in a clean, professional layout.
+Professional cybersecurity portfolio showcasing hands-on projects, certifications, and contact information.
 
-🔗 **Live Site:** [niknaz-65.github.io](https://niknaz-65.github.io)
+Live site: https://niknaz-65.github.io
 
 ---
 
-## 📑 About
-I am a **Cybersecurity Analyst** with a strong background in:
+## About
+
+I am a **Cybersecurity Analyst** with hands-on experience in SIEM monitoring, endpoint telemetry, log analysis, and SOC-style investigations.  
+My work focuses on practical detection engineering, DFIR fundamentals, and security analysis aligned with industry frameworks.
+
+Core focus areas:
 - Digital Forensics & Incident Response (DFIR)
-- Risk Management & Compliance (NIST, SOX ITGC)
-- Vulnerability Assessment & SIEM (Splunk, Rapid7)
-- Secure System Administration (Linux/Windows)
+- SIEM & SOC Monitoring (Elastic SIEM, Splunk)
+- Endpoint Telemetry (Sysmon, Windows Event Logs)
+- Network Telemetry & Analysis (Zeek, Wireshark)
+- Risk & Compliance Foundations (NIST, SOX ITGC)
 
-This portfolio was built to showcase my work, achievements, and technical growth as I complete my **M.S. in Cybersecurity Technology (UMGC, 2025).**
+This portfolio documents my technical work while completing my **M.S. in Cybersecurity Technology (UMGC, GPA 4.0)** and building real-world, audit-ready security projects.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
+
 - **Frontend:** HTML5, CSS3
-- **Styling:** Custom CSS with Flexbox/Grid, Responsive Design
+- **Layout:** CSS Grid, Flexbox, Responsive Design
 - **Hosting:** GitHub Pages
-- **Extras:** Font Awesome (icons), SEO meta tags, Social Preview banners
+- **Tooling:** GitHub, custom assets, SEO meta tags
+- **Security Focus:** Content clarity, minimal dependencies, recruiter-friendly structure
 
 ---
 
-## 📂 Structure
+## Portfolio Structure
+
+```text
+/
+├── index.html            # Main landing page (overview + experience snapshot)
+├── projects.html         # DFIR, SOC, SIEM, and automation projects
+├── certifications.html   # Verified certifications and training
+├── contact.html          # Contact form and professional links
+├── assets/
+│   ├── site-banner.png
+│   ├── project images
+│   ├── certification logos
+│   └── icons
+├── Niknaz_Sadehvandi_Cybersecurity_Analyst_Resume.pdf
