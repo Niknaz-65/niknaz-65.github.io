@@ -7,32 +7,50 @@
   <meta name="description" content="Contact Niknaz Sadehvandi for cybersecurity roles and collaborations." />
   <link rel="icon" href="assets/favicon.png" />
   <style>
-    :root{--navy:#0a1f44;--navy2:#13294b;--bg:#f7f9fc;--card:#fff;--muted:#5b6876;--radius:16px;--shadow:0 10px 30px rgba(0,0,0,.08)}
-    *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#222}
-    header{background:var(--navy);color:#fff}.nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 20px}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:700}.brand .lock{width:26px;height:26px;border:2px solid #fff;border-radius:6px;position:relative}
+    :root{--navy:#0a1f44;--navy2:#13294b;--bg:#f7f9fc;--card:#fff;--muted:#5b6876;--radius:16px;--shadow:0 10px 30px rgba(0,0,0,.08);--border:rgba(10,31,68,.12)}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#222}
+
+    header{background:var(--navy);color:#fff}
+    .nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 20px;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .brand .lock{width:26px;height:26px;border:2px solid #fff;border-radius:6px;position:relative}
     .brand .lock:before{content:"";position:absolute;top:-12px;left:6px;right:6px;height:12px;border:2px solid #fff;border-bottom:none;border-radius:10px 10px 0 0}
-    nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0}nav a{color:#e8eef8;text-decoration:none;font-weight:600}nav a.active{color:#fff;border-bottom:2px solid #fff;padding-bottom:2px}
+
+    nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0;flex-wrap:wrap}
+    nav a{color:#e8eef8;text-decoration:none;font-weight:600}
+    nav a.active{color:#fff;border-bottom:2px solid #fff;padding-bottom:2px}
+
     .wrap{max-width:900px;margin:24px auto;padding:0 20px}
     h1{color:var(--navy2);margin:6px 0 12px}
+
     .btnrow{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0}
-    .btn{display:inline-flex;align-items:center;gap:8px;background:var(--navy2);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+    .btn{display:inline-flex;align-items:center;gap:8px;background:var(--navy2);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;border:1px solid transparent}
+    .btn:hover{text-decoration:none;filter:brightness(1.04)}
     .btn.alt{background:#474a51}
-    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;margin-top:16px}
+
+    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;margin-top:16px;border:1px solid var(--border)}
     label{display:block;font-weight:600;margin:10px 0 6px;color:#30415d}
     input,textarea{width:100%;padding:12px 14px;border-radius:10px;border:1px solid #d7dde8;font-size:15px}
     textarea{min-height:140px;resize:vertical}
     .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:640px){ .row{grid-template-columns:1fr} }
+
     .submit{margin-top:12px;display:inline-flex;align-items:center;gap:8px;background:var(--navy2);color:#fff;padding:12px 16px;border-radius:10px;border:none;font-weight:700;cursor:pointer}
-    .note{color:var(--muted);font-size:14px;margin-top:8px}
+    .note{color:var(--muted);font-size:14px;margin-top:10px}
     .alert{display:none;margin-top:12px;padding:12px 14px;border-radius:10px;background:#e9f9ef;color:#0c6b2b}
+
+    footer{margin-top:28px;background:var(--navy);color:#cfd9ea}
+    .foot{max-width:1100px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    footer a{color:#cfd9ea;text-decoration:none}
+    footer a:hover{text-decoration:underline}
   </style>
 </head>
 <body>
   <header>
     <div class="nav">
-      <div class="brand"><div class="lock"></div><div>Niknaz Sadehvandi</div></div>
-      <nav>
+      <div class="brand"><div class="lock" aria-hidden="true"></div><div>Niknaz Sadehvandi</div></div>
+      <nav aria-label="Primary">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="projects.html">Projects</a></li>
@@ -45,18 +63,20 @@
 
   <main class="wrap">
     <h1>Get in Touch</h1>
+
     <div class="btnrow">
-      <a class="btn" href="mailto:sadvandniknaz0@gmail.com">✉️ Email</a>
-      <a class="btn" href="https://www.linkedin.com/in/niknaz-sadehvandi-a34179325" target="_blank" rel="noopener">in LinkedIn</a>
-      <a class="btn" href="https://github.com/niknaz-65" target="_blank" rel="noopener">🐙 GitHub</a>
-      <a class="btn alt" href="/">🌐 Website</a>
+      <a class="btn" href="mailto:sadvandniknaz0@gmail.com">Email</a>
+      <a class="btn" href="https://www.linkedin.com/in/niknaz-sadehvandi-a34179325" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/niknaz-65" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn alt" href="index.html">Website</a>
     </div>
 
     <section class="card">
+      <!-- IMPORTANT: replace FORM_ID with your real Formspree endpoint, or remove the form -->
       <form id="contactForm" action="https://formspree.io/f/FORM_ID" method="POST">
-        <!-- Honeypot to deter bots -->
         <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
         <input type="hidden" name="subject" value="New message from niknaz-65.github.io" />
+
         <div class="row">
           <div>
             <label for="name">Name</label>
@@ -67,38 +87,54 @@
             <input id="email" type="email" name="email" required />
           </div>
         </div>
+
         <label for="message">Message</label>
-        <textarea id="message" name="message" required placeholder="Hi Niknaz, I’d love to connect about…"></textarea>
+        <textarea id="message" name="message" required placeholder="Hi Niknaz, I’d like to connect about..."></textarea>
+
         <button class="submit" type="submit">Send Message</button>
-        <div id="ok" class="alert">Thanks! Your message has been sent.</div>
-        <p class="note">Open to full-time roles in SOC analysis, digital forensics, vulnerability management, and compliance (remote or hybrid).</p>
+        <div id="ok" class="alert">Thanks. Your message has been sent.</div>
+
+        <p class="note">
+          Open to full-time roles in SOC analysis, digital forensics, vulnerability management, and compliance (remote or hybrid).
+        </p>
       </form>
     </section>
   </main>
 
   <footer>
-    <div class="foot" style="max-width:1100px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;color:#cfd9ea">
-      <small>© 2025 Niknaz Sadehvandi • Cybersecurity Portfolio</small>
-      <a href="Niknaz_Sadehvandi_Resume.pdf" download style="color:#cfd9ea">Download Resume</a>
+    <div class="foot">
+      <small>© <span id="y"></span> Niknaz Sadehvandi • Cybersecurity Portfolio</small>
+      <a href="Niknaz_Sadehvandi_Cybersecurity_Analyst_Resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
     </div>
   </footer>
 
   <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+
     // Optional: submit via fetch to stay on-page
     const form = document.getElementById('contactForm');
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const endpoint = form.getAttribute('action');
       const data = new FormData(form);
+
+      // If FORM_ID not replaced, fail fast
+      if (endpoint.includes('FORM_ID')) {
+        alert('Formspree FORM_ID is not set. Replace FORM_ID or use the Email button.');
+        return;
+      }
+
       try {
         const res = await fetch(endpoint, { method: 'POST', body: data, headers: { 'Accept': 'application/json' }});
         if (res.ok) {
           document.getElementById('ok').style.display = 'block';
           form.reset();
         } else {
-          alert('There was a problem sending your message. Please email me directly.');
+          alert('Problem sending your message. Email me directly.');
         }
-      } catch(err){ alert('Network error. Please try again or email me directly.'); }
+      } catch (err) {
+        alert('Network error. Email me directly.');
+      }
     });
   </script>
 </body>
