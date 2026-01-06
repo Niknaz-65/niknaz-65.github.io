@@ -1,14 +1,22 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Niknaz Sadehvandi | Cybersecurity Analyst</title>
-  <meta name="description" content="Cybersecurity professional specializing in digital forensics, SIEM monitoring, and vulnerability assessment. Experienced in incident investigation, automation scripting, and compliance alignment with NIST, SOX, and ITGC frameworks." />
+
+  <!-- Primary SEO -->
+  <meta name="description" content="Cybersecurity Analyst focused on SIEM monitoring, endpoint telemetry, log analysis, and SOC investigations. Elastic SIEM, Sysmon, Zeek, Splunk. MITRE ATT&CK, NIST, SOX ITGC." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Niknaz Sadehvandi | Cybersecurity Portfolio" />
-  <meta property="og:description" content="DFIR • SOC • SIEM • Compliance" />
+  <meta property="og:description" content="SIEM • SOC • Endpoint Telemetry • DFIR • Compliance (NIST, SOX ITGC)" />
+  <meta property="og:type" content="website" />
+
   <link rel="icon" href="assets/favicon.png" />
-  
+
   <style>
     :root {
       --navy: #0a1f44;
@@ -19,66 +27,159 @@
       --accent: #d93025; /* PDF red */
       --radius: 16px;
       --shadow: 0 10px 30px rgba(0,0,0,.08);
+      --border: rgba(10,31,68,.12);
+      --focus: 0 0 0 3px rgba(13,110,253,.25);
     }
+
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: var(--bg); color:#222; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: #111827;
+    }
     a { color: var(--navy-2); text-decoration: none; }
     a:hover { text-decoration: underline; }
 
     /* Header / Nav */
     header { background: var(--navy); color: #fff; }
-    .nav { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; }
+    .nav {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      gap: 16px;
+    }
     .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: .2px; }
     .brand .lock { width: 26px; height: 26px; border: 2px solid #fff; border-radius: 6px; position: relative; }
-    .brand .lock:before { content:""; position:absolute; top:-12px; left:6px; right:6px; height: 12px; border: 2px solid #fff; border-bottom: none; border-radius: 10px 10px 0 0; }
-    nav ul { list-style: none; display: flex; gap: 22px; margin:0; padding:0; }
+    .brand .lock:before {
+      content:"";
+      position:absolute;
+      top:-12px;
+      left:6px;
+      right:6px;
+      height: 12px;
+      border: 2px solid #fff;
+      border-bottom: none;
+      border-radius: 10px 10px 0 0;
+    }
+    nav ul { list-style: none; display: flex; gap: 22px; margin:0; padding:0; flex-wrap: wrap; }
     nav a { color:#e8eef8; font-weight:600; }
     nav a.active { color:#fff; border-bottom:2px solid #fff; padding-bottom:2px; }
 
     /* Hero */
-    .hero { max-width: 1100px; margin: 30px auto; display:grid; grid-template-columns: 180px 1fr; gap: 28px; align-items: center; padding: 0 20px; }
-    .headshot { width:180px; height:180px; border-radius: 20px; object-fit: cover; box-shadow: var(--shadow); border: 4px solid #fff; }
-    .hero h1 { margin:0 0 8px; font-size: 32px; color: var(--navy-2); }
-    .tagline { margin:0 0 10px; color:#30415d; font-weight:600; }
-    .summary { color: var(--muted); line-height: 1.5; margin-bottom: 18px; }
-    .cta { display:flex; gap:12px; flex-wrap: wrap; }
-    .btn { display:inline-flex; align-items:center; gap:8px; background: var(--navy-2); color:#fff; padding:12px 16px; border-radius:10px; border:none; box-shadow: var(--shadow); font-weight:600; }
-    .btn:hover { transform: translateY(-2px); filter: brightness(1.05); }
-    .btn.outline { background:#fff; color: var(--navy-2); border:2px solid var(--navy-2); }
+    .hero {
+      max-width: 1100px;
+      margin: 30px auto;
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 28px;
+      align-items: center;
+      padding: 0 20px;
+    }
+    @media (max-width: 720px){
+      .hero { grid-template-columns: 1fr; }
+      .headshot { width: 140px; height: 140px; }
+    }
+    .headshot {
+      width:180px;
+      height:180px;
+      border-radius: 20px;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+      border: 4px solid #fff;
+      background: #fff;
+    }
+    .hero h1 { margin:0 0 8px; font-size: 34px; color: var(--navy-2); }
+    .tagline { margin:0 0 10px; color:#30415d; font-weight:650; }
+    .summary { color: var(--muted); line-height: 1.55; margin: 0 0 14px; max-width: 78ch; }
+    .cta { display:flex; flex-direction: column; gap: 12px; }
+    .cta-main, .cta-social { display:flex; gap:12px; flex-wrap: wrap; }
+
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background: var(--navy-2);
+      color:#fff;
+      padding:12px 16px;
+      border-radius:12px;
+      border: 1px solid transparent;
+      box-shadow: var(--shadow);
+      font-weight:650;
+      transition: transform .12s ease, filter .12s ease, background .12s ease;
+      text-decoration: none;
+    }
+    .btn:hover { transform: translateY(-2px); filter: brightness(1.05); text-decoration:none; }
+    .btn:focus { outline: none; box-shadow: var(--shadow), var(--focus); }
+
+    .btn.outline {
+      background:#fff;
+      color: var(--navy-2);
+      border-color: var(--border);
+    }
     .btn.pdf { background: var(--accent); }
-    .btn.linkedin {
-  background-color: #0077b5; /* LinkedIn blue */
-  color: #fff;
-  display: inline-flex;
-  align-items: center;
-  font-weight: 600;
-}
-.btn.linkedin:hover {
-  background-color: #005f87;
-  transform: translateY(-2px);
-  filter: brightness(1.05);
-}
+    .btn.linkedin { background-color:#0077b5; color:#fff; }
+    .btn.linkedin:hover { background-color:#005f87; }
+    .btn.github { background:#111827; color:#fff; }
+    .btn.github:hover { background:#0b1220; }
+
+    .btn .icon {
+      width:18px;
+      height:18px;
+      display:inline-block;
+      vertical-align:middle;
+      filter: invert(1);
+    }
 
     /* Sections / Cards */
     .section { max-width:1100px; margin: 26px auto; padding: 0 20px; }
-    .card { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 22px; }
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+      border: 1px solid var(--border);
+    }
     .section h2 { margin-top: 0; color: var(--navy-2); }
-    .badges { display:flex; flex-wrap: wrap; gap: 10px; }
+    .badges { display:flex; flex-wrap: wrap; gap: 10px; align-items:center; }
     .badges img { height: 24px; }
 
     /* Projects preview */
     .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
-    .project { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 16px; display:flex; flex-direction:column; gap:10px; }
+    .project {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px;
+      border: 1px solid var(--border);
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
     .project h3 { margin:0; color: var(--navy-2); }
     .project p { margin:0; color: var(--muted); }
     .kicker { font-size: 12px; color:#6b7787; text-transform: uppercase; letter-spacing: .4px; }
 
     /* Footer */
     footer { margin-top: 36px; background: var(--navy); color:#cfd9ea; }
-    .foot { max-width:1100px; margin:0 auto; padding:16px 20px; display:flex; align-items:center; justify-content: space-between; }
+    .foot {
+      max-width:1100px;
+      margin:0 auto;
+      padding:16px 20px;
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    footer a { color:#e8eef8; }
   </style>
 </head>
+
 <body>
   <header>
     <div class="nav">
@@ -86,7 +187,7 @@
         <div class="lock" aria-hidden="true"></div>
         <div>Niknaz Sadehvandi</div>
       </div>
-      <nav>
+      <nav aria-label="Primary">
         <ul>
           <li><a class="active" href="index.html">Home</a></li>
           <li><a href="projects.html">Projects</a></li>
@@ -100,164 +201,157 @@
   <!-- Hero -->
   <section class="hero">
     <img class="headshot" src="profile.jpg" alt="Niknaz Sadehvandi" />
+
     <div>
       <h1>Cybersecurity Analyst</h1>
-      <p class="tagline">DFIR • SOC Monitoring • Vulnerability Management • Compliance (NIST, SOX ITGC)</p>
-      <p class="summary">I investigate intrusions, analyze logs, and harden systems. Skilled with Splunk, Linux, Python, and network tooling (Nmap, Wireshark). Currently completing my <strong>M.S. in Cybersecurity Technology (UMGC, 2025)</strong>.</p>
-    <p>
-  I’m a cybersecurity professional specializing in digital forensics, SIEM monitoring, and vulnerability assessment.
-  I enjoy investigating incidents, building automation scripts, and aligning findings with NIST and SOX frameworks.
-</p>
+      <p class="tagline">SIEM • Endpoint Telemetry • SOC Investigations • Compliance (NIST, SOX ITGC)</p>
+
+      <!-- Removed duplicate paragraph, aligned to your resume -->
+      <p class="summary">
+        Cybersecurity Analyst with hands-on experience in SIEM monitoring, endpoint telemetry, log analysis, and SOC investigations.
+        Built Elastic SIEM pipelines with Sysmon and Zeek telemetry and performed Windows security audits aligned with MITRE ATT&amp;CK.
+        M.S. Cybersecurity Technology (UMGC, GPA 4.0; President’s List).
+      </p>
+
       <div class="cta">
-  <!-- Main buttons row -->
-  <div class="cta-main">
-    <a class="btn pdf" href="Niknaz_Sadehvandi_IT_Support_Resume.pdf" download>📄 Download Resume</a>
-    <a class="btn outline" href="projects.html">View Projects</a>
-    <a class="btn outline" href="contact.html">Contact Me</a>
-  </div>
+        <!-- Main buttons row -->
+        <div class="cta-main">
+          <!-- UPDATED resume filename + safer target behavior -->
+          <a class="btn pdf" href="Niknaz_Sadehvandi_Cybersecurity_Analyst_Resume.pdf" target="_blank" rel="noopener">
+            Download Resume (PDF)
+          </a>
+          <a class="btn outline" href="projects.html">View Projects</a>
+          <a class="btn outline" href="contact.html">Contact</a>
+        </div>
 
-  <!-- Social buttons row -->
-  <div class="cta-social">
-    <a class="btn linkedin" href="https://www.linkedin.com/in/niknaz-sadehvandi-a34179325" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" 
-           alt="LinkedIn" 
-           style="width:18px; filter:invert(1); vertical-align:middle; margin-right:6px;">
-      LinkedIn
-    </a>
+        <!-- Social buttons row (kept, fixed GitHub URL casing + added rel) -->
+        <div class="cta-social">
+          <a class="btn linkedin" href="https://www.linkedin.com/in/niknaz-sadehvandi-a34179325" target="_blank" rel="noopener">
+            <img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="" aria-hidden="true">
+            LinkedIn
+          </a>
 
-    <a class="btn github" href="https://github.com/Niknaz-65" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg"
-           alt="GitHub"
-           style="width:18px; filter:invert(1); vertical-align:middle; margin-right:6px;">
-      GitHub
-    </a>
-  </div>
-</div>
+          <a class="btn github" href="https://github.com/niknaz-65" target="_blank" rel="noopener">
+            <img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="" aria-hidden="true">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
   </section>
 
- <!-- Skills & Tools -->
-<section class="section">
-  <div class="card">
-    <h2>Skills & Tools</h2>
+  <!-- Skills & Tools -->
+  <section class="section">
+    <div class="card">
+      <h2>Skills &amp; Tools</h2>
 
-    <div class="badges">
+      <div class="badges">
+        <!-- Programming -->
+        <img alt="Python" src="https://img.shields.io/badge/Python-Automation%20%7C%20Scripting-blue" />
+        <img alt="PowerShell" src="https://img.shields.io/badge/PowerShell-IR%20%7C%20Admin-lightblue" />
+        <img alt="Bash" src="https://img.shields.io/badge/Bash-Linux%20Automation-green" />
 
-      <!-- Programming -->
-      <img alt="Python" src="https://img.shields.io/badge/Python-Automation%20%7C%20Scripting-blue" />
-      <img alt="PowerShell" src="https://img.shields.io/badge/PowerShell-IR%20%7C%20Admin-lightblue" />
-      <img alt="Bash" src="https://img.shields.io/badge/Bash-Linux%20Automation-green" />
+        <!-- SIEM / IR -->
+        <img alt="Elastic SIEM" src="https://img.shields.io/badge/SIEM-Elastic-informational" />
+        <img alt="Splunk" src="https://img.shields.io/badge/SIEM-Splunk-informational" />
+        <img alt="Windows Event Logs" src="https://img.shields.io/badge/Log%20Analysis-Windows%20Event%20Logs-yellow" />
+        <img alt="MITRE ATT&CK" src="https://img.shields.io/badge/MITRE-ATT%26CK-red" />
 
-      <!-- SIEM / IR -->
-      <img alt="Splunk" src="https://img.shields.io/badge/SIEM-Splunk-informational" />
-      <img alt="Log Analysis" src="https://img.shields.io/badge/Log%20Analysis-Windows%20Event%20Logs-yellow" />
-      <img alt="MITRE ATT&CK" src="https://img.shields.io/badge/MITRE-ATT%26CK-red" />
+        <!-- Vulnerability & Network Tools -->
+        <img alt="Nessus" src="https://img.shields.io/badge/Vulnerability%20Scanning-Nessus-orange" />
+        <img alt="Nmap" src="https://img.shields.io/badge/Recon-Nmap-success" />
+        <img alt="Wireshark" src="https://img.shields.io/badge/Network-Wireshark-9cf" />
 
-      <!-- Vulnerability & Network Tools -->
-      <img alt="Nessus" src="https://img.shields.io/badge/Vulnerability%20Scanning-Nessus-orange" />
-      <img alt="Nmap" src="https://img.shields.io/badge/Recon-Nmap-success" />
-      <img alt="Wireshark" src="https://img.shields.io/badge/Network-Wireshark-9cf" />
+        <!-- Forensics -->
+        <img alt="Autopsy" src="https://img.shields.io/badge/Forensics-Autopsy-purple" />
+        <img alt="FTK Imager" src="https://img.shields.io/badge/Forensics-FTK%20Imager-lightgrey" />
+        <img alt="Sysinternals" src="https://img.shields.io/badge/Sysinternals-Autoruns%20%7C%20ProcMon-critical" />
 
-      <!-- Forensics -->
-      <img alt="Autopsy" src="https://img.shields.io/badge/Forensics-Autopsy-purple" />
-      <img alt="FTK Imager" src="https://img.shields.io/badge/Forensics-FTK%20Imager-lightgrey" />
-      <img alt="Sysinternals" src="https://img.shields.io/badge/Sysinternals-Autoruns%20%7C%20ProcMon-critical" />
+        <!-- Platforms -->
+        <img alt="Windows" src="https://img.shields.io/badge/Platform-Windows-blueviolet" />
+        <img alt="Linux" src="https://img.shields.io/badge/Platform-Linux-orange" />
+        <img alt="Active Directory" src="https://img.shields.io/badge/Active%20Directory-Group%20Policy-important" />
 
-      <!-- Platforms -->
-      <img alt="Windows" src="https://img.shields.io/badge/Platform-Windows-blueviolet" />
-      <img alt="Linux" src="https://img.shields.io/badge/Platform-Linux-orange" />
-      <img alt="Active Directory" src="https://img.shields.io/badge/Active%20Directory-Group%20Policy-important" />
+        <!-- Cloud -->
+        <img alt="AWS" src="https://img.shields.io/badge/Cloud-AWS-yellowgreen" />
+        <img alt="Azure" src="https://img.shields.io/badge/Cloud-Azure-lightblue" />
 
-      <!-- Cloud -->
-      <img alt="AWS" src="https://img.shields.io/badge/Cloud-AWS-yellowgreen" />
-      <img alt="Azure" src="https://img.shields.io/badge/Cloud-Azure-lightblue" />
-
-      <!-- Version Control -->
-      <img alt="Git" src="https://img.shields.io/badge/Git-Commit%20Early%20%26%20Often-critical" />
-
+        <!-- Version Control -->
+        <img alt="Git" src="https://img.shields.io/badge/Git-Commit%20Early%20%26%20Often-critical" />
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Projects Preview -->
-<section id="featured-work" class="section">
-  <h2>Featured Work</h2>
-  <div class="projects">
+  <!-- Projects Preview -->
+  <section id="featured-work" class="section">
+    <h2>Featured Work</h2>
 
-    <!-- DFIR case study -->
-    <article class="project">
-      <span class="kicker">Forensics / DFIR</span>
-      <h3>Forensic Analysis of an Intrusion</h3>
-      <p>
-        Investigated persistence mechanisms, unauthorized accounts, and SSH
-        exfiltration. Used FTK Imager, Autopsy, and Autoruns to reconstruct
-        the intrusion timeline and recommend remediation aligned with NIST &amp; ITGC.
-      </p>
-      <p>
-        <a href="https://github.com/niknaz-65/digital-forensics-project3"
-           target="_blank" rel="noopener">
-          View project &rarr;
-        </a>
-      </p>
-    </article>
+    <div class="projects">
+      <article class="project">
+        <span class="kicker">Forensics / DFIR</span>
+        <h3>Forensic Analysis of an Intrusion</h3>
+        <p>
+          Investigated persistence mechanisms and SSH-based exfiltration. Used FTK Imager, Autopsy, and Autoruns to reconstruct
+          a timeline and document remediation aligned with NIST and ITGC.
+        </p>
+        <p>
+          <a href="https://github.com/niknaz-65/digital-forensics-project3" target="_blank" rel="noopener">
+            View project &rarr;
+          </a>
+        </p>
+      </article>
 
-    <!-- Splunk detections -->
-    <article class="project">
-      <span class="kicker">SOC / SIEM</span>
-      <h3>Splunk Detections &amp; Dashboards</h3>
-      <p>
-        Built SPL queries for failed logins, privilege assignment, and suspicious
-        process activity. Designed triage dashboards so analysts can pivot quickly
-        by host and user during incidents.
-      </p>
-      <p>
-        <a href="https://github.com/Niknaz-65/splunk-detections-dashboards"
-           target="_blank" rel="noopener">
-          View project &rarr;
-        </a>
-      </p>
-    </article>
+      <article class="project">
+        <span class="kicker">SOC / SIEM</span>
+        <h3>Splunk Detections &amp; Dashboards</h3>
+        <p>
+          Built SPL queries for failed logins and suspicious process activity. Designed triage dashboards to pivot quickly by host and user.
+        </p>
+        <p>
+          <a href="https://github.com/niknaz-65/splunk-detections-dashboards" target="_blank" rel="noopener">
+            View project &rarr;
+          </a>
+        </p>
+      </article>
 
-    <!-- Network recon toolkit -->
-    <article class="project">
-      <span class="kicker">Recon / Automation</span>
-      <h3>Network Recon Toolkit</h3>
-      <p>
-        Python wrapper around Nmap that runs common service-enumeration profiles,
-        parses XML output, and generates an HTML summary for handoff to
-        vulnerability scanning and reporting.
-      </p>
-      <p>
-        <a href="https://github.com/Niknaz-65/network-recon-toolkit"
-           target="_blank" rel="noopener">
-          View project &rarr;
-        </a>
-      </p>
-    </article>
+      <article class="project">
+        <span class="kicker">Recon / Automation</span>
+        <h3>Network Recon Toolkit</h3>
+        <p>
+          Python wrapper around Nmap that runs enumeration profiles, parses XML output, and generates an HTML summary for reporting handoff.
+        </p>
+        <p>
+          <a href="https://github.com/niknaz-65/network-recon-toolkit" target="_blank" rel="noopener">
+            View project &rarr;
+          </a>
+        </p>
+      </article>
 
-    <!-- 8-bit ALU & CPU -->
-    <article class="project">
-      <span class="kicker">Computer Architecture / Logisim</span>
-      <h3>8-bit ALU &amp; Simple CPU</h3>
-      <p>
-        Designed and implemented an 8-bit Arithmetic Logic Unit and simple CPU
-        in Logisim-evolution (UMGC CMSC 306). Supports 14 operations with status
-        flags, registers, and a control unit that loads and executes instructions.
-      </p>
-      <p>
-        <a href="CPU_Project.pdf" target="_blank" rel="noopener">
-          Project report (PDF) &rarr;
-        </a>
-      </p>
-    </article>
+      <article class="project">
+        <span class="kicker">Computer Architecture / Logisim</span>
+        <h3>8-bit ALU &amp; Simple CPU</h3>
+        <p>
+          Designed an 8-bit ALU and simple CPU in Logisim-evolution supporting multiple operations with registers, flags, and a control unit.
+        </p>
+        <p>
+          <a href="CPU_Project.pdf" target="_blank" rel="noopener">
+            Project report (PDF) &rarr;
+          </a>
+        </p>
+      </article>
+    </div>
+  </section>
 
-  </div>
-</section>
-<!-- Certifications CTA -->
-<section class="section" id="certifications">
+  <!-- Certifications CTA -->
+  <section class="section" id="certifications">
     <div class="card">
       <h2>Certifications</h2>
-      <p>IBM: Python Basics (2024) • Stanford Online: R Programming Fundamentals (2024) • <em>Azure Fundamentals (in progress)</em></p>
-      <p><a href="certifications.html">See all certifications →</a></p>
+      <p style="color: var(--muted); margin: 0;">
+        IBM: Python Basics for Data Science (2024) • R Programming Fundamentals (2024) • <em>Azure Fundamentals (in progress)</em>
+      </p>
+      <p style="margin: 10px 0 0;">
+        <a href="certifications.html">See all certifications &rarr;</a>
+      </p>
     </div>
   </section>
 
@@ -268,34 +362,36 @@
 
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px;">
         <div class="card" style="padding:16px;">
-          <h3 style="margin-top:0;">Security & Compliance</h3>
-          <ul style="margin:0; padding-left:18px; color:#5b6876; line-height:1.6;">
-            <li>IT General Controls, SOX, audits, corrective actions</li>
-            <li>Incident response, threat hunting, digital forensics</li>
-            <li>Risk management and documentation</li>
+          <h3 style="margin-top:0;">Security &amp; Compliance</h3>
+          <ul style="margin:0; padding-left:18px; color:var(--muted); line-height:1.6;">
+            <li>SOX ITGC and audit-ready documentation</li>
+            <li>Incident investigation and DFIR fundamentals</li>
+            <li>Risk-based recommendations and remediation tracking</li>
           </ul>
         </div>
 
         <div class="card" style="padding:16px;">
           <h3 style="margin-top:0;">Tools</h3>
-          <ul style="margin:0; padding-left:18px; color:#5b6876; line-height:1.6;">
-            <li>Tenable, Nessus, Splunk, Wireshark</li>
+          <ul style="margin:0; padding-left:18px; color:var(--muted); line-height:1.6;">
+            <li>Elastic SIEM, Splunk, Wireshark</li>
             <li>FTK Imager, Autopsy, Autoruns, Nmap, VirusTotal</li>
+            <li>Nessus/Tenable (lab)</li>
           </ul>
         </div>
 
         <div class="card" style="padding:16px;">
           <h3 style="margin-top:0;">Platforms</h3>
-          <ul style="margin:0; padding-left:18px; color:#5b6876; line-height:1.6;">
-            <li>Windows, Linux, Mac, Active Directory, Office 365</li>
-            <li>AWS; basic Azure</li>
+          <ul style="margin:0; padding-left:18px; color:var(--muted); line-height:1.6;">
+            <li>Windows, Linux, Active Directory</li>
+            <li>Office 365; AWS/Azure fundamentals</li>
           </ul>
         </div>
 
         <div class="card" style="padding:16px;">
           <h3 style="margin-top:0;">Programming</h3>
-          <ul style="margin:0; padding-left:18px; color:#5b6876; line-height:1.6;">
-            <li>Python, PowerShell, Bash, Java, R</li>
+          <ul style="margin:0; padding-left:18px; color:var(--muted); line-height:1.6;">
+            <li>Python, PowerShell, Bash</li>
+            <li>Java and R (academic projects)</li>
           </ul>
         </div>
       </div>
@@ -306,8 +402,8 @@
   <section class="section" id="education">
     <div class="card">
       <h2>Education</h2>
-      <ul style="margin:0; padding-left:18px; color:#5b6876; line-height:1.6;">
-        <li><strong>M.S. Cybersecurity Technology</strong>, University of Maryland Global Campus (GPA 4.0, President’s List)</li>
+      <ul style="margin:0; padding-left:18px; color:var(--muted); line-height:1.6;">
+        <li><strong>M.S. Cybersecurity Technology</strong>, University of Maryland Global Campus (GPA 4.0; President’s List)</li>
         <li><strong>B.S. Information Technology</strong>, University of Phoenix (Magna Cum Laude)</li>
       </ul>
     </div>
@@ -315,9 +411,15 @@
 
   <footer>
     <div class="foot">
-      <small>© 2025 Niknaz Sadehvandi • Cybersecurity Portfolio</small>
-      <a href="Niknaz_Sadehvandi_IT_Support_Resume.pdf" download>Download PDF Resume</a>
+      <small>© <span id="y"></span> Niknaz Sadehvandi • Cybersecurity Portfolio</small>
+      <!-- UPDATED resume filename in footer -->
+      <a href="Niknaz_Sadehvandi_Cybersecurity_Analyst_Resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
     </div>
   </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+```
