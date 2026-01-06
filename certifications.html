@@ -15,6 +15,7 @@
       --muted: #5b6876;
       --radius: 16px;
       --shadow: 0 10px 30px rgba(0,0,0,.08);
+      --border: rgba(10,31,68,.12);
     }
     * { box-sizing: border-box; }
     body {
@@ -23,6 +24,7 @@
       background: var(--bg);
       color: #222;
     }
+
     header { background: var(--navy); color: #fff; }
     .nav {
       max-width: 1100px;
@@ -31,6 +33,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 16px 20px;
+      gap: 16px;
     }
     .brand {
       display: flex;
@@ -62,6 +65,7 @@
       gap: 22px;
       margin: 0;
       padding: 0;
+      flex-wrap: wrap;
     }
     nav a {
       color: #e8eef8;
@@ -73,20 +77,29 @@
       border-bottom: 2px solid #fff;
       padding-bottom: 2px;
     }
+
     .wrap { max-width: 1100px; margin: 24px auto; padding: 0 20px; }
-    h1 { color: var(--navy2); margin: 6px 0 4px; }
-    .lead { color: var(--muted); margin: 0 0 14px; }
+    h1 { color: var(--navy2); margin: 6px 0 6px; }
+    .lead { color: var(--muted); margin: 0 0 14px; max-width: 85ch; }
+
     .list { display: grid; gap: 14px; }
+
     .cert {
       background: var(--card);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
+      border: 1px solid var(--border);
       display: grid;
       grid-template-columns: 80px 1fr auto;
       gap: 16px;
       align-items: center;
       padding: 16px;
     }
+    @media (max-width: 720px) {
+      .cert { grid-template-columns: 64px 1fr; }
+      .cert .actions { grid-column: 1 / -1; }
+    }
+
     .logo {
       width: 64px;
       height: 64px;
@@ -96,6 +109,7 @@
     .cert h3 { margin: 0 0 4px; color: var(--navy2); }
     .meta { margin: 0; color: #2d3e56; font-size: 14px; }
     .desc { margin: 6px 0 0; color: var(--muted); }
+
     .btn {
       display: inline-flex;
       align-items: center;
@@ -106,13 +120,16 @@
       border-radius: 10px;
       text-decoration: none;
       font-weight: 600;
+      border: 1px solid transparent;
+      white-space: nowrap;
     }
+    .btn:hover { filter: brightness(1.05); text-decoration: none; }
     .btn.alt {
       background: #fff;
       color: var(--navy2);
       border: 2px solid var(--navy2);
     }
-    h2 { color: var(--navy2); margin: 22px 0 10px; }
+
     footer { margin-top: 28px; background: var(--navy); color: #cfd9ea; }
     .foot {
       max-width: 1100px;
@@ -121,17 +138,21 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
     }
+    footer a { color: #cfd9ea; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
   <header>
     <div class="nav">
       <div class="brand">
-        <div class="lock"></div>
+        <div class="lock" aria-hidden="true"></div>
         <div>Niknaz Sadehvandi</div>
       </div>
-      <nav>
+      <nav aria-label="Primary">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="projects.html">Projects</a></li>
@@ -144,32 +165,39 @@
 
   <main class="wrap">
     <h1>Certifications</h1>
-    <p class="lead">Verified credentials highlighting scripting, analytics, and foundational scripting and cloud concepts supporting IT and security projects.</p>
+    <p class="lead">
+      Completed credentials highlighting scripting and analytics foundations that support SIEM workflows, automation, and security projects.
+    </p>
 
     <section class="list" aria-label="Completed certifications">
       <!-- IBM Python Basics -->
       <article class="cert">
-       <img class="logo" src="assets/ibm-logo.png" alt="IBM logo" />
+        <img class="logo" src="assets/ibm-logo.png" alt="IBM logo" />
         <div>
           <h3>Python Basics for Data Science</h3>
           <p class="meta">IBM • 2024</p>
-          <p class="desc">Data handling, automation, and scripting used in coursework and projects for parsing and analyzing sample datasets.</p>
+          <p class="desc">Python scripting foundations used for automation, parsing outputs, and working with datasets in labs and projects.</p>
         </div>
-        <div>
-          <a class="btn" href="#" target="_blank" rel="noopener">🔗 Verify</a>
+
+        <!-- OPTIONAL: replace href with real verification URL or local proof file -->
+        <div class="actions">
+          <!-- Example local proof file: assets/certs/ibm-python-basics.pdf -->
+          <a class="btn" href="assets/certs/ibm-python-basics.pdf" target="_blank" rel="noopener">View proof</a>
         </div>
       </article>
 
       <!-- Stanford R Fundamentals -->
       <article class="cert">
-       <img class="logo" src="assets/stanford-logo.png" alt="Stanford Online logo" />
+        <img class="logo" src="assets/stanford-logo.png" alt="Stanford Online logo" />
         <div>
           <h3>R Programming Fundamentals</h3>
           <p class="meta">Stanford Online • 2024</p>
-          <p class="desc">Statistical thinking and data wrangling useful for practicing data analysis and visualization in academic projects.</p>
+          <p class="desc">Data wrangling and visualization foundations used in academic exercises and reporting practice.</p>
         </div>
-        <div>
-          <a class="btn" href="#" target="_blank" rel="noopener">🔗 Verify</a>
+
+        <!-- OPTIONAL: replace href with real verification URL or local proof file -->
+        <div class="actions">
+          <a class="btn" href="assets/certs/stanford-r-fundamentals.pdf" target="_blank" rel="noopener">View proof</a>
         </div>
       </article>
     </section>
@@ -177,9 +205,13 @@
 
   <footer>
     <div class="foot">
-      <small>© 2025 Niknaz Sadehvandi • Cybersecurity Portfolio</small>
-      <a href="Niknaz_Sadehvandi_IT_Support_Resume.pdf" download style="color:#cfd9ea">Download Resume</a>
+      <small>© <span id="y"></span> Niknaz Sadehvandi • Cybersecurity Portfolio</small>
+      <a href="Niknaz_Sadehvandi_Cybersecurity_Analyst_Resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
     </div>
   </footer>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
