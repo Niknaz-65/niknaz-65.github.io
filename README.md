@@ -96,16 +96,15 @@ Currently completing an **M.S. in Cybersecurity Technology (UMGC, GPA 4.0, Presi
 
 ## Certifications
 
-* **Python Basics for Data Science (IBM)**
+- **Python Basics for Data Science (IBM)**
 
 ---
 
 ## Contact
 
-* **Location:** Matthews, NC
-* **Email:** [sadvandniknaz0@gmail.com](mailto:sadvandniknaz0@gmail.com)
-* **Phone:** (202) 600-1591
-* **GitHub:** [https://github.com/niknaz-65](https://github.com/niknaz-65)
+- **Location:** Matthews, NC
+- **Email:** [sadvandniknaz0@gmail.com](mailto:sadvandniknaz0@gmail.com)
+- **GitHub:** [https://github.com/niknaz-65](https://github.com/niknaz-65)
 
-```
+
 
