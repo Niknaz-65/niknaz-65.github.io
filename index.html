@@ -6,15 +6,19 @@
   <title>Niknaz Sadehvandi | Cybersecurity Analyst</title>
 
   <!-- Primary SEO -->
-  <meta name="description" content="Cybersecurity Analyst focused on SIEM monitoring, endpoint telemetry, log analysis, and SOC investigations. Elastic SIEM, Sysmon, Zeek, Splunk. MITRE ATT&CK, NIST, SOX ITGC." />
+  <meta name="description" content="Cybersecurity Analyst specializing in Elastic SIEM, Sysmon, Zeek, and SOC investigations. Built Fleet-managed pipelines, validated 1,500+ Zeek events via Filebeat, and delivered Windows security audits aligned with MITRE ATT&CK, NIST, and SOX ITGC." />
   <meta name="robots" content="index,follow" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Niknaz Sadehvandi | Cybersecurity Portfolio" />
-  <meta property="og:description" content="SIEM • SOC • Endpoint Telemetry • DFIR • Compliance (NIST, SOX ITGC)" />
+  <meta property="og:description" content="Elastic SIEM • Sysmon • Zeek • SOC Investigations • Windows Security Audits • MITRE ATT&CK • NIST • SOX ITGC" />
   <meta property="og:type" content="website" />
 
   <link rel="icon" href="assets/favicon.png" />
+
+  <!-- Performance -->
+  <link rel="preconnect" href="https://img.shields.io" />
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
 
   <style>
     :root {
@@ -95,6 +99,8 @@
     .hero h1 { margin:0 0 8px; font-size: 34px; color: var(--navy-2); }
     .tagline { margin:0 0 10px; color:#30415d; font-weight:650; }
     .summary { color: var(--muted); line-height: 1.55; margin: 0 0 14px; max-width: 78ch; }
+    .meta { display:flex; flex-wrap:wrap; gap:10px; margin: 0 0 16px; padding:0; list-style:none; color:#6b7787; }
+    .meta li { background:#fff; border:1px solid var(--border); border-radius: 999px; padding: 6px 10px; box-shadow: 0 6px 18px rgba(0,0,0,.04); }
     .cta { display:flex; flex-direction: column; gap: 12px; }
     .cta-main, .cta-social { display:flex; gap:12px; flex-wrap: wrap; }
 
@@ -190,7 +196,7 @@
         <ul>
           <li><a class="active" href="index.html">Home</a></li>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="certifications.html">Certifications</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -199,26 +205,31 @@
 
   <!-- Hero -->
   <section class="hero">
-    <img class="headshot" src="assets/profile.jpg" alt="Niknaz Sadehvandi" />
+    <img class="headshot" src="assets/profile.jpg" alt="Niknaz Sadehvandi" loading="lazy" decoding="async" />
 
     <div>
       <h1>Cybersecurity Analyst</h1>
-      <p class="tagline">SIEM • Endpoint Telemetry • SOC Investigations • Compliance (NIST, SOX ITGC)</p>
-      
-      <p class="summary">
-  Cybersecurity Analyst with hands-on experience in SIEM monitoring, endpoint telemetry, log analysis, and SOC investigations.
-  Built Elastic SIEM pipelines with Sysmon and Zeek telemetry and performed Windows security audits aligned with MITRE ATT&amp;CK.
-  M.S. Cybersecurity Technology (UMGC, GPA 4.0; President’s List).
-</p>
+      <p class="tagline">Elastic SIEM • Sysmon • Zeek • SOC Investigations • Windows Security Audits • MITRE ATT&amp;CK • NIST • SOX ITGC</p>
 
-<p class="summary">
-  Founder &amp; Cybersecurity Consultant — Nikki IT &amp; Security Consulting (Dec 2025–Present).
-</p>
+      <ul class="meta" aria-label="Highlights">
+        <li>Fleet-managed Elastic pipeline (Sysmon v15+)</li>
+        <li>Zeek on Ubuntu 24.04 • 1,500+ events validated</li>
+        <li>UMGC M.S. Cybersecurity • GPA 4.0</li>
+      </ul>
+
+      <p class="summary">
+        Cybersecurity Analyst with hands-on experience in endpoint security, SIEM monitoring, log analysis, and security investigations.
+        Built Fleet-managed Elastic SIEM ingestion with Sysmon telemetry and validated Zeek network events via Filebeat.
+        Delivered Windows security assessments and hardening recommendations aligned with MITRE ATT&amp;CK, NIST, and SOX ITGC.
+      </p>
+
+      <p class="summary">
+        Founder &amp; Cybersecurity Consultant — Nikki IT &amp; Security Consulting (Dec 2025–Present).
+      </p>
 
       <div class="cta">
-        <!-- Main buttons row -->
         <div class="cta-main">
-          <!-- UPDATED resume filename + safer target behavior -->
+          <!-- Resume file must exist at repo root -->
           <a class="btn pdf" href="Niknaz_Sadehvandi_Cybersecurity_Analyst_Resume.pdf" target="_blank" rel="noopener">
             Download Resume (PDF)
           </a>
@@ -226,7 +237,6 @@
           <a class="btn outline" href="contact.html">Contact</a>
         </div>
 
-        <!-- Social buttons row (kept, fixed GitHub URL casing + added rel) -->
         <div class="cta-social">
           <a class="btn linkedin" href="https://www.linkedin.com/in/niknaz-sadehvandi-a34179325" target="_blank" rel="noopener">
             <img class="icon" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="" aria-hidden="true">
@@ -248,18 +258,18 @@
       <h2>Skills &amp; Tools</h2>
 
       <div class="badges">
-        <!-- Programming -->
-        <img alt="Python" src="https://img.shields.io/badge/Python-Automation%20%7C%20Scripting-blue" />
-        <img alt="PowerShell" src="https://img.shields.io/badge/PowerShell-IR%20%7C%20Admin-lightblue" />
-        <img alt="Bash" src="https://img.shields.io/badge/Bash-Linux%20Automation-green" />
-
-        <!-- SIEM / IR -->
+        <!-- SIEM / Telemetry -->
         <img alt="Elastic SIEM" src="https://img.shields.io/badge/SIEM-Elastic-informational" />
         <img alt="Splunk" src="https://img.shields.io/badge/SIEM-Splunk-informational" />
+        <img alt="Sysmon" src="https://img.shields.io/badge/Telemetry-Sysmon-blue" />
+        <img alt="Zeek" src="https://img.shields.io/badge/Telemetry-Zeek-blue" />
         <img alt="Windows Event Logs" src="https://img.shields.io/badge/Log%20Analysis-Windows%20Event%20Logs-yellow" />
+        <img alt="KQL" src="https://img.shields.io/badge/Query-KQL-9cf" />
         <img alt="MITRE ATT&CK" src="https://img.shields.io/badge/MITRE-ATT%26CK-red" />
+        <img alt="NIST" src="https://img.shields.io/badge/Framework-NIST-lightgrey" />
+        <img alt="SOX ITGC" src="https://img.shields.io/badge/Compliance-SOX%20ITGC-lightgrey" />
 
-        <!-- Vulnerability & Network Tools -->
+        <!-- Vuln / Network -->
         <img alt="Nessus" src="https://img.shields.io/badge/Vulnerability%20Scanning-Nessus-orange" />
         <img alt="Nmap" src="https://img.shields.io/badge/Recon-Nmap-success" />
         <img alt="Wireshark" src="https://img.shields.io/badge/Network-Wireshark-9cf" />
@@ -269,26 +279,37 @@
         <img alt="FTK Imager" src="https://img.shields.io/badge/Forensics-FTK%20Imager-lightgrey" />
         <img alt="Sysinternals" src="https://img.shields.io/badge/Sysinternals-Autoruns%20%7C%20ProcMon-critical" />
 
+        <!-- Scripting -->
+        <img alt="Python" src="https://img.shields.io/badge/Python-Automation%20%7C%20Scripting-blue" />
+        <img alt="PowerShell" src="https://img.shields.io/badge/PowerShell-IR%20%7C%20Admin-lightblue" />
+        <img alt="Bash" src="https://img.shields.io/badge/Bash-Linux%20Automation-green" />
+
         <!-- Platforms -->
         <img alt="Windows" src="https://img.shields.io/badge/Platform-Windows-blueviolet" />
         <img alt="Linux" src="https://img.shields.io/badge/Platform-Linux-orange" />
         <img alt="Active Directory" src="https://img.shields.io/badge/Active%20Directory-Group%20Policy-important" />
-
-        <!-- Cloud -->
-        <img alt="AWS" src="https://img.shields.io/badge/Cloud-AWS-yellowgreen" />
-        <img alt="Azure" src="https://img.shields.io/badge/Cloud-Azure-lightblue" />
-
-        <!-- Version Control -->
         <img alt="Git" src="https://img.shields.io/badge/Git-Commit%20Early%20%26%20Often-critical" />
       </div>
     </div>
   </section>
 
-  <!-- Projects Preview -->
+  <!-- Featured Work -->
   <section id="featured-work" class="section">
     <h2>Featured Work</h2>
 
     <div class="projects">
+      <article class="project">
+        <span class="kicker">SOC / Elastic SIEM</span>
+        <h3>Elastic SIEM Ingestion (Sysmon + Zeek)</h3>
+        <p>
+          Built Fleet-managed endpoint telemetry ingestion (Sysmon v15+) and validated 1,500+ Zeek events via Filebeat.
+          Verified real-time visibility and data quality in Kibana Discover.
+        </p>
+        <p>
+          <a href="projects.html#elastic-siem" rel="noopener">View details &rarr;</a>
+        </p>
+      </article>
+
       <article class="project">
         <span class="kicker">Forensics / DFIR</span>
         <h3>Forensic Analysis of an Intrusion</h3>
@@ -344,7 +365,7 @@
     </div>
   </section>
 
-  <!-- Certifications CTA -->
+  <!-- Certifications -->
   <section class="section" id="certifications">
     <div class="card">
       <h2>Certifications</h2>
@@ -373,19 +394,20 @@
         </div>
 
         <div class="card" style="padding:16px;">
-          <h3 style="margin-top:0;">Tools</h3>
+          <h3 style="margin-top:0;">SIEM &amp; Telemetry</h3>
           <ul style="margin:0; padding-left:18px; color:var(--muted); line-height:1.6;">
-            <li>Elastic SIEM, Splunk, Wireshark</li>
-            <li>FTK Imager, Autopsy, Autoruns, Nmap, VirusTotal</li>
-            <li>Nessus/Tenable (lab)</li>
+            <li>Elastic SIEM, Filebeat, Kibana, KQL</li>
+            <li>Splunk, SPL (dashboards and triage views)</li>
+            <li>Sysmon, Windows Event Logs, Zeek</li>
           </ul>
         </div>
 
         <div class="card" style="padding:16px;">
-          <h3 style="margin-top:0;">Platforms</h3>
+          <h3 style="margin-top:0;">Tools</h3>
           <ul style="margin:0; padding-left:18px; color:var(--muted); line-height:1.6;">
-            <li>Windows, Linux, Active Directory</li>
-            <li>Office 365; AWS/Azure fundamentals</li>
+            <li>Wireshark, Nmap, Nessus/Tenable (lab)</li>
+            <li>Autopsy, FTK Imager, Autoruns</li>
+            <li>VirusTotal, Event Viewer, auditpol</li>
           </ul>
         </div>
 
@@ -407,6 +429,7 @@
       <ul style="margin:0; padding-left:18px; color:var(--muted); line-height:1.6;">
         <li><strong>M.S. Cybersecurity Technology</strong>, University of Maryland Global Campus (GPA 4.0; President’s List)</li>
         <li><strong>B.S. Information Technology</strong>, University of Phoenix (Magna Cum Laude)</li>
+        <li><strong>A.A. Information Technology</strong>, CPCC</li>
       </ul>
     </div>
   </section>
@@ -414,7 +437,6 @@
   <footer>
     <div class="foot">
       <small>© <span id="y"></span> Niknaz Sadehvandi • Cybersecurity Portfolio</small>
-      <!-- UPDATED resume filename in footer -->
       <a href="Niknaz_Sadehvandi_Cybersecurity_Analyst_Resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
     </div>
   </footer>
@@ -424,4 +446,3 @@
   </script>
 </body>
 </html>
-```
