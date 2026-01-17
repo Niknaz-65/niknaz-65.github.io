@@ -4,48 +4,105 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact | Niknaz Sadehvandi</title>
+
+  <!-- Primary SEO -->
   <meta name="description" content="Contact Niknaz Sadehvandi for cybersecurity roles and collaborations." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact | Niknaz Sadehvandi" />
+  <meta property="og:description" content="Cybersecurity Analyst — SOC, DFIR, SIEM, and compliance." />
+  <meta property="og:type" content="website" />
+
   <link rel="icon" href="assets/favicon.png" />
+
   <style>
-    :root{--navy:#0a1f44;--navy2:#13294b;--bg:#f7f9fc;--card:#fff;--muted:#5b6876;--radius:16px;--shadow:0 10px 30px rgba(0,0,0,.08);--border:rgba(10,31,68,.12)}
+    :root{
+      --navy:#0a1f44;
+      --navy2:#13294b;
+      --bg:#f7f9fc;
+      --card:#fff;
+      --muted:#5b6876;
+      --radius:16px;
+      --shadow:0 10px 30px rgba(0,0,0,.08);
+      --border:rgba(10,31,68,.12);
+      --focus: 0 0 0 3px rgba(13,110,253,.25);
+      --okbg:#e9f9ef;
+      --okfg:#0c6b2b;
+      --errbg:#fff2f2;
+      --errfg:#8a1f1f;
+    }
     *{box-sizing:border-box}
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#222}
+    a{color:var(--navy2);text-decoration:none}
+    a:hover{text-decoration:underline}
+    a:focus{outline:none;box-shadow:var(--focus);border-radius:10px}
 
     header{background:var(--navy);color:#fff}
-    .nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 20px;gap:16px}
+    .nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 20px;gap:16px;flex-wrap:wrap}
     .brand{display:flex;align-items:center;gap:12px;font-weight:700}
     .brand .lock{width:26px;height:26px;border:2px solid #fff;border-radius:6px;position:relative}
     .brand .lock:before{content:"";position:absolute;top:-12px;left:6px;right:6px;height:12px;border:2px solid #fff;border-bottom:none;border-radius:10px 10px 0 0}
 
     nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0;flex-wrap:wrap}
-    nav a{color:#e8eef8;text-decoration:none;font-weight:600}
+    nav a{color:#e8eef8;font-weight:600}
     nav a.active{color:#fff;border-bottom:2px solid #fff;padding-bottom:2px}
 
     .wrap{max-width:900px;margin:24px auto;padding:0 20px}
-    h1{color:var(--navy2);margin:6px 0 12px}
+    h1{color:var(--navy2);margin:6px 0 10px}
+    .lead{color:var(--muted);margin:0 0 14px;line-height:1.55}
 
     .btnrow{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0}
-    .btn{display:inline-flex;align-items:center;gap:8px;background:var(--navy2);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;border:1px solid transparent}
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;
+      background:var(--navy2);color:#fff;
+      padding:10px 14px;border-radius:10px;
+      text-decoration:none;font-weight:600;border:1px solid transparent
+    }
     .btn:hover{text-decoration:none;filter:brightness(1.04)}
+    .btn:focus{outline:none;box-shadow:var(--focus)}
     .btn.alt{background:#474a51}
 
     .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;margin-top:16px;border:1px solid var(--border)}
     label{display:block;font-weight:600;margin:10px 0 6px;color:#30415d}
-    input,textarea{width:100%;padding:12px 14px;border-radius:10px;border:1px solid #d7dde8;font-size:15px}
+    input,textarea{
+      width:100%;
+      padding:12px 14px;
+      border-radius:10px;
+      border:1px solid #d7dde8;
+      font-size:15px
+    }
+    input:focus, textarea:focus{outline:none;box-shadow:var(--focus);border-color:rgba(13,110,253,.35)}
     textarea{min-height:140px;resize:vertical}
     .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     @media (max-width:640px){ .row{grid-template-columns:1fr} }
 
-    .submit{margin-top:12px;display:inline-flex;align-items:center;gap:8px;background:var(--navy2);color:#fff;padding:12px 16px;border-radius:10px;border:none;font-weight:700;cursor:pointer}
-    .note{color:var(--muted);font-size:14px;margin-top:10px}
-    .alert{display:none;margin-top:12px;padding:12px 14px;border-radius:10px;background:#e9f9ef;color:#0c6b2b}
+    .submit{
+      margin-top:12px;
+      display:inline-flex;align-items:center;gap:8px;
+      background:var(--navy2);color:#fff;
+      padding:12px 16px;border-radius:10px;border:none;
+      font-weight:700;cursor:pointer
+    }
+    .submit:focus{outline:none;box-shadow:var(--focus)}
+    .note{color:var(--muted);font-size:14px;margin-top:10px;line-height:1.5}
+
+    .status{
+      display:none;
+      margin-top:12px;
+      padding:12px 14px;
+      border-radius:10px;
+      font-weight:600;
+    }
+    .status.ok{background:var(--okbg);color:var(--okfg)}
+    .status.err{background:var(--errbg);color:var(--errfg)}
 
     footer{margin-top:28px;background:var(--navy);color:#cfd9ea}
     .foot{max-width:1100px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
-    footer a{color:#cfd9ea;text-decoration:none}
-    footer a:hover{text-decoration:underline}
+    footer a{color:#e8eef8}
   </style>
 </head>
+
 <body>
   <header>
     <div class="nav">
@@ -63,39 +120,48 @@
 
   <main class="wrap">
     <h1>Get in Touch</h1>
+    <p class="lead">
+      Open to roles in SOC analysis, digital forensics, vulnerability management, and compliance (remote or hybrid).
+    </p>
 
     <div class="btnrow">
       <a class="btn" href="mailto:sadvandniknaz0@gmail.com">Email</a>
+      <a class="btn" href="tel:+12026001591">Call: (202) 600-1591</a>
       <a class="btn" href="https://www.linkedin.com/in/niknaz-sadehvandi-a34179325" target="_blank" rel="noopener">LinkedIn</a>
       <a class="btn" href="https://github.com/niknaz-65" target="_blank" rel="noopener">GitHub</a>
-      <a class="btn alt" href="index.html">Website</a>
+      <a class="btn alt" href="Niknaz_Sadehvandi_Cybersecurity_Analyst_Resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
     </div>
 
     <section class="card">
-      <!-- IMPORTANT: replace FORM_ID with your real Formspree endpoint, or remove the form -->
-      <form id="contactForm" action="https://formspree.io/f/FORM_ID" method="POST">
+      <div class="kicker" style="font-size:12px;color:#6b7787;text-transform:uppercase;letter-spacing:.4px;">Message Form</div>
+
+      <!-- Option A: Set a real Formspree endpoint, e.g. https://formspree.io/f/abcdwxyz -->
+      <!-- Option B: Keep action="" and remove JS submit; rely on Email button above -->
+      <form id="contactForm" action="" method="POST" novalidate>
         <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
         <input type="hidden" name="subject" value="New message from niknaz-65.github.io" />
 
         <div class="row">
           <div>
             <label for="name">Name</label>
-            <input id="name" name="name" required />
+            <input id="name" name="name" required autocomplete="name" />
           </div>
           <div>
             <label for="email">Email</label>
-            <input id="email" type="email" name="email" required />
+            <input id="email" type="email" name="email" required autocomplete="email" />
           </div>
         </div>
 
         <label for="message">Message</label>
-        <textarea id="message" name="message" required placeholder="Hi Niknaz, I’d like to connect about..."></textarea>
+        <textarea id="message" name="message" required autocomplete="off" placeholder="Hi Niknaz, I’d like to connect about..."></textarea>
 
         <button class="submit" type="submit">Send Message</button>
-        <div id="ok" class="alert">Thanks. Your message has been sent.</div>
+
+        <div id="statusOk" class="status ok" role="status" aria-live="polite">Message sent.</div>
+        <div id="statusErr" class="status err" role="status" aria-live="polite">Form not configured. Use the Email button above.</div>
 
         <p class="note">
-          Open to full-time roles in SOC analysis, digital forensics, vulnerability management, and compliance (remote or hybrid).
+          Resume: <a href="Niknaz_Sadehvandi_Cybersecurity_Analyst_Resume.pdf" target="_blank" rel="noopener">Niknaz_Sadehvandi_Cybersecurity_Analyst_Resume.pdf</a>
         </p>
       </form>
     </section>
@@ -111,29 +177,39 @@
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
 
-    // Optional: submit via fetch to stay on-page
     const form = document.getElementById('contactForm');
+    const ok = document.getElementById('statusOk');
+    const err = document.getElementById('statusErr');
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const endpoint = form.getAttribute('action');
-      const data = new FormData(form);
+      ok.style.display = 'none';
+      err.style.display = 'none';
 
-      // If FORM_ID not replaced, fail fast
-      if (endpoint.includes('FORM_ID')) {
-        alert('Formspree FORM_ID is not set. Replace FORM_ID or use the Email button.');
+      const endpoint = (form.getAttribute('action') || '').trim();
+      if (!endpoint) {
+        err.style.display = 'block';
         return;
       }
 
       try {
-        const res = await fetch(endpoint, { method: 'POST', body: data, headers: { 'Accept': 'application/json' }});
+        const data = new FormData(form);
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
         if (res.ok) {
-          document.getElementById('ok').style.display = 'block';
+          ok.style.display = 'block';
           form.reset();
         } else {
-          alert('Problem sending your message. Email me directly.');
+          err.textContent = 'Problem sending your message. Use the Email button above.';
+          err.style.display = 'block';
         }
-      } catch (err) {
-        alert('Network error. Email me directly.');
+      } catch (_) {
+        err.textContent = 'Network error. Use the Email button above.';
+        err.style.display = 'block';
       }
     });
   </script>
