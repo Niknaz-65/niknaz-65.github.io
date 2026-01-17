@@ -4,23 +4,76 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Niknaz Sadehvandi</title>
+
+  <!-- Primary SEO -->
   <meta name="description" content="Cybersecurity projects by Niknaz Sadehvandi — DFIR case studies, SOC detections, and security tooling." />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Projects | Niknaz Sadehvandi" />
+  <meta property="og:description" content="DFIR case studies, SOC detections, and security automation projects." />
+  <meta property="og:type" content="website" />
+
   <link rel="icon" href="assets/favicon.png" />
+
   <style>
-    :root{--navy:#0a1f44;--navy2:#13294b;--bg:#f7f9fc;--card:#fff;--muted:#5b6876;--radius:16px;--shadow:0 10px 30px rgba(0,0,0,.08)}
-    *{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#222}
-    header{background:var(--navy);color:#fff}.nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:16px 20px}
-    .brand{display:flex;align-items:center;gap:12px;font-weight:700}.brand .lock{width:26px;height:26px;border:2px solid #fff;border-radius:6px;position:relative}
-    .brand .lock:before{content:"";position:absolute;top:-12px;left:6px;right:6px;height:12px;border:2px solid #fff;border-bottom:none;border-radius:10px 10px 0 0}
-    nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0}nav a{color:#e8eef8;text-decoration:none;font-weight:600}nav a.active{color:#fff;border-bottom:2px solid #fff;padding-bottom:2px}
+    :root{
+      --navy:#0a1f44;
+      --navy2:#13294b;
+      --bg:#f7f9fc;
+      --card:#fff;
+      --muted:#5b6876;
+      --radius:16px;
+      --shadow:0 10px 30px rgba(0,0,0,.08);
+      --border: rgba(10,31,68,.12);
+      --focus: 0 0 0 3px rgba(13,110,253,.25);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      background:var(--bg);
+      color:#222
+    }
+    a{color:var(--navy2)}
+    a:hover{text-decoration:underline}
+
+    header{background:var(--navy);color:#fff}
+    .nav{
+      max-width:1100px;margin:0 auto;display:flex;align-items:center;
+      justify-content:space-between;padding:16px 20px;gap:16px;flex-wrap:wrap
+    }
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .brand .lock{width:26px;height:26px;border:2px solid #fff;border-radius:6px;position:relative}
+    .brand .lock:before{
+      content:"";position:absolute;top:-12px;left:6px;right:6px;height:12px;
+      border:2px solid #fff;border-bottom:none;border-radius:10px 10px 0 0
+    }
+    nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0;flex-wrap:wrap}
+    nav a{color:#e8eef8;text-decoration:none;font-weight:600}
+    nav a.active{color:#fff;border-bottom:2px solid #fff;padding-bottom:2px}
+
     .wrap{max-width:1100px;margin:24px auto;padding:0 20px}
     h1{color:var(--navy2);margin:6px 0 12px}
-    .lead{color:var(--muted)}
+    .lead{color:var(--muted);margin:0 0 14px}
+
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:18px}
     @media (max-width:1024px){ .grid{ grid-template-columns:repeat(2,1fr); } }
     @media (max-width:640px){ .grid{ grid-template-columns:1fr; } }
-    .card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;display:flex;flex-direction:column;height:100%;transition:transform .15s ease, box-shadow .15s ease}
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      border:1px solid var(--border);
+      overflow:hidden;
+      display:flex;
+      flex-direction:column;
+      height:100%;
+      transition:transform .15s ease, box-shadow .15s ease
+    }
     .card:hover{ transform:translateY(-2px); box-shadow:0 14px 34px rgba(0,0,0,.12); }
+
     .thumb{height:200px;background:#0f274f center/cover no-repeat}
     .pad{padding:18px;display:flex;flex-direction:column;flex:1}
     .kicker{font-size:12px;color:#6b7787;text-transform:uppercase;letter-spacing:.4px}
@@ -28,16 +81,34 @@
     .card p{margin:0 0 8px;color:var(--muted)}
     ul.meta{margin:6px 0 0 18px;color:#2d3e56}
     .btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}
-    .btn{display:inline-flex;align-items:center;gap:8px;background:var(--navy2);color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
-    .btn.alt{background:#fff;color:var(--navy2);border:2px solid var(--navy2)}
+
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;
+      background:var(--navy2);color:#fff;
+      padding:10px 14px;border-radius:10px;
+      text-decoration:none;font-weight:600;border:1px solid transparent
+    }
+    .btn:hover{text-decoration:none;filter:brightness(1.05)}
+    .btn:focus{outline:none;box-shadow:var(--focus)}
+    .btn.alt{background:#fff;color:var(--navy2);border:1px solid var(--navy2)}
+
     footer{margin-top:28px;background:var(--navy);color:#cfd9ea}
-    .foot{max-width:1100px;margin:0 auto;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .foot{
+      max-width:1100px;margin:0 auto;padding:16px 20px;
+      display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap
+    }
+    footer a{color:#e8eef8;text-decoration:none}
+    footer a:hover{text-decoration:underline}
   </style>
 </head>
+
 <body>
   <header>
     <div class="nav">
-      <div class="brand"><div class="lock" aria-hidden="true"></div><div>Niknaz Sadehvandi</div></div>
+      <div class="brand">
+        <div class="lock" aria-hidden="true"></div>
+        <div>Niknaz Sadehvandi</div>
+      </div>
       <nav aria-label="Primary">
         <ul>
           <li><a href="index.html">Home</a></li>
@@ -53,65 +124,64 @@
     <h1>Projects</h1>
     <p class="lead">Selected security projects demonstrating DFIR, SOC detections, and automation.</p>
 
-    <!-- OPTIONAL: keep this small, or delete entirely -->
     <section class="card" style="padding:18px;margin-top:14px;">
       <div class="kicker">Experience Snapshot</div>
       <h3 style="margin:8px 0 6px;color:var(--navy2);">Nikki IT &amp; Security Consulting (Dec 2025 – Present)</h3>
       <ul class="meta" style="margin-top:6px;">
-        <li>Built Fleet-managed Elastic SIEM endpoint telemetry using Sysmon and validated investigations with KQL.</li>
-        <li>Deployed Zeek + Filebeat ingestion and validated real-time network telemetry in Kibana Discover.</li>
-        <li>Performed Windows endpoint audits (Event ID 4625, audit policy, firewall rules, netstat correlation) and delivered hardening recommendations.</li>
+        <li>Engineered and validated a Fleet-managed Elastic SIEM endpoint pipeline using Sysmon v15+; analyzed process creation, network connections, and PowerShell activity using KQL.</li>
+        <li>Deployed a Zeek network sensor on Ubuntu 24.04; ingested and validated 1,500+ structured network events into Elastic SIEM via Filebeat; confirmed real-time visibility in Kibana Discover.</li>
+        <li>Conducted Windows endpoint security audits, analyzing authentication failures, firewall rules, and active connections; delivered actionable hardening and monitoring recommendations.</li>
       </ul>
       <div class="btns" style="margin-top:12px;">
-        <a class="btn" href="Niknaz_Sadehvandi_Cybersecurity_Analyst_Resume.pdf" target="_blank" rel="noopener">📄 View Resume (PDF)</a>
+        <a class="btn" href="Niknaz_Sadehvandi_Cybersecurity_Analyst_Resume.pdf" target="_blank" rel="noopener">View Resume (PDF)</a>
       </div>
     </section>
 
     <section class="grid">
       <article class="card">
-        <div class="thumb" style="background-image:url('assets/digital-forensics-project1-cover.png');"></div>
+        <div class="thumb" style="background-image:url('assets/digital-forensics-project1-cover.png'),linear-gradient(120deg,#0f274f,#244b7a);"></div>
         <div class="pad">
           <div class="kicker">Forensics / DFIR</div>
           <h3>Digital Forensics Project 1 – Network Intrusion</h3>
-          <p>Performed web server vulnerability scanning and Base64 decoding using Dirb, Nmap, and CyberChef in a controlled forensic lab (UMGC CST 640).</p>
+          <p>Performed web server scanning and Base64 decoding using Dirb, Nmap, and CyberChef in a controlled forensic lab.</p>
           <ul class="meta">
             <li>Analyzed IIS logs and network traffic</li>
             <li>Decoded exfiltrated credentials using CyberChef</li>
           </ul>
           <div class="btns">
-            <a class="btn" href="https://github.com/niknaz-65/digital-forensics-project1" target="_blank" rel="noopener">💻 GitHub Repo</a>
+            <a class="btn" href="https://github.com/niknaz-65/digital-forensics-project1" target="_blank" rel="noopener">GitHub Repo</a>
           </div>
         </div>
       </article>
 
       <article class="card">
-        <div class="thumb" style="background-image:url('assets/digital-forensics-project2-cover.png');"></div>
+        <div class="thumb" style="background-image:url('assets/digital-forensics-project2-cover.png'),linear-gradient(120deg,#0f274f,#1c355c);"></div>
         <div class="pad">
           <div class="kicker">Ethical Hacking / DFIR</div>
           <h3>Digital Forensics Project 2 – The Hacker Attacks</h3>
-          <p>Simulated hacker persistence and data exfiltration through SSH backdoors, scheduled tasks, and startup scripts in a controlled environment (UMGC CST 640).</p>
+          <p>Simulated persistence and data exfiltration through SSH backdoors, scheduled tasks, and startup scripts in a controlled environment.</p>
           <ul class="meta">
-            <li>Created scheduled backdoor tasks and startup batch scripts</li>
+            <li>Created scheduled tasks and startup scripts</li>
             <li>Captured and analyzed malicious activity logs</li>
           </ul>
           <div class="btns">
-            <a class="btn" href="https://github.com/niknaz-65/digital-forensics-project2" target="_blank" rel="noopener">💻 GitHub Repo</a>
+            <a class="btn" href="https://github.com/niknaz-65/digital-forensics-project2" target="_blank" rel="noopener">GitHub Repo</a>
           </div>
         </div>
       </article>
 
       <article class="card">
-        <div class="thumb" style="background-image:url('assets/digital-forensics-project3-cover.png');"></div>
+        <div class="thumb" style="background-image:url('assets/digital-forensics-project3-cover.png'),linear-gradient(120deg,#0f274f,#244b7a);"></div>
         <div class="pad">
           <div class="kicker">Forensics / Incident Response</div>
           <h3>Digital Forensics Project 3 – Forensic Analysis of an Intrusion</h3>
-          <p>Analyzed IIS logs, startup folder artifacts, and exfiltration evidence to reconstruct an intrusion timeline and recommend remediation actions (UMGC DFC 620).</p>
+          <p>Analyzed logs and artifacts to reconstruct an intrusion timeline and recommend remediation actions.</p>
           <ul class="meta">
             <li>Investigated persistence mechanisms and system artifacts</li>
-            <li>Identified data exfiltration using registry and log analysis</li>
+            <li>Identified exfiltration evidence using log and registry analysis</li>
           </ul>
           <div class="btns">
-            <a class="btn" href="https://github.com/niknaz-65/digital-forensics-project3" target="_blank" rel="noopener">💻 GitHub Repo</a>
+            <a class="btn" href="https://github.com/niknaz-65/digital-forensics-project3" target="_blank" rel="noopener">GitHub Repo</a>
           </div>
         </div>
       </article>
@@ -121,13 +191,13 @@
         <div class="pad">
           <div class="kicker">SOC / SIEM</div>
           <h3>Splunk Detections &amp; Dashboards</h3>
-          <p>Created SPL queries for failed authentication spikes, privilege assignment, and suspicious process trees; built triage dashboards for rapid incident response.</p>
+          <p>Created SPL queries for authentication spikes, privilege events, and suspicious process activity; built triage dashboards for rapid pivots.</p>
           <ul class="meta">
             <li>Detections for Event IDs 4625/4672 and process anomalies</li>
-            <li>Dashboard panels for host/user pivots and geo trends</li>
+            <li>Dashboards for host/user pivots</li>
           </ul>
           <div class="btns">
-            <a class="btn" href="https://github.com/niknaz-65/splunk-detections-dashboards" target="_blank" rel="noopener">💻 GitHub Repo</a>
+            <a class="btn" href="https://github.com/niknaz-65/splunk-detections-dashboards" target="_blank" rel="noopener">GitHub Repo</a>
           </div>
         </div>
       </article>
@@ -137,32 +207,31 @@
         <div class="pad">
           <div class="kicker">Recon / Automation</div>
           <h3>Network Recon Toolkit</h3>
-          <p>Python wrapper that runs Nmap service enumeration, parses results, and generates an HTML summary for handoff to vulnerability scanning.</p>
+          <p>Python wrapper that runs Nmap service enumeration, parses results, and generates an HTML summary for reporting handoff.</p>
           <ul class="meta">
-            <li>Automated common scan profiles (top-1000, -sV, -O)</li>
-            <li>HTML report with host/service highlights</li>
+            <li>Automated common scan profiles</li>
+            <li>Generated HTML report summaries</li>
           </ul>
           <div class="btns">
-            <a class="btn" href="https://raw.githubusercontent.com/niknaz-65/network-recon-toolkit/main/report_screenshot.png" target="_blank" rel="noopener">📄 View Report</a>
-            <a class="btn alt" href="https://github.com/niknaz-65/network-recon-toolkit" target="_blank" rel="noopener">💻 GitHub Repo</a>
+            <a class="btn" href="https://github.com/niknaz-65/network-recon-toolkit" target="_blank" rel="noopener">GitHub Repo</a>
           </div>
         </div>
       </article>
 
       <article class="card">
-        <div class="thumb" style="background-image:url('alu_screenshot.png');"></div>
+        <div class="thumb" style="background-image:url('assets/alu_screenshot.png'),linear-gradient(120deg,#0f172a,#1d3557);"></div>
         <div class="pad">
           <div class="kicker">Computer Architecture / Logisim</div>
           <h3>8-bit ALU &amp; Simple CPU</h3>
-          <p>Designed and implemented an 8-bit ALU and simple CPU in Logisim-evolution. Includes multiple operations, status flags, registers, and a control unit.</p>
+          <p>Designed an 8-bit ALU and simple CPU in Logisim-evolution with registers, flags, and a control unit.</p>
           <ul class="meta">
             <li>Implemented core ALU ops and flags</li>
             <li>Built registers and control signals</li>
           </ul>
           <div class="btns">
-            <a class="btn" href="https://github.com/niknaz-65/alu-cpu-logisim" target="_blank" rel="noopener">💻 GitHub Repo</a>
-            <a class="btn alt" href="CPU_Project.pdf" target="_blank" rel="noopener">📄 Project Report (PDF)</a>
-            <a class="btn alt" href="ALU.circ" target="_blank" rel="noopener">⚙️ Download ALU.circ</a>
+            <a class="btn" href="https://github.com/niknaz-65/alu-cpu-logisim" target="_blank" rel="noopener">GitHub Repo</a>
+            <a class="btn alt" href="CPU_Project.pdf" target="_blank" rel="noopener">Project Report (PDF)</a>
+            <a class="btn alt" href="assets/ALU.circ" target="_blank" rel="noopener">ALU.circ</a>
           </div>
         </div>
       </article>
@@ -172,14 +241,14 @@
         <div class="pad">
           <div class="kicker">Threat Intelligence / OSINT</div>
           <h3>Cyber Threat Intelligence &amp; IOC Hunting (OTX)</h3>
-          <p>Investigated 30K+ indicators from AlienVault OTX and LevelBlue to analyze ransomware-related IOCs, enrich reputation, and simulate CTI workflows.</p>
+          <p>Processed 30,000+ indicators to analyze ransomware-related IOCs, enrich reputation, and simulate CTI workflows.</p>
           <ul class="meta">
             <li>Filtered IPv4, URL, domain, and SHA-256 indicators</li>
-            <li>Used API + curl to pull JSON and enrich IOCs</li>
+            <li>Enriched IOCs via API-driven JSON pulls</li>
             <li>Correlated infrastructure with threat families</li>
           </ul>
           <div class="btns">
-            <a class="btn" href="https://github.com/niknaz-65/cti-ioc-hunting-otx" target="_blank" rel="noopener">💻 GitHub Repo</a>
+            <a class="btn" href="https://github.com/niknaz-65/cti-ioc-hunting-otx" target="_blank" rel="noopener">GitHub Repo</a>
           </div>
         </div>
       </article>
@@ -189,14 +258,13 @@
         <div class="pad">
           <div class="kicker">OSINT / Network Forensics</div>
           <h3>IP Threat Investigation &amp; OSINT Analysis</h3>
-          <p>Performed IP-based threat investigation using whois, DNS enumeration, geoIP, and threat-intel sources to assess risk and extract indicators.</p>
+          <p>Performed IP-based threat investigation using whois, DNS enumeration, geoIP, and threat intel sources to assess risk and extract indicators.</p>
           <ul class="meta">
-            <li>Used whois, dig, nslookup, and host for DNS mapping</li>
-            <li>Enriched IPs via APIs (ipinfo, geoIP)</li>
-            <li>Correlated ASN, hosting type, and reputation</li>
+            <li>Mapped DNS and infrastructure using CLI tooling</li>
+            <li>Enriched IPs via APIs and correlated ASN/reputation</li>
           </ul>
           <div class="btns">
-            <a class="btn" href="https://github.com/niknaz-65/ip-threat-investigation" target="_blank" rel="noopener">💻 GitHub Repo</a>
+            <a class="btn" href="https://github.com/niknaz-65/ip-threat-investigation" target="_blank" rel="noopener">GitHub Repo</a>
           </div>
         </div>
       </article>
@@ -206,14 +274,13 @@
         <div class="pad">
           <div class="kicker">Malware Analysis / Sandbox</div>
           <h3>Malware Sandbox Analysis</h3>
-          <p>Detonated a suspicious file in a sandbox to observe process behavior, network callbacks, file changes, and extract IOCs for SOC/DFIR triage.</p>
+          <p>Detonated a suspicious file in a sandbox to observe process behavior, network callbacks, and file changes; documented IOCs for triage.</p>
           <ul class="meta">
-            <li>Observed process tree and registry/file system changes</li>
+            <li>Observed process tree and file/registry changes</li>
             <li>Captured network callbacks and potential C2</li>
-            <li>Documented IOCs for analyst handoff</li>
           </ul>
           <div class="btns">
-            <a class="btn" href="https://github.com/niknaz-65/malware-sandbox-analysis" target="_blank" rel="noopener">💻 GitHub Repo</a>
+            <a class="btn" href="https://github.com/niknaz-65/malware-sandbox-analysis" target="_blank" rel="noopener">GitHub Repo</a>
           </div>
         </div>
       </article>
@@ -223,7 +290,7 @@
   <footer>
     <div class="foot">
       <small>© <span id="y"></span> Niknaz Sadehvandi • Cybersecurity Portfolio</small>
-      <a href="Niknaz_Sadehvandi_Cybersecurity_Analyst_Resume.pdf" target="_blank" rel="noopener" style="color:#cfd9ea;">Download Resume (PDF)</a>
+      <a href="Niknaz_Sadehvandi_Cybersecurity_Analyst_Resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
     </div>
   </footer>
 
