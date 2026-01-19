@@ -81,9 +81,15 @@ Cybersecurity Analyst with experience in **SIEM monitoring**, **endpoint telemet
   - Screenshot: [IOC Reputation Validation](artifacts/malware_ioc_reputation_validation.png)
 
 - **DFIR & Incident Investigation**  
-  Investigated simulated intrusions using IIS log analysis, Base64 decoding, SSH exfiltration review, and Windows artifact analysis with Autopsy, FTK Imager, and Wireshark.
+  Investigated a simulated web server intrusion using IIS log analysis, Base64 decoding, SSH exfiltration review, and Windows persistence artifact analysis with Autoruns and scheduled tasks, supported by additional DFIR tooling (Autopsy, FTK Imager, Wireshark).
 
-  
+  Artifacts:
+  - PDF: [DFIR Incident Investigation & Forensic Analysis](artifacts/DFIR_Incident_Investigation_Forensic_Analysis.pdf)
+  - Screenshot: [IIS Logs – Suspicious requests](artifacts/iis_log_suspicious_requests.jpg)
+  - Screenshot: [IIS Logs – Exfiltration evidence](artifacts/iis_log_exfiltration_evidence.jpg)
+  - Screenshot: [Hidden directory persistence artifact](artifacts/persistence_hidden_directory_artifact.jpg)
+  - Screenshot: [Startup folder persistence](artifacts/startup_folder_persistence.jpg)
+  - Screenshot: [Scheduled task persistence XML](artifacts/scheduled_task_persistence.xml.jpg)
 
 ---
 
