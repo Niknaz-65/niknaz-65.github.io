@@ -30,7 +30,7 @@ Currently completing an **M.S. in Cybersecurity Technology (UMGC, GPA 4.0, Presi
 
 ## Highlighted Experience (Portfolio-Relevant)
 
-### NS Cybersecurity | Remote | Dec 2025 – Present  
+### NS Cybersecurity | Remote | Dec 2024 – Present  
 **Founder & Cybersecurity Consultant**
 
 - Engineered a **Fleet-managed Elastic SIEM endpoint pipeline** using **Sysmon v15+**; ingested process creation, network connections, and PowerShell events; validated visibility using **KQL**.
@@ -60,10 +60,10 @@ Currently completing an **M.S. in Cybersecurity Technology (UMGC, GPA 4.0, Presi
   Nmap-based automation wrapper with structured output and report generation.
 
 - **Threat Intelligence & Malware Analysis**  
-  Static and behavioral analysis; processed **30,000+ indicators** and extracted IOCs related to persistence and execution.
+  Static and behavioral analysis; processed **30,000+ indicators**, extracted IOCs, and correlated artifacts related to persistence, execution, and network activity.
 
-- **Entry-Level DFIR & Incident Investigation Labs**  
-  IIS log review, Base64 decoding, SSH exfiltration analysis, and endpoint artifacts using Autopsy, FTK Imager, and Wireshark.
+- **DFIR & Incident Investigation Labs**  
+  Investigated simulated intrusions using IIS log analysis, Base64 decoding, SSH exfiltration review, and Windows artifact analysis with Autopsy, FTK Imager, and Wireshark.
 
 ---
 
