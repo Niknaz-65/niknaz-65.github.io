@@ -11,7 +11,7 @@ Hands-on cybersecurity portfolio focused on SIEM monitoring, endpoint and networ
 
 ## Summary
 
-Cybersecurity Analyst with hands-on experience in **SIEM monitoring**, **endpoint telemetry**, **log analysis**, and **SOC investigations**. Founder of **Nikki IT & Security Consulting**, delivering **Elastic SIEM ingestion pipelines**, **Sysmon and Zeek telemetry**, and **Windows security assessments** aligned with **MITRE ATT&CK**.
+Cybersecurity Analyst with hands-on experience in **SIEM monitoring**, **endpoint telemetry**, **log analysis**, and **SOC investigations**. Founder of **NS Cybersecurity**, delivering **Elastic SIEM ingestion pipelines**, **Sysmon and Zeek telemetry**, and **Windows security assessments** aligned with **MITRE ATT&CK**.
 
 Currently completing an **M.S. in Cybersecurity Technology (UMGC, GPA 4.0, President’s List)**.
 
@@ -30,7 +30,7 @@ Currently completing an **M.S. in Cybersecurity Technology (UMGC, GPA 4.0, Presi
 
 ## Highlighted Experience (Portfolio-Relevant)
 
-### Nikki IT & Security Consulting | Remote | Dec 2025 – Present  
+### NS Cybersecurity | Remote | Dec 2025 – Present  
 **Founder & Cybersecurity Consultant**
 
 - Engineered a **Fleet-managed Elastic SIEM endpoint pipeline** using **Sysmon v15+**; ingested process creation, network connections, and PowerShell events; validated visibility using **KQL**.
