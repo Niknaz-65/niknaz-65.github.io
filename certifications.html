@@ -1,3 +1,14 @@
+Keep it. Only fix these:
+
+1. Remove the “Additional credentials” placeholder block (it looks unfinished and recruiters notice it).
+2. Replace “Proof: pending upload” with either:
+
+* a real link to a PDF/image you uploaded, or
+* remove the proof line entirely until you have it.
+
+Copy/paste this cleaned `certifications.html`:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -113,17 +124,6 @@
     .btn:hover { filter: brightness(1.05); text-decoration: none; }
     .btn:focus { outline: none; box-shadow: var(--focus); }
     .btn.alt { background: #fff; color: var(--navy2); border: 1px solid var(--navy2); }
-    .pill {
-      display: inline-flex;
-      align-items: center;
-      padding: 10px 12px;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      color: #6b7787;
-      background: #fff;
-      font-weight: 600;
-      white-space: nowrap;
-    }
 
     footer { margin-top: 28px; background: var(--navy); color: #cfd9ea; }
     .foot {
@@ -165,31 +165,26 @@
     </p>
 
     <section class="list" aria-label="Certifications">
-      <!-- IBM Python Basics (listed on resume) -->
       <article class="cert">
         <img class="logo" src="assets/ibm-logo.png" alt="IBM logo" />
         <div>
           <h3>Python Basics for Data Science</h3>
           <p class="meta">IBM • 2024</p>
-          <p class="desc">Python scripting foundations used for automation, parsing outputs, and working with datasets in labs and projects.</p>
+          <p class="desc">
+            Python foundations applied to security automation, parsing outputs, and generating structured reports for SOC-style workflows.
+          </p>
         </div>
-        <div class="actions">
-          <!-- If you upload proof later, replace pill with a real link:
-               href="assets/certs/ibm-python-basics.pdf" -->
-          <span class="pill">Proof: pending upload</span>
-        </div>
-      </article>
 
-      <!-- Optional section: only keep items you can prove -->
-      <article class="cert">
-        <img class="logo" src="assets/placeholder-badge.png" alt="Credential badge" />
-        <div>
-          <h3>Additional credentials</h3>
-          <p class="meta">Add only if verified</p>
-          <p class="desc">If you include a credential here, add either a public verification URL or a PDF proof file in <code>assets/certs/</code>.</p>
-        </div>
+        <!-- Option A (recommended when you have proof): -->
+        <!--
         <div class="actions">
-          <a class="btn alt" href="contact.html">Request verification</a>
+          <a class="btn alt" href="assets/certs/ibm-python-basics.pdf" target="_blank" rel="noopener">View Certificate</a>
+        </div>
+        -->
+
+        <!-- Option B (use until you upload proof): -->
+        <div class="actions">
+          <a class="btn alt" href="contact.html">Request certificate proof</a>
         </div>
       </article>
     </section>
@@ -207,3 +202,4 @@
   </script>
 </body>
 </html>
+```
