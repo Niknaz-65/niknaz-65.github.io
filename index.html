@@ -6,7 +6,7 @@
   <title>Niknaz Sadehvandi | Cybersecurity Analyst</title>
 
   <!-- Primary SEO -->
-  <meta name="description" content="Cybersecurity Analyst specializing in Elastic SIEM, Sysmon, Zeek, and SOC investigations. Built Fleet-managed pipelines, validated 1,500+ Zeek events via Filebeat, and delivered Windows security audits aligned with MITRE ATT&CK and NIST; familiar with SOX ITGC concepts." />
+  <meta name="description" content="Cybersecurity Analyst with experience in SIEM monitoring, endpoint telemetry, log analysis, and SOC investigations. Founder of NS Cybersecurity, delivering Elastic SIEM ingestion pipelines, Sysmon and Zeek telemetry, and Windows security assessments aligned with MITRE ATT&CK and NIST; familiar with SOX ITGC." />
   <meta name="robots" content="index,follow" />
 
   <!-- Open Graph -->
@@ -27,7 +27,7 @@
       --bg: #f7f9fc;
       --card: #ffffff;
       --muted: #5b6876;
-      --accent: #d93025; /* PDF red */
+      --accent: #d93025;
       --radius: 16px;
       --shadow: 0 10px 30px rgba(0,0,0,.08);
       --border: rgba(10,31,68,.12);
@@ -206,10 +206,12 @@
   <!-- Hero -->
   <section class="hero">
     <img class="headshot"
-     src="assets/profile.jpg"
-     alt="Niknaz Sadehvandi, Cybersecurity Analyst">
+         src="assets/profile.jpg"
+         alt="Niknaz Sadehvandi, Cybersecurity Analyst">
+
+    <div>
       <h1>Cybersecurity Analyst</h1>
-      <p class="tagline">Elastic SIEM • Sysmon • Zeek • SOC Investigations • Windows Security Audits • MITRE ATT&amp;CK • NIST • SOX ITGC</p>
+      <p class="tagline">Elastic SIEM • Sysmon • Zeek • SOC Investigations • Windows Security Audits • MITRE ATT&CK • NIST • SOX ITGC</p>
 
       <ul class="meta" aria-label="Highlights">
         <li>Fleet-managed Elastic pipeline (Sysmon v15+)</li>
@@ -218,19 +220,16 @@
       </ul>
 
       <p class="summary">
-        Cybersecurity Analyst with experience in SIEM monitoring, endpoint telemetry, log analysis, 
-        and SOC investigations.Founder of NS Cybersecurity,delivering Elastic SIEM ingestion 
-        pipelines, Sysmon and Zeek telemetry, and Windows security assessments aligned with 
-        MITRE ATT&CK and NIST.
+        Cybersecurity Analyst with experience in SIEM monitoring, endpoint telemetry, log analysis, and SOC investigations.
+        Founder of NS Cybersecurity, delivering Elastic SIEM ingestion pipelines, Sysmon and Zeek telemetry, and Windows security assessments aligned with MITRE ATT&CK and NIST, with familiarity in SOX ITGC.
       </p>
 
       <p class="summary">
-        Founder & Cybersecurity Consultant — NS Cybersecurity (Dec 2024–Present).
+        Founder &amp; Cybersecurity Consultant — NS Cybersecurity (Dec 2024–Present).
       </p>
 
       <div class="cta">
         <div class="cta-main">
-          <!-- Resume file must exist at repo root -->
           <a class="btn pdf" href="Niknaz_Sadehvandi_Cybersecurity_Analyst_Resume.pdf" target="_blank" rel="noopener">
             Download Resume (PDF)
           </a>
@@ -301,13 +300,14 @@
     <div class="projects">
       <article class="project">
         <span class="kicker">SOC / Elastic SIEM</span>
-        <h3>Elastic SIEM Ingestion (Sysmon + Zeek)</h3>
+        <h3>Elastic SIEM + Fleet + Sysmon</h3>
         <p>
-          Built Fleet-managed endpoint telemetry ingestion (Sysmon v15+) and validated 1,500+ Zeek events via Filebeat.
-          Verified real-time visibility and data quality in Kibana Discover.
+          Endpoint telemetry pipeline using Sysmon v15+ plus Elastic Agent and Fleet. Validated process, network, and PowerShell events in Kibana Discover and Elastic SIEM.
         </p>
         <p>
-          <article class="card" id="elastic-siem">
+          Artifacts:
+          <a href="artifacts/Endpoint_Detection_Elastic_Sysmon.pdf" target="_blank" rel="noopener">Endpoint Detection – Elastic SIEM + Sysmon (PDF)</a> ·
+          <a href="artifacts/kibana_sysmon_process_events.png" target="_blank" rel="noopener">Kibana – Sysmon process events (screenshot)</a>
         </p>
       </article>
 
@@ -315,8 +315,7 @@
         <span class="kicker">Forensics / DFIR</span>
         <h3>Forensic Analysis of an Intrusion</h3>
         <p>
-          Investigated persistence mechanisms and SSH-based exfiltration. Used FTK Imager, Autopsy, and Autoruns to reconstruct
-          a timeline and document remediation aligned with NIST and ITGC.
+          Investigated persistence mechanisms and SSH-based exfiltration. Used FTK Imager, Autopsy, and Autoruns to reconstruct a timeline and document remediation aligned with NIST and ITGC.
         </p>
         <p>
           <a href="https://github.com/niknaz-65/digital-forensics-project3" target="_blank" rel="noopener">
