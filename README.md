@@ -83,6 +83,8 @@ Cybersecurity Analyst with experience in **SIEM monitoring**, **endpoint telemet
 - **DFIR & Incident Investigation**  
   Investigated simulated intrusions using IIS log analysis, Base64 decoding, SSH exfiltration review, and Windows artifact analysis with Autopsy, FTK Imager, and Wireshark.
 
+  
+
 ---
 
 ## Tech Stack (Site)
