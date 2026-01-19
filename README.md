@@ -56,6 +56,7 @@ Cybersecurity Analyst with experience in **SIEM monitoring**, **endpoint telemet
 
 - **Zeek + Filebeat → Elastic SIEM (Network Telemetry Ingestion)**  
   Network sensor deployment, structured log ingestion, and Kibana validation.
+  
  Artifacts:
   - PDF: [Elastic SIEM – Zeek Log Ingestion & Validation](artifacts/Elastic_SIEM_Zeek_Log_Ingestion_and_Validation.pdf)
   - Screenshot: [Kibana Discover – Zeek DNS & connection events](artifacts/kibana_zeek_conn_dns_events.png)
@@ -63,7 +64,11 @@ Cybersecurity Analyst with experience in **SIEM monitoring**, **endpoint telemet
   - Screenshot: [Elastic SIEM – Rule schedule & risk configuration](artifacts/elastic_zeek_rule_schedule_risk.png)
 
 - **SOC Dashboarding & Alert Triage (Splunk SIEM)**  
-  SOC dashboards and analyst triage views for Windows security events and authentication anomalies.
+  SOC dashboards and detection queries for monitoring Windows authentication activity and privilege escalation signals.
+
+  Artifacts:
+  - PDF: [SOC Log Analysis – Failed Login Assessment](artifacts/SOC_Log_Analysis_Failed_Login_Assessment.pdf)
+  - Screenshot: [Splunk Authentication Dashboard](artifacts/dashboard_preview.png)
 
 - **Network Reconnaissance & SOC Automation (Python)**  
   Nmap-based automation wrapper with structured output and report generation.
@@ -71,7 +76,7 @@ Cybersecurity Analyst with experience in **SIEM monitoring**, **endpoint telemet
 - **Threat Intelligence & Malware Analysis**  
   Static and behavioral analysis; processed **30,000+ indicators**, extracted IOCs, and correlated artifacts related to persistence, execution, and network activity.
 
-- **DFIR & Incident Investigation Labs**  
+- **DFIR & Incident Investigation**  
   Investigated simulated intrusions using IIS log analysis, Base64 decoding, SSH exfiltration review, and Windows artifact analysis with Autopsy, FTK Imager, and Wireshark.
 
 ---
