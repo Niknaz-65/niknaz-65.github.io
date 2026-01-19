@@ -1,8 +1,8 @@
 ![Banner](assets/site-banner.png)
 
-# Niknaz Sadehvandi | Cybersecurity Analyst Portfolio
+# Niknaz Sadehvandi | Cybersecurity Analyst | SIEM & SOC Portfolio
 
-Hands-on cybersecurity portfolio focused on SIEM monitoring, endpoint and network telemetry, DFIR fundamentals, and SOC-style investigations.
+Cybersecurity portfolio focused on SIEM monitoring, endpoint and network telemetry, DFIR and SOC-style investigations.
 
 **Live site:** https://niknaz-65.github.io  
 **Resume (PDF):** Niknaz_Sadehvandi_Cybersecurity_Analyst_Resume.pdf
@@ -11,9 +11,9 @@ Hands-on cybersecurity portfolio focused on SIEM monitoring, endpoint and networ
 
 ## Summary
 
-Cybersecurity Analyst with hands-on experience in **SIEM monitoring**, **endpoint telemetry**, **log analysis**, and **SOC investigations**. Founder of **NS Cybersecurity**, delivering **Elastic SIEM ingestion pipelines**, **Sysmon and Zeek telemetry**, and **Windows security assessments** aligned with **MITRE ATT&CK**.
+Cybersecurity Analyst with experience in **SIEM monitoring**, **endpoint telemetry**, **log analysis**, and **SOC investigations**. Founder of **NS Cybersecurity**, delivering **Elastic SIEM ingestion pipelines**, **Sysmon and Zeek telemetry**, and **Windows security assessments** aligned with **MITRE ATT&CK**.
 
-Currently completing an **M.S. in Cybersecurity Technology (UMGC, GPA 4.0, President’s List)**.
+**M.S. in Cybersecurity Technology (UMGC, GPA 4.0, President’s List)**.
 
 ---
 
@@ -23,7 +23,7 @@ Currently completing an **M.S. in Cybersecurity Technology (UMGC, GPA 4.0, Presi
 - **Endpoint Telemetry:** Sysmon, Windows Event Logs, authentication, process, and network events  
 - **Network Telemetry:** Zeek, Filebeat, Kibana Discover validation, Wireshark analysis  
 - **DFIR & Investigation:** Autopsy, FTK Imager, Autoruns, artifact review, IOC extraction  
-- **Security Standards (Foundations):** MITRE ATT&CK, NIST, SOX ITGC  
+- **Framework Alignment:** MITRE ATT&CK, NIST, SOX ITGC  
 - **Automation & Scripting:** Python, PowerShell, Bash  
 
 ---
@@ -38,7 +38,7 @@ Currently completing an **M.S. in Cybersecurity Technology (UMGC, GPA 4.0, Presi
 - Conducted **Windows endpoint security audits** covering authentication failures, firewall rules, and active connections; validated outbound traffic and delivered hardening recommendations.
 
 ### Sunset Auto Sales | Mar 2019 – Present  
-**Cybersecurity | IT Support Technician**
+**Cybersecurity & IT Support Technician**
 
 - Supported and secured Windows endpoints; performed malware investigations, MFA enforcement, endpoint troubleshooting, and system imaging.
 - Maintained security documentation and resolved high-volume support tickets across operational systems.
@@ -49,6 +49,10 @@ Currently completing an **M.S. in Cybersecurity Technology (UMGC, GPA 4.0, Presi
 
 - **Elastic SIEM + Fleet + Sysmon (Endpoint Telemetry Pipeline)**  
   Endpoint event collection, enrichment, and SIEM validation for SOC visibility.
+
+  Artifacts:
+  - PDF: [Endpoint Detection – Elastic SIEM + Sysmon](artifacts/Endpoint_Detection_Elastic_Sysmon.pdf)
+  - Screenshot: [Kibana Discover – Sysmon process events](artifacts/kibana_sysmon_process_events.png)
 
 - **Zeek + Filebeat → Elastic SIEM (Network Telemetry Ingestion)**  
   Network sensor deployment, structured log ingestion, and Kibana validation.
