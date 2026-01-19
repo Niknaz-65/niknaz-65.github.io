@@ -73,8 +73,12 @@ Cybersecurity Analyst with experience in **SIEM monitoring**, **endpoint telemet
 - **Network Reconnaissance & SOC Automation (Python)**  
   Nmap-based automation wrapper with structured output and report generation.
 
-- **Threat Intelligence & Malware Analysis**  
-  Static and behavioral analysis; processed **30,000+ indicators**, extracted IOCs, and correlated artifacts related to persistence, execution, and network activity.
+- **Threat Intelligence & Malware Analysis**
+  Static and behavioral analysis of suspicious artifacts; IOC extraction and validation for SOC and DFIR use.
+
+  Artifacts:
+  - PDF: [Malware Sandbox Analysis & IOC Extraction](artifacts/Malware_Sandbox_Analysis_and_IOC_Extraction.pdf)
+  - Screenshot: [IOC Reputation Validation](artifacts/malware_ioc_reputation_validation.png)
 
 - **DFIR & Incident Investigation**  
   Investigated simulated intrusions using IIS log analysis, Base64 decoding, SSH exfiltration review, and Windows artifact analysis with Autopsy, FTK Imager, and Wireshark.
