@@ -56,6 +56,11 @@ Cybersecurity Analyst with experience in **SIEM monitoring**, **endpoint telemet
 
 - **Zeek + Filebeat → Elastic SIEM (Network Telemetry Ingestion)**  
   Network sensor deployment, structured log ingestion, and Kibana validation.
+ Artifacts:
+  - PDF: [Elastic SIEM – Zeek Log Ingestion & Validation](artifacts/Elastic_SIEM_Zeek_Log_Ingestion_and_Validation.pdf)
+  - Screenshot: [Kibana Discover – Zeek DNS & connection events](artifacts/kibana_zeek_conn_dns_events.png)
+  - Screenshot: [Elastic SIEM – Zeek DNS detection rule](artifacts/elastic_zeek_dns_detection_rule.png)
+  - Screenshot: [Elastic SIEM – Rule schedule & risk configuration](artifacts/elastic_zeek_rule_schedule_risk.png)
 
 - **SOC Dashboarding & Alert Triage (Splunk SIEM)**  
   SOC dashboards and analyst triage views for Windows security events and authentication anomalies.
