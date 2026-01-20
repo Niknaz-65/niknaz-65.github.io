@@ -85,11 +85,11 @@ Cybersecurity Analyst with experience in **SIEM monitoring**, **endpoint telemet
 
   Artifacts:
   - PDF: [DFIR Incident Investigation & Forensic Analysis](artifacts/DFIR_Incident_Investigation_Forensic_Analysis.pdf)
-  - Screenshot: [IIS Logs – Suspicious requests](artifacts/iis_log_suspicious_requests.jpg)
-  - Screenshot: [IIS Logs – Exfiltration evidence](artifacts/iis_log_exfiltration_evidence.jpg)
-  - Screenshot: [Hidden directory persistence artifact](artifacts/persistence_hidden_directory_artifact.jpg)
-  - Screenshot: [Startup folder persistence](artifacts/startup_folder_persistence.jpg)
-  - Screenshot: [Scheduled task persistence XML](artifacts/scheduled_task_persistence.xml.jpg)
+  - Screenshot: [IIS Logs – Suspicious requests](artifacts/iis_log_suspicious_requests.png)
+  - Screenshot: [IIS Logs – Exfiltration evidence](artifacts/iis_log_exfiltration_evidence.png)
+  - Screenshot: [Hidden directory persistence artifact](artifacts/persistence_hidden_directory_artifact.png)
+  - Screenshot: [Startup folder persistence](artifacts/startup_folder_persistence.png)
+  - Screenshot: [Scheduled task persistence XML](artifacts/scheduled_task_persistence.xml.png)
 
 ---
 
