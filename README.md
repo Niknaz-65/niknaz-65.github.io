@@ -56,8 +56,8 @@ Cybersecurity Analyst with experience in **SIEM monitoring**, **endpoint telemet
 
 - **Zeek + Filebeat → Elastic SIEM (Network Telemetry Ingestion)**  
   Network sensor deployment, structured log ingestion, and Kibana validation.
-  
- Artifacts:
+
+  Artifacts:
   - PDF: [Elastic SIEM – Zeek Log Ingestion & Validation](artifacts/Elastic_SIEM_Zeek_Log_Ingestion_and_Validation.pdf)
   - Screenshot: [Kibana Discover – Zeek DNS & connection events](artifacts/kibana_zeek_conn_dns_events.png)
   - Screenshot: [Elastic SIEM – Zeek DNS detection rule](artifacts/elastic_zeek_dns_detection_rule.png)
@@ -73,7 +73,7 @@ Cybersecurity Analyst with experience in **SIEM monitoring**, **endpoint telemet
 - **Network Reconnaissance & SOC Automation (Python)**  
   Nmap-based automation wrapper with structured output and report generation.
 
-- **Threat Intelligence & Malware Analysis**
+- **Threat Intelligence & Malware Analysis**  
   Static and behavioral analysis of suspicious artifacts; IOC extraction and validation for SOC and DFIR use.
 
   Artifacts:
