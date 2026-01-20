@@ -73,6 +73,10 @@ Cybersecurity Analyst with experience in **SIEM monitoring**, **endpoint telemet
 - **Network Reconnaissance & SOC Automation (Python)**  
   Nmap-based automation wrapper with structured output and report generation.
 
+  Artifacts:
+  - PDF: [Network Reconnaissance & SOC Automation – Nmap Reporting](artifacts/Network_Reconnaissance_and_SOC_Automation_Nmap_Reporting.pdf)
+  - Screenshot: [Nmap Recon Scan Results](artifacts/nmap_recon_scan_results.png)
+
 - **Threat Intelligence & Malware Analysis**  
   Static and behavioral analysis of suspicious artifacts; IOC extraction and validation for SOC and DFIR use.
 
