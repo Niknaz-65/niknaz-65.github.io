@@ -1,11 +1,11 @@
 ![Banner](assets/site-banner.png)
 
-# Niknaz Sadehvandi | Cybersecurity Analyst | SIEM & SOC Portfolio
+# Nikki Sadvand | Cybersecurity Analyst | SIEM & SOC Portfolio
 
 Cybersecurity portfolio focused on SIEM monitoring, endpoint and network telemetry, DFIR and SOC-style investigations.
 
-**Live site:** https://niknaz-65.github.io  
-**Resume (PDF):** Niknaz_Sadehvandi_Cybersecurity_Analyst_Resume.pdf
+**Live site:** https://Nikki-65.github.io  
+**Resume (PDF):** Nikki_Sadvand_Cybersecurity_Analyst_Resume.pdf
 
 ---
 
@@ -120,7 +120,7 @@ Cybersecurity Analyst with experience in **SIEM monitoring**, **endpoint telemet
 │   ├── project images
 │   ├── certification logos
 │   └── icons
-└── Niknaz_Sadehvandi_Cybersecurity_Analyst_Resume.pdf
+└── Nikki_Sadvand_Cybersecurity_Analyst_Resume.pdf
 ```
 ---
 
@@ -134,7 +134,7 @@ Cybersecurity Analyst with experience in **SIEM monitoring**, **endpoint telemet
 
 - **Location:** Matthews, NC
 - **Email:** [sadvandniknaz0@gmail.com](mailto:sadvandniknaz0@gmail.com)
-- **GitHub:** [https://github.com/niknaz-65](https://github.com/niknaz-65)
+- **GitHub:** [https://github.com/Nikki-65](https://github.com/Nikki-65)
 
 
 
